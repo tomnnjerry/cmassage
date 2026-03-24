@@ -22,7 +22,11 @@ urlpatterns = [
 
 
 
-
+    path('massage-with-cupping/', views.kinetic_protocol_view, name='kinetic_protocol'),
+    
+    # Integrated Modality 02: Massage + Stretching
+    # URL: /protocols/massage-with-stretching/
+    path('massage-with-stretching/', views.structural_protocol_view, name='structural_protocol'),
 
 
 

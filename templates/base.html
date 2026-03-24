@@ -199,7 +199,7 @@
                     <a class="nav-link active" href="{% url 'home:home' %}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'home:home' %}">About</a>
+                    <a class="nav-link" href="{% url 'home:about' %}">About</a>
                 </li>
 
                 <li class="nav-item dropdown">
@@ -210,8 +210,16 @@
                         <li><a class="dropdown-item" href="{% url 'home:deep_tissue' %}">Deep Tissue Massage</a></li>
                         <li><a class="dropdown-item" href="{% url 'home:prenatal' %}">Prenatal Massage</a></li>
                         <li><a class="dropdown-item" href="{% url 'home:swedish' %}">Swedish/Relaxation Massage</a></li>
-                        <li><a class="dropdown-item" href="">Massage with Cupping</a></li>
-                        <li><a class="dropdown-item" href="">Massage with Stretching</a></li>
+                        <li>
+                            <a class="dropdown-item" href="{% url 'home:kinetic_protocol' %}">
+                                Massage with Cupping
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{% url 'home:structural_protocol' %}">
+                                Massage with Stretching
+                            </a>
+                        </li>
                         <li><a class="dropdown-item" href="{% url 'home:lymphatic' %}">Lymphatic Drainage</a></li>
                         <li><a class="dropdown-item" href="{% url 'home:reflexology' %}">Reflexology</a></li>
                         <li><a class="dropdown-item" href="{% url 'home:cupping' %}">Cupping Therapy</a></li>

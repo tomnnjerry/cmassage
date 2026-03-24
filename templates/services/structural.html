@@ -1,0 +1,961 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header %}
+
+{% endblock header %}
+
+{% block css %}
+    
+{% endblock css %}
+    
+
+
+{% block body %}
+    <section class="service-hero-v3 structural-hero">
+    <div class="hero-image-overlay">
+        <img src="https://images.unsplash.com/photo-1544126592-807daa215a75?auto=format&fit=crop&q=80" alt="Massage and Assisted Stretching">
+        <div class="gradient-shield-structural"></div>
+    </div>
+
+    <div class="container position-relative z-5">
+        <div class="row">
+            <div class="col-lg-7">
+                
+                <div class="hero-text-block animate__animated animate__fadeInUp">
+                    <span class="modality-tag text-gold-metallic ls-3 mb-3 d-block fw-bold uppercase x-small">The Structural Protocol</span>
+                    
+                    <h1 class="display-1 text-white mb-4">
+                        Massage with <br>
+                        <span class="serif italic text-gold-metallic">Stretching</span>
+                    </h1>
+
+                    <div class="description-box mb-5">
+                        <p class="lead text-white opacity-90">
+                            Feel taller, move better, and reset your body. We combine a targeted deep-tissue massage with professional assisted stretching to unlock tight joints and give your muscles the length they’ve been missing.
+                        </p>
+                    </div>
+
+                    <div class="action-row d-flex align-items-center gap-5">
+                        <button class="btn-luxury-sharp" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                            Book Your Reset
+                        </button>
+
+                        <div class="v-stats d-flex gap-4 border-start border-gold-thin ps-4">
+                            <div class="stat-item">
+                                <span class="d-block text-gold-metallic h5 mb-0">45/75</span>
+                                <span class="x-small text-white opacity-50 ls-2 uppercase">Minutes</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="d-block text-gold-metallic h5 mb-0">Active</span>
+                                <span class="x-small text-white opacity-50 ls-2 uppercase">Relief</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .service-hero-v3.structural-hero {
+        min-height: 85vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+        background-color: #052c1e; /* Emerald Deep */
+        padding: 100px 0;
+        overflow: hidden;
+    }
+
+    .hero-image-overlay {
+        position: absolute;
+        top: 0; right: 0; width: 55%; height: 100%;
+        z-index: 1;
+    }
+    .hero-image-overlay img {
+        width: 100%; height: 100%; object-fit: cover;
+        filter: brightness(0.45);
+    }
+    
+    .gradient-shield-structural {
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: linear-gradient(to right, #052c1e 45%, transparent 100%);
+    }
+
+    .display-1 { font-weight: 800; letter-spacing: -1px; line-height: 1; }
+
+    .description-box {
+        max-width: 500px;
+        border-left: 2px solid #D4AF37; /* Gold Metallic */
+        padding-left: 25px;
+    }
+
+    .btn-luxury-sharp {
+        background: #D4AF37;
+        color: #052c1e;
+        padding: 18px 35px;
+        border: none;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.8rem;
+        transition: 0.3s;
+    }
+    .btn-luxury-sharp:hover { background: #FAF9F3; transform: translateY(-3px); }
+
+    @media (max-width: 991px) {
+        .hero-image-overlay { width: 100%; opacity: 0.3; }
+        .display-1 { font-size: 3rem; }
+        .gradient-shield-structural { background: linear-gradient(to bottom, #052c1e 60%, transparent 100%); }
+    }
+</style>
+
+
+<section class="stretch-benefits-simple joy-both">
+    <div class="container">
+        
+        <div class="row mb-5 text-center">
+            <div class="col-12">
+                <h6 class="ls-wide text-gold-metallic mb-3">THE RESULTS</h6>
+                <h2 class="display-4 text-emerald-deep mb-4">Reset Your <span class="serif italic text-gold-metallic">Reach</span></h2>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="benefit-box-v55 p-4 h-100 border-sharp-gold bg-emerald-deep text-white">
+                    <i class="ph ph-arrows-out-simple text-gold-metallic display-6 mb-3 d-block"></i>
+                    <h3 class="serif h4 mb-3">Unlock Your Joints</h3>
+                    <p class="small opacity-80 mb-0">
+                        Tight muscles act like a brake on your joints. By stretching them out, we "release the brake," making it easier to reach, bend, and move without that stiff feeling.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="benefit-box-v55 p-4 h-100 border-sharp-gold">
+                    <i class="ph ph-person-simple-run text-gold-metallic display-6 mb-3 d-block"></i>
+                    <h3 class="serif text-emerald-deep h4 mb-3">Stand Taller</h3>
+                    <p class="small text-muted mb-0">
+                        Sitting at desks makes our bodies "curl" forward. This session pulls you back into alignment, opening up your chest and shoulders so you naturally stand with better posture.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="benefit-box-v55 p-4 h-100 border-sharp-gold">
+                    <i class="ph ph-lightning text-gold-metallic display-6 mb-3 d-block"></i>
+                    <h3 class="serif text-emerald-deep h4 mb-3">Quiet the Nerves</h3>
+                    <p class="small text-muted mb-0">
+                        When muscles are short and tight, they can pinch or irritate nerves. Stretching creates "breathing room" for your nervous system, reducing tingles and sharp pains.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="benefit-box-v55 p-4 h-100 border-sharp-gold">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="ph ph-trend-up text-gold-metallic display-6 d-block"></i>
+                    </div>
+                    <h3 class="serif text-emerald-deep h4 mb-3">Play Better</h3>
+                    <p class="small text-muted mb-0">
+                        Whether it’s a better golf swing or a deeper squat, longer muscles mean more power. This is the "secret weapon" for anyone who wants to perform at their best.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    .stretch-benefits-simple {
+        background-color: #FFFFFF;
+        padding: 100px 0;
+    }
+
+    .benefit-box-v55 {
+        border-radius: 2px;
+        transition: 0.3s ease;
+        border: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    .benefit-box-v55:hover {
+        transform: translateY(-5px);
+        border-color: #D4AF37;
+        box-shadow: 0 20px 40px rgba(5, 44, 30, 0.05);
+    }
+
+    .bg-emerald-deep { background-color: #052c1e !important; }
+
+    @media (max-width: 991px) {
+        .stretch-benefits-simple { padding: 60px 0; }
+    }
+</style>
+<section class="stretch-candidates-simple joy-both">
+    <div class="container">
+        
+        <div class="row mb-5 align-items-end">
+            <div class="col-lg-6">
+                <h6 class="ls-wide text-gold-metallic mb-3">WHO WE HELP</h6>
+                <h2 class="display-4 text-emerald-deep mb-4">Perfect for the <span class="serif italic text-gold-metallic">Compressed Body</span></h2>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            
+            <div class="col-lg-4">
+                <div class="candidate-card-v56 p-5 h-100 border-sharp-gold bg-white">
+                    <h4 class="serif text-emerald-deep h4 mb-3">The "Short" Muscles</h4>
+                    <p class="small text-muted mb-4">Sitting all day causes your hip flexors and chest to shorten. We pull those muscles back to their natural length so you can stand straight again.</p>
+                    <ul class="simple-list list-unstyled x-small ls-1 uppercase text-gold-metallic fw-bold">
+                        <li>— Tight Hips</li>
+                        <li>— Rounded Shoulders</li>
+                        <li>— "Heavy" Lower Back</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="candidate-card-v56 p-5 h-100 bg-emerald-deep text-white">
+                    <h4 class="serif text-gold-metallic h4 mb-3">The Athlete</h4>
+                    <p class="small opacity-80 mb-4">Better flexibility means a better golf swing, a faster run, and less risk of injury. We help you move past your "sticking points."</p>
+                    <ul class="simple-list list-unstyled x-small ls-1 uppercase opacity-75 fw-bold">
+                        <li>— Improved Agility</li>
+                        <li>— Post-Workout Reset</li>
+                        <li>— Joint Fluidity</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="candidate-card-v56 p-5 h-100 border-sharp-gold bg-ivory">
+                    <h4 class="serif text-emerald-deep h4 mb-3">The "Morning Stiff"</h4>
+                    <p class="small text-muted mb-4">If you wake up feeling like you need a "grease job" for your joints, the combination of massage and stretching provides that lubrication.</p>
+                    <ul class="simple-list list-unstyled x-small ls-1 uppercase text-gold-metallic fw-bold">
+                        <li>— Joint "Creaking"</li>
+                        <li>— General Tightness</li>
+                        <li>— Recovery from Inactivity</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row mt-5 pt-lg-3 justify-content-center">
+            <div class="col-lg-8 text-center">
+                <div class="p-4 bg-white border-sharp-gold shadow-sm">
+                    <p class="small text-emerald-deep mb-0">
+                        <i class="ph ph-t-shirt text-gold-metallic me-2"></i>
+                        <strong>Pro-Tip:</strong> For this session, please wear or bring comfortable, loose-fitting clothing or athletic wear (like yoga pants or gym shorts) so we can move your limbs easily.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    .stretch-candidates-simple { background-color: #FAF9F3; padding: 100px 0; }
+    .candidate-card-v56 { border-radius: 4px; border: 1px solid rgba(212, 175, 55, 0.2); transition: 0.4s; }
+    .candidate-card-v56:hover { transform: translateY(-10px); border-color: #D4AF37; }
+    .simple-list li { margin-bottom: 8px; }
+    .bg-ivory { background-color: #FFFFFF !important; }
+</style>
+
+
+<section class="stretch-process-simple joy-both">
+    <div class="container">
+        
+        <div class="row mb-5 text-center">
+            <div class="col-12">
+                <h6 class="ls-wide text-gold-metallic mb-3">THE METHOD</h6>
+                <h2 class="display-3 text-emerald-deep mb-4">The Structural <span class="serif italic">Flow</span></h2>
+            </div>
+        </div>
+
+        <div class="row g-0 shadow-lg border-sharp-gold">
+            
+            <div class="col-lg-4">
+                <div class="process-step-v57 p-5 h-100 bg-white border-end">
+                    <span class="step-num text-gold-metallic serif display-5 d-block mb-3">01.</span>
+                    <h4 class="serif text-emerald-deep h4 mb-3">The Soften</h4>
+                    <p class="small text-muted mb-0">
+                        Nathalie begins by massaging the muscles we plan to stretch. By "softening" the tissue first, your nervous system relaxes, allowing for a much deeper and safer stretch than you could ever do on your own.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="process-step-v57 p-5 h-100 bg-emerald-deep text-white">
+                    <span class="step-num text-gold-metallic serif display-5 d-block mb-3">02.</span>
+                    <h4 class="serif h4 mb-3 text-gold-metallic">The Lengthen</h4>
+                    <p class="small opacity-80 mb-0">
+                        Nathalie will move your limbs through specific ranges. You might be asked to "push" gently against her hand and then relax. This "tricks" your muscles into letting go of deep-seated tension.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="process-step-v57 p-5 h-100 bg-white">
+                    <span class="step-num text-gold-metallic serif display-5 d-block mb-3">03.</span>
+                    <h4 class="serif text-emerald-deep h4 mb-3">The Balance</h4>
+                    <p class="small text-muted mb-0">
+                        We finish by checking your alignment. We ensure both sides of your body feel equal, your joints feel "oiled," and you can stand up feeling taller and more centered than when you walked in.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row mt-5 text-center">
+            <div class="col-12">
+                <p class="x-small text-gold-metallic ls-2 fw-bold uppercase">
+                    <i class="ph ph-compass me-2"></i> Goal: Improved Alignment & Freedom of Movement
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    .stretch-process-simple { background-color: #FFFFFF; padding: 120px 0; }
+    .process-step-v57 { transition: 0.3s; }
+    .bg-emerald-deep { background-color: #052c1e !important; }
+    .border-sharp-gold { border: 1px solid #D4AF37; }
+    
+    @media (max-width: 991px) {
+        .stretch-process-simple { padding: 80px 0; }
+        .process-step-v57 { border-bottom: 1px solid rgba(212, 175, 55, 0.2); border-end: none !important; }
+    }
+</style>
+
+<section class="booking-stretch-v58 joy-both bg-white">
+    <div class="container">
+        
+        <div class="row g-5 justify-content-center">
+            
+            <div class="col-lg-5">
+                <div class="path-card-v58 light-path-stretch p-5 h-100 animate__animated animate__fadeInLeft">
+                    <h6 class="ls-wide text-gold-metallic mb-3">NEW TO STRETCHING?</h6>
+                    <h2 class="serif text-emerald-deep h2 mb-4">New Patients.</h2>
+                    <p class="body-text text-muted mb-5">
+                        Your first visit includes a **Posture & Range Check**. Nathalie will look at how you move, find where your "brakes" are on, and create a plan to get your flexibility back.
+                    </p>
+                    <button class="btn-path-dark w-100" data-bs-toggle="modal" data-bs-target="#stretchModal">
+                        Book Initial Reset <i class="ph ph-vector-three ms-2"></i>
+                    </button>
+                    <p class="text-center x-small text-muted italic mt-3">Wear comfortable gym or yoga clothes.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="path-card-v58 dark-path-stretch p-5 h-100 animate__animated animate__fadeInRight">
+                    <h6 class="ls-wide text-gold-metallic mb-3">KEEP THE LENGTH</h6>
+                    <h2 class="serif text-white h2 mb-4">Returning.</h2>
+                    <p class="body-text text-white opacity-75 mb-5">
+                        Ready to go deeper? Since we’ve already mapped your movement patterns, we’ll get straight to work on expanding your reach and refining your alignment.
+                    </p>
+                    <button class="btn-path-gold w-100" data-bs-toggle="modal" data-bs-target="#stretchModal">
+                        Fast-Track Booking <i class="ph ph-lightning ms-2"></i>
+                    </button>
+                    <p class="text-center x-small text-white opacity-50 italic mt-3">Consistency is the key to flexibility.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" id="stretchModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content border-sharp-gold">
+            
+            <div class="modal-header border-0 p-4 pb-0 bg-white">
+                <div>
+                    <h5 class="serif text-emerald-deep h3 mb-1">Cathartic <span class="italic text-gold-metallic">Portal.</span></h5>
+                    <p class="x-small text-muted ls-2 mb-0 uppercase">Massage & Stretching · Bay Harbor</p>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body p-4 bg-white">
+                <div class="iframe-container bg-ivory border-sharp-gold d-flex align-items-center justify-content-center" style="min-height: 500px; position: relative;">
+                    
+                    <div id="stretchLoader" class="text-center">
+                        <i class="ph ph-arrows-out-simple animate-pulse display-4 text-gold-metallic mb-3"></i>
+                        <p class="serif italic text-emerald-deep">Loading the Structural Calendar...</p>
+                    </div>
+
+                    <iframe 
+                        id="stretchIframe"
+                        src="https://your-booking-link.com" 
+                        style="width:100%; height:600px; border:none; display:none;" 
+                        onload="document.getElementById('stretchLoader').style.display='none'; this.style.display='block';">
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Section Styles */
+    .booking-stretch-v58 { padding: 120px 0; }
+    .path-card-v58 { border-radius: 4px; border: 1px solid rgba(212, 175, 55, 0.2); transition: 0.4s; }
+    .light-path-stretch { background: #FFFFFF; box-shadow: 15px 15px 0px #FAF9F3; }
+    .dark-path-stretch { background: #052c1e; border-color: #052c1e; box-shadow: 15px 15px 0px rgba(212, 175, 55, 0.1); }
+    
+    .path-card-v58:hover { transform: translateY(-8px); border-color: #D4AF37; }
+
+    /* Button Styles */
+    .btn-path-dark { background: #052c1e; color: #D4AF37; border: 1px solid #052c1e; padding: 20px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.75rem; transition: 0.3s; }
+    .btn-path-gold { background: #D4AF37; color: #052c1e; border: 1px solid #D4AF37; padding: 20px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.75rem; transition: 0.3s; }
+
+    .btn-path-dark:hover { background: #D4AF37; color: #052c1e; }
+    .btn-path-gold:hover { background: #FFFFFF; border-color: #FFFFFF; }
+
+    /* Animation */
+    @keyframes pulse { 0% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(1.1); } 100% { opacity: 1; transform: scale(1); } }
+    .animate-pulse { animation: pulse 1.5s ease-in-out infinite; display: inline-block; }
+
+    @media (max-width: 991px) {
+        .booking-stretch-v58 { padding: 80px 0; }
+        .path-card-v58 { margin-bottom: 30px; }
+    }
+</style>
+
+<section class="stretch-reviews-simple joy-both">
+    <div class="container">
+        
+        <div class="row mb-5 pb-lg-3 align-items-end">
+            <div class="col-lg-6">
+                <h6 class="ls-wide text-gold-metallic mb-3">CLIENT FEEDBACK</h6>
+                <h2 class="display-3 text-emerald-deep mb-0">The Gift of <br><span class="serif italic text-gold-metallic">Movement</span></h2>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            
+            <div class="col-lg-4">
+                <div class="simple-review-card-v59 p-5 h-100 border-sharp-gold bg-white">
+                    <div class="stars-gold mb-4">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p class="serif text-emerald-deep h4 mb-4">"I walked in feeling hunched over from my desk job and walked out feeling two inches taller. The way Nathalie combines the massage with the stretches actually works."</p>
+                    <div class="review-meta pt-4 border-top">
+                        <span class="d-block fw-bold text-emerald-deep">Sarah L.</span>
+                        <span class="x-small ls-1 text-gold-metallic uppercase">Corporate Director</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="simple-review-card-v59 p-5 h-100 bg-emerald-deep text-white">
+                    <div class="stars-gold mb-4">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p class="serif h4 mb-4">"Best stretch I’ve ever had. I play a lot of golf and my hips were always the problem. After a few sessions, my swing feels fluid and the morning stiffness is gone."</p>
+                    <div class="review-meta pt-4 border-top border-white-10">
+                        <span class="d-block fw-bold text-white">Mark T.</span>
+                        <span class="x-small ls-1 text-gold-metallic uppercase">Golf Enthusiast</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="simple-review-card-v59 p-5 h-100 border-sharp-gold bg-white">
+                    <div class="stars-gold mb-4">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p class="serif text-emerald-deep h4 mb-4">"I never knew how much I needed a professional stretch. It’s so much deeper than what I do at home. I feel lighter on my feet and much more relaxed."</p>
+                    <div class="review-meta pt-4 border-top">
+                        <span class="d-block fw-bold text-emerald-deep">Elena R.</span>
+                        <span class="x-small ls-1 text-gold-metallic uppercase">Yoga Practitioner</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row mt-5 pt-lg-4 text-center">
+            <div class="col-12">
+                <a href="#" class="google-trust-badge text-decoration-none">
+                    <span class="text-emerald-deep fw-bold ls-2 x-small uppercase">
+                        <i class="ph-fill ph-google-logo text-gold-metallic me-2"></i> Join 130+ 5-Star Recovery Stories
+                    </span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    .stretch-reviews-simple { background-color: #FAF9F3; padding: 120px 0; }
+    .simple-review-card-v59 { border-radius: 4px; border: 1px solid rgba(212, 175, 55, 0.2); transition: 0.5s ease; }
+    .simple-review-card-v59:hover { transform: translateY(-10px); border-color: #D4AF37; box-shadow: 0 20px 50px rgba(5, 44, 30, 0.08); }
+    .stars-gold { color: #D4AF37; font-size: 0.8rem; }
+    .bg-emerald-deep { background-color: #052c1e !important; }
+    .border-white-10 { border-color: rgba(255,255,255,0.1) !important; }
+    .google-trust-badge { border-bottom: 2px solid #D4AF37; padding-bottom: 5px; transition: 0.3s; }
+    .google-trust-badge:hover { opacity: 0.7; }
+
+    @media (max-width: 991px) {
+        .stretch-reviews-simple { padding: 80px 0; }
+    }
+</style>
+
+
+<section class="stretch-aftermath-simple joy-both">
+    <div class="container">
+        
+        <div class="row mb-5 text-center">
+            <div class="col-12">
+                <h6 class="ls-wide text-gold-metallic mb-3">YOUR EXPERIENCE</h6>
+                <h2 class="display-3 text-emerald-deep mb-4">The Structural <span class="serif italic">Reset</span></h2>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="after-card-v60 p-4 h-100 border-sharp-gold bg-white">
+                    <i class="ph ph-waves text-gold-metallic display-6 mb-3 d-block"></i>
+                    <h3 class="serif text-emerald-deep h4 mb-3">"Good" Tension</h3>
+                    <p class="small text-muted mb-0">
+                        You will feel a deep, intense stretch. It should never feel like "stabbing" pain, but rather a satisfying release—like a giant yawn for your entire body.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="after-card-v60 p-4 h-100 bg-emerald-deep text-white">
+                    <i class="ph ph-hand-tapping text-gold-metallic display-6 mb-3 d-block"></i>
+                    <h3 class="serif text-gold-metallic h4 mb-3">Push & Relax</h3>
+                    <p class="small opacity-80 mb-0">
+                        Nathalie will guide you. You might be asked to gently push against her hand for a few seconds and then breathe out as she deepens the stretch. This is how we unlock deep tension.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="after-card-v60 p-4 h-100 border-sharp-gold bg-white">
+                    <i class="ph ph-info text-gold-metallic display-6 mb-3 d-block"></i>
+                    <h3 class="serif text-emerald-deep h4 mb-3">Next-Day Feel</h3>
+                    <p class="small text-muted mb-0">
+                        You might feel slightly "worked over" the next day, similar to how you feel after a light yoga class or a good workout. This is just your muscles adjusting to their new, longer length.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="after-card-v60 p-4 h-100 border-sharp-gold bg-white">
+                    <i class="ph ph-brain text-gold-metallic display-6 mb-3 d-block"></i>
+                    <h3 class="serif text-emerald-deep h4 mb-3">Brain Fog Lift</h3>
+                    <p class="small text-muted mb-0">
+                        When you open up your posture, you open up your breathing. Many clients leave feeling more "awake," alert, and mentally clear because their body isn't working so hard to stay upright.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row mt-5 pt-lg-3">
+            <div class="col-lg-10 mx-auto">
+                <div class="prep-box-v60 d-flex align-items-center p-4 bg-ivory border-sharp-gold">
+                    <i class="ph ph-t-shirt text-gold-metallic fs-2 me-4"></i>
+                    <p class="small text-emerald-deep mb-0">
+                        <strong>HOW TO PREPARE:</strong> Please arrive in (or bring) flexible clothing. Yoga pants, gym shorts, or loose-fitting sweats are perfect. We need to be able to move your legs and arms freely to get the best results!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    .stretch-aftermath-simple { background-color: #FFFFFF; padding: 120px 0; }
+    .after-card-v60 { border-radius: 4px; border: 1px solid rgba(212, 175, 55, 0.2); transition: 0.3s; }
+    .after-card-v60:hover { transform: translateY(-5px); border-color: #D4AF37; box-shadow: 0 15px 30px rgba(5, 44, 30, 0.05); }
+    .bg-emerald-deep { background-color: #052c1e !important; }
+    .prep-box-v60 { box-shadow: 10px 10px 0px rgba(212, 175, 55, 0.1); }
+    .bg-ivory { background-color: #FAF9F3 !important; }
+
+    @media (max-width: 991px) {
+        .stretch-aftermath-simple { padding: 80px 0; }
+        .prep-box-v60 { flex-direction: column; text-align: center; }
+        .prep-box-v60 i { margin: 0 0 15px 0 !important; }
+    }
+</style>
+
+<section class="why-stretch-simple joy-both">
+    <div class="container">
+        
+        <div class="row align-items-center g-5">
+            
+            <div class="col-lg-5 animate__animated animate__fadeIn">
+                <h6 class="ls-wide text-gold-metallic mb-3">THE CATHARTIC DIFFERENCE</h6>
+                <h2 class="display-3 text-emerald-deep mb-4">We prepare the <br><span class="serif italic text-gold-metallic">muscle first</span></h2>
+                
+                <div class="credential-badge-simple p-4 border-sharp-gold bg-ivory d-inline-block">
+                    <span class="h2 serif text-emerald-deep mb-0">Elite Care</span>
+                    <p class="x-small ls-2 fw-bold text-gold-metallic mb-0 uppercase">One-on-One <br>Clinical Attention</p>
+                </div>
+            </div>
+
+            <div class="col-lg-6 offset-lg-1">
+                <div class="simple-pillars">
+                    
+                    <div class="s-pill-item mb-5 animate__animated animate__fadeInRight">
+                        <div class="d-flex align-items-center gap-3 mb-2">
+                            <i class="ph ph-shield-check text-gold-metallic h4 mb-0"></i>
+                            <h4 class="serif text-emerald-deep h4 mb-0">Safe & Scientific</h4>
+                        </div>
+                        <p class="small text-muted ps-5">
+                            We use advanced techniques (like PNF) that talk to your nervous system. We don't just "tug"—we use science to tell your brain it’s safe for the muscle to let go.
+                        </p>
+                    </div>
+
+                    <div class="s-pill-item mb-5 animate__animated animate__fadeInRight animate__delay-1s">
+                        <div class="d-flex align-items-center gap-3 mb-2">
+                            <i class="ph ph-ruler text-gold-metallic h4 mb-0"></i>
+                            <h4 class="serif text-emerald-deep h4 mb-0">Tailored to Your Body</h4>
+                        </div>
+                        <p class="small text-muted ps-5">
+                            No "cookie-cutter" routines. Nathalie assesses your specific "sticking points"—whether it's tight hips from driving or a stiff neck from the computer.
+                        </p>
+                    </div>
+
+                    <div class="s-pill-item animate__animated animate__fadeInRight animate__delay-2s">
+                        <div class="d-flex align-items-center gap-3 mb-2">
+                            <i class="ph ph-armchair text-gold-metallic h4 mb-0"></i>
+                            <h4 class="serif text-emerald-deep h4 mb-0">Luxury Privacy</h4>
+                        </div>
+                        <p class="small text-muted ps-5">
+                            Unlike open-floor stretch gyms, your session happens in a quiet, private clinical suite. No crowds, no noise—just focused, high-end recovery.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    .why-stretch-simple {
+        background-color: #FFFFFF;
+        padding: 120px 0;
+    }
+
+    .credential-badge-simple {
+        box-shadow: 15px 15px 0px #FAF9F3;
+        border: 1px solid #D4AF37;
+    }
+
+    .s-pill-item {
+        position: relative;
+        transition: 0.3s ease;
+    }
+
+    .s-pill-item:hover {
+        transform: translateX(10px);
+    }
+
+    .s-pill-item i {
+        font-size: 2.2rem;
+    }
+
+    .bg-ivory { background-color: #FAF9F3 !important; }
+
+    @media (max-width: 991px) {
+        .why-stretch-simple { padding: 80px 0; }
+        .credential-badge-simple { margin-bottom: 40px; }
+    }
+</style>
+<section class="structural-about-simple joy-both">
+    <div class="container">
+        
+        <div class="row align-items-center g-5 flex-row-reverse">
+            
+            <div class="col-lg-5 animate__animated animate__fadeIn">
+                <div class="structural-image-frame position-relative">
+                    <img src="https://images.unsplash.com/photo-1519824145371-296894a0daa9?auto=format&fit=crop&q=80" alt="Assisted Stretching Reset" class="img-fluid border-sharp-gold">
+                    
+                    <div class="floating-reset-badge bg-emerald-deep text-white p-4">
+                        <span class="d-block h2 serif text-gold-metallic mb-0">RESET</span>
+                        <p class="x-small ls-2 mb-0 uppercase">Posture & <br>Performance</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <h6 class="ls-wide text-gold-metallic mb-3">THE MIXTURE</h6>
+                <h2 class="display-3 text-emerald-deep mb-4">The Best of <br><span class="serif italic text-gold-metallic">Both Worlds</span></h2>
+                
+                <p class="lead-text-simple text-emerald-deep mb-5">
+                    Think of massage as the **pre-game** and stretching as the **victory**. Massage warms up your muscles and calms your nerves so they don't "fight" the movement. Once the muscle is soft, the stretching can go twice as deep, safely pulling your body back into its natural, long, and tall alignment.
+                </p>
+
+                <div class="mixture-pillars">
+                    <div class="mixture-item mb-4 pb-4 border-bottom-subtle">
+                        <h4 class="serif text-emerald-deep h5 mb-2">No "Snap-Back" Effect</h4>
+                        <p class="small text-muted mb-0">When you stretch a "cold" or hard muscle, it usually snaps right back to being tight. By mixing in massage first, we melt that hardness away so the stretch actually stays.</p>
+                    </div>
+
+                    <div class="mixture-item">
+                        <h4 class="serif text-emerald-deep h5 mb-2">3D Alignment</h4>
+                        <p class="small text-muted mb-0">Nathalie uses her hands to feel where the "tug" is coming from. If your neck is tight, she might massage your chest and stretch your arm—fixing the problem from the source, not just where it hurts.</p>
+                    </div>
+                </div>
+
+                <div class="mt-5 d-flex align-items-center gap-3">
+                    <i class="ph ph-bounding-box text-gold-metallic fs-4"></i>
+                    <p class="x-small text-muted ls-1 mb-0 uppercase">Perfect for athletes and office-athletes alike.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    .structural-about-simple {
+        background-color: #FAF9F3; /* Ivory */
+        padding: 120px 0;
+    }
+
+    .lead-text-simple {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        border-left: 3px solid #D4AF37;
+        padding-left: 25px;
+    }
+
+    .structural-image-frame img {
+        border-radius: 2px;
+        box-shadow: -20px 20px 0px #FFFFFF;
+        border: 1px solid rgba(212, 175, 55, 0.3);
+    }
+
+    .floating-reset-badge {
+        position: absolute;
+        bottom: -30px;
+        left: -30px;
+        border: 1px solid #D4AF37;
+        box-shadow: 0 20px 40px rgba(5, 44, 30, 0.15);
+        z-index: 10;
+    }
+
+    .border-bottom-subtle {
+        border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    @media (max-width: 991px) {
+        .structural-about-simple { padding: 80px 0; }
+        .floating-reset-badge { position: static; margin-top: 20px; text-align: center; }
+        .structural-image-frame { margin-bottom: 60px; }
+    }
+</style>
+
+
+<section class="stretch-faq-simple joy-both">
+    <div class="container">
+        
+        <div class="row mb-5">
+            <div class="col-lg-6">
+                <h6 class="ls-wide text-gold-metallic mb-3">YOUR QUESTIONS</h6>
+                <h2 class="display-3 text-emerald-deep mb-0"><span class="serif italic">FAQ</span></h2>
+            </div>
+        </div>
+
+        <div class="row g-5">
+            
+            <div class="col-lg-4">
+                <h4 class="serif text-gold-metallic h5 mb-4 border-bottom pb-2">01 — The Session</h4>
+                <div class="accordion accordion-flush stretch-faq-acc" id="faqS1">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#s1">What should I wear?</button></h2>
+                        <div id="s1" class="accordion-collapse collapse" data-bs-parent="#faqS1"><div class="accordion-body">Think "Yoga Ready." Leggings, gym shorts, or loose sweats are best. We need to be able to move your legs and arms without stiff fabric getting in the way.</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#s2">Is it just stretching?</button></h2>
+                        <div id="s2" class="accordion-collapse collapse" data-bs-parent="#faqS1"><div class="accordion-body">No. It’s a 50/50 mix. Nathalie uses massage to "soften" the muscles first so that the stretch is deeper and more effective.</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#s3">Will it hurt?</button></h2>
+                        <div id="s3" class="accordion-collapse collapse" data-bs-parent="#faqS1"><div class="accordion-body">It should feel like a "strong pull." If it ever feels sharp or painful, you just tell Nathalie and she backs off instantly. You are always in control.</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#s4">How long does it take?</button></h2>
+                        <div id="s4" class="accordion-collapse collapse" data-bs-parent="#faqS1"><div class="accordion-body">We offer 45, 75, and 105-minute sessions. Most people find 75 minutes is the "sweet spot" for a full-body reset.</div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <h4 class="serif text-gold-metallic h5 mb-4 border-bottom pb-2">02 — The Results</h4>
+                <div class="accordion accordion-flush stretch-faq-acc" id="faqS2">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#s5">Why not stretch at home?</button></h2>
+                        <div id="s5" class="accordion-collapse collapse" data-bs-parent="#faqS2"><div class="accordion-body">When you stretch yourself, your body often "tenses up" to protect itself. When Nathalie stretches you, your muscles can fully relax, reaching spots you can't hit alone.</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#s6">Does it help posture?</button></h2>
+                        <div id="s6" class="accordion-collapse collapse" data-bs-parent="#faqS2"><div class="accordion-body">Yes! We focus on the muscles that make you slouch. By lengthening your chest and hips, you’ll naturally stand taller without trying.</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#s7">Is it good for athletes?</button></h2>
+                        <div id="s7" class="accordion-collapse collapse" data-bs-parent="#faqS2"><div class="accordion-body">Absolutely. It’s the "secret weapon" for golf, tennis, and gym recovery. It keeps your joints "oiled" and your movement fluid.</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#s8">What is "Push-Relax"?</button></h2>
+                        <div id="s8" class="accordion-collapse collapse" data-bs-parent="#faqS2"><div class="accordion-body">It's a technique where you gently push against Nathalie's hand for 5 seconds. This "resets" the muscle so it can stretch much further than usual.</div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <h4 class="serif text-gold-metallic h5 mb-4 border-bottom pb-2">03 — The Rules</h4>
+                <div class="accordion accordion-flush stretch-faq-acc" id="faqS3">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#s9">Will I be sore tomorrow?</button></h2>
+                        <div id="s9" class="accordion-collapse collapse" data-bs-parent="#faqS3"><div class="accordion-body">You might feel a light "muscle glow," similar to the day after a yoga class. It’s a sign your muscles are adapting to their new length.</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#s10">How often should I go?</button></h2>
+                        <div id="s10" class="accordion-collapse collapse" data-bs-parent="#faqS3"><div class="accordion-body">For a major posture reset, once a week for a month is great. For maintenance, every 2-4 weeks keeps you from tightening back up.</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#s11">Can I go if I'm not flexible?</button></h2>
+                        <div id="s11" class="accordion-collapse collapse" data-bs-parent="#faqS3"><div class="accordion-body">Yes! This is actually *for* people who aren't flexible. You don't need to be a "yoga person" to get amazing results.</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#s12">Can I go after a workout?</button></h2>
+                        <div id="s12" class="accordion-collapse collapse" data-bs-parent="#faqS3"><div class="accordion-body">It’s perfect after a workout. It helps flush out lactic acid and prevents that "stiff-as-a-board" feeling the next day.</div></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    .stretch-faq-simple { background-color: #FFFFFF; padding: 120px 0; }
+    .stretch-faq-acc .accordion-item { border-bottom: 1px solid rgba(5, 44, 30, 0.1) !important; background: transparent; }
+    .stretch-faq-acc .accordion-button { padding: 20px 0; background: transparent !important; box-shadow: none !important; font-family: var(--serif); color: var(--emerald-deep); }
+    .stretch-faq-acc .accordion-button:not(.collapsed) { color: var(--gold-metallic); }
+    .stretch-faq-acc .accordion-body { padding: 0 0 20px 0; font-size: 0.9rem; color: #666; line-height: 1.6; }
+</style>
+<section class="stretch-cta-simple joy-both bg-white">
+    <div class="container">
+        
+        <div class="cta-banner-v61 d-flex flex-column flex-lg-row align-items-center justify-content-between animate__animated animate__fadeInUp">
+            
+            <div class="cta-text-left">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <span class="x-small text-gold-metallic ls-3 fw-bold uppercase">Ready to stand taller?</span>
+                    <div class="gold-line-simple"></div>
+                </div>
+                <h2 class="serif text-white display-4 mb-3">Give your body <br><span class="italic text-gold-metallic">room to breathe</span></h2>
+            </div>
+
+            <div class="cta-actions-right mt-5 mt-lg-0 text-center text-lg-end">
+                <div class="d-flex flex-column flex-sm-row gap-3 align-items-center">
+                    <button class="btn-cta-gold-sharp" data-bs-toggle="modal" data-bs-target="#stretchModal">
+                        Schedule Your Reset <i class="ph ph-arrows-out-line ms-2"></i>
+                    </button>
+                    
+                    <div class="cta-sub-contact border-start border-white-10 ps-4 ms-2 d-none d-sm-block text-start">
+                        <a href="tel:7862927551" class="text-white text-decoration-none x-small ls-2 fw-bold hover-gold d-block">786.292.7551</a>
+                        <span class="x-small text-gold-metallic opacity-50 uppercase ls-1">Bay Harbor Islands</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="text-center mt-5">
+            <p class="x-small text-muted ls-2 uppercase opacity-50">
+                <i class="ph ph-map-pin me-1"></i> Located in the heart of Bay Harbor · 1005 Kane Concourse
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    .stretch-cta-simple {
+        padding: 100px 0 60px 0;
+    }
+
+    .cta-banner-v61 {
+        background-color: #052c1e; /* Emerald Deep */
+        padding: 60px 70px;
+        border-radius: 2px;
+        border: 1px solid #D4AF37;
+        box-shadow: 0 30px 60px rgba(5, 44, 30, 0.2);
+        position: relative;
+    }
+
+    .gold-line-simple {
+        width: 40px;
+        height: 1px;
+        background: #D4AF37;
+    }
+
+    .btn-cta-gold-sharp {
+        background: #D4AF37;
+        color: #052c1e;
+        border: 1px solid #D4AF37;
+        padding: 22px 45px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.8rem;
+        transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        border-radius: 0;
+        white-space: nowrap;
+    }
+
+    .btn-cta-gold-sharp:hover {
+        background: transparent;
+        color: #FFFFFF;
+        border-color: #FFFFFF;
+        transform: translateY(-5px);
+    }
+
+    .border-white-10 { border-color: rgba(255,255,255,0.1) !important; }
+    .hover-gold:hover { color: #D4AF37 !important; transition: 0.3s; }
+
+    @media (max-width: 991px) {
+        .stretch-cta-simple { padding: 60px 0; }
+        .cta-banner-v61 { padding: 50px 30px; text-align: center; }
+        .cta-text-left { margin-bottom: 40px; }
+        .gold-line-simple { display: none; }
+        .d-flex { justify-content: center; }
+        .border-start { border: none !important; padding: 0 !important; margin: 0 !important; }
+        .cta-sub-contact { text-align: center !important; }
+    }
+</style>
+
+{% endblock body %}
+    
+
+
+{% block js %}
+    
+{% endblock js %}
+    

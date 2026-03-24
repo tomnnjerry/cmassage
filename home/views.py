@@ -35,6 +35,30 @@ def cupping_treatments(request):
 def prenatal_wellness(request):
     return render(request, 'services/prenatal.html')
 
+def kinetic_protocol_view(request):
+    """Integrated View: Massage + Cupping"""
+    context = {
+        'protocol_name': 'The Kinetic Protocol',
+        'service_slug': 'massage-with-cupping',
+        'clinical_focus': 'Decompression & Myofascial Release',
+        'intensity': 'LVL 04',
+        'duration': '60/90/120 Min',
+        'meta_description': 'A clinical integration of deep tissue massage and medical-grade cupping therapy in Bay Harbor.'
+    }
+    return render(request, 'services/kinetic.html', context)
+
+def structural_protocol_view(request):
+    """Integrated View: Massage + Stretching"""
+    context = {
+        'protocol_name': 'The Structural Protocol',
+        'service_slug': 'massage-with-stretching',
+        'clinical_focus': 'Biomechanical Reset & ROM Enhancement',
+        'intensity': 'LVL 03',
+        'duration': '45/75/105 Min',
+        'meta_description': 'Advanced assisted stretching combined with targeted massage to restore joint mobility.'
+    }
+    return render(request, 'services/structural.html', context)
+
 # --- Main Nav Pages ---
 
 def faq(request):
