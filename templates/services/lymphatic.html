@@ -1,0 +1,1243 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+
+
+<section class="service-hero-v3 purify-hero">
+    <div class="hero-image-overlay">
+        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&q=80" alt="Lymphatic Therapy">
+        <div class="gradient-shield-light"></div>
+    </div>
+
+    <div class="container position-relative z-5">
+        <div class="row">
+            <div class="col-lg-7">
+                
+                <div class="hero-text-block animate__animated animate__fadeInUp">
+                    <span class="modality-tag text-gold-metallic ls-3 mb-3 d-block fw-bold uppercase x-small">Modality 02 — Systemic Detox</span>
+                    
+                    <h1 class="display-1 text-white mb-4">
+                        The Purify <br>
+                        <span class="serif italic text-gold-metallic">Protocol.</span>
+                    </h1>
+
+                    <div class="description-box mb-5">
+                        <p class="lead text-white opacity-75">
+                            A specialized, light-touch treatment designed to flush out toxins and reduce swelling. We activate your body’s natural filtering system to eliminate bloating and boost your immune health.
+                        </p>
+                    </div>
+
+                    <div class="action-row d-flex align-items-center gap-5">
+                        <a href="#book" class="btn-luxury-sharp">
+                            Book Your Detox
+                        </a>
+
+                        <div class="v-stats d-flex gap-4 border-start border-gold-thin ps-4">
+                            <div class="stat-item">
+                                <span class="d-block text-gold-metallic h5 mb-0">60/90</span>
+                                <span class="x-small text-white opacity-50 ls-2 uppercase">Min</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="d-block text-gold-metallic h5 mb-0">LVL 01</span>
+                                <span class="x-small text-white opacity-50 ls-2 uppercase">Intensity</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="clinical-tag animate__animated animate__fadeInRight">
+        <span class="ls-2">CELLULAR FLOW · EST. BAY HARBOR ISLANDS</span>
+    </div>
+</section>
+
+<style>
+    .service-hero-v3.purify-hero {
+        min-height: 90vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+        background-color: var(--emerald-deep);
+        padding: 100px 0;
+        overflow: hidden;
+    }
+
+    /* THE IMAGE: Brighter and more "Water-like" */
+    .hero-image-overlay {
+        position: absolute;
+        top: 0; right: 0; width: 60%; height: 100%;
+        z-index: 1;
+    }
+    .hero-image-overlay img {
+        width: 100%; height: 100%; object-fit: cover;
+        filter: brightness(0.7) contrast(1.1);
+    }
+    
+    /* Using a softer gradient for the "Purify" feel */
+    .gradient-shield-light {
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: linear-gradient(to right, var(--emerald-deep) 35%, transparent 100%);
+    }
+
+    /* TYPOGRAPHY */
+    .display-1 {
+        font-weight: 800;
+        letter-spacing: -2px;
+        line-height: 0.9;
+    }
+
+    .description-box {
+        max-width: 550px;
+        border-left: 2px solid var(--gold-metallic);
+        padding-left: 30px;
+    }
+
+    .border-gold-thin { border-color: rgba(212, 175, 55, 0.3) !important; }
+
+    /* CLINICAL BADGE */
+    .clinical-tag {
+        position: absolute;
+        bottom: 0; right: 0;
+        background: var(--gold-metallic);
+        color: var(--emerald-deep);
+        padding: 15px 40px;
+        font-size: 0.65rem;
+        font-weight: 900;
+        z-index: 10;
+    }
+
+    /* BUTTON */
+    .btn-luxury-sharp {
+        background: var(--gold-metallic);
+        color: var(--emerald-deep);
+        padding: 20px 40px;
+        text-decoration: none;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.75rem;
+        transition: 0.4s;
+        display: inline-block;
+    }
+    .btn-luxury-sharp:hover {
+        background: white;
+        transform: translateY(-5px);
+    }
+
+    @media (max-width: 991px) {
+        .hero-image-overlay { width: 100%; opacity: 0.5; }
+        .display-1 { font-size: 3.5rem; }
+    }
+</style>
+
+
+
+
+<section class="purify-yield joy-both">
+    <div class="container">
+        
+        <div class="row mb-5 pb-lg-3 text-center">
+            <div class="col-12">
+                <h6 class="ls-wide text-gold-metallic mb-3">SYSTEMIC BENEFITS</h6>
+                <h2 class="display-3 text-emerald-deep mb-4">Restore your <span class="serif italic">natural flow</span></h2>
+                <p class="text-muted mx-auto" style="max-width: 600px;">
+                    The lymphatic system is your body’s waste management network. When it slows down, you feel heavy and swollen. We help "restart" the pump.
+                </p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            
+            <div class="col-lg-3 col-md-6 animate__animated animate__fadeInUp">
+                <div class="purify-card p-4 h-100 border-sharp-gold">
+                    <div class="yield-icon-box mb-4">
+                        <i class="ph ph-drop text-gold-metallic fs-2"></i>
+                    </div>
+                    <h3 class="serif text-emerald-deep h4 mb-3">Reduces Bloating</h3>
+                    <p class="small text-muted mb-0">
+                        Feeling puffy or heavy? We move trapped water and fluid back into circulation, instantly reducing swelling in the legs, arms, and face.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 animate__animated animate__fadeInUp animate__delay-1s" style="background-color: var(--emerald-deep);">
+                <div class="purify-card p-4 h-100 bg-emerald-deep text-white">
+                    <div class="yield-icon-box mb-4 bg-white border-0">
+                        <i class="ph ph-first-aid text-emerald-deep fs-2"></i>
+                    </div>
+                    <h3 class="serif text-gold-metallic h4 mb-3">Surgical Recovery</h3>
+                    <p class="small opacity-75 mb-0">
+                        Crucial for post-op healing. We accelerate the removal of bruising and inflammatory fluid, helping your tissues knit back together faster.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 animate__animated animate__fadeInUp animate__delay-2s">
+                <div class="purify-card p-4 h-100 border-sharp-gold">
+                    <div class="yield-icon-box mb-4">
+                        <i class="ph ph-shield-plus text-gold-metallic fs-2"></i>
+                    </div>
+                    <h3 class="serif text-emerald-deep h4 mb-3">Immune Boost</h3>
+                    <p class="small text-muted mb-0">
+                        By flushing out metabolic waste and toxins, your white blood cells can move more efficiently to protect your system from illness.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 animate__animated animate__fadeInUp animate__delay-3s">
+                <div class="purify-card p-4 h-100 border-sharp-gold">
+                    <div class="yield-icon-box mb-4">
+                        <i class="ph ph-sparkle text-gold-metallic fs-2"></i>
+                    </div>
+                    <h3 class="serif text-emerald-deep h4 mb-3">Cellular Glow</h3>
+                    <p class="small text-muted mb-0">
+                        When the internal pipes are clean, it shows on the outside. This treatment clears skin congestion and leaves you with a refreshed, vibrant look.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    .purify-yield {
+        background-color: var(--white);
+        padding: 120px 0;
+    }
+
+    /* THE CARD UX */
+    .purify-card {
+        border-radius: 4px;
+        transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .purify-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 30px 60px rgba(5, 44, 30, 0.08);
+        border-color: var(--emerald-deep);
+    }
+
+    /* THE ICON BOX */
+    .yield-icon-box {
+        width: 55px;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--ivory);
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        border-radius: 2px;
+    }
+
+    .purify-card.bg-emerald-deep {
+        box-shadow: 0 20px 40px rgba(5, 44, 30, 0.15);
+    }
+
+    @media (max-width: 991px) {
+        .purify-yield { padding: 80px 0; }
+    }
+</style>
+
+<section class="purify-candidates joy-both">
+    <div class="container">
+        
+        <div class="row mb-5 pb-lg-4">
+            <div class="col-lg-6">
+                <h6 class="ls-wide text-gold-metallic mb-3">IDENTIFYING STAGNATION</h6>
+                <h2 class="display-3 text-emerald-deep mb-4">Who is a <br><span class="serif italic text-gold-metallic">Candidate?</span></h2>
+            </div>
+            <div class="col-lg-5 offset-lg-1 d-flex align-items-end">
+                <p class="body-text text-muted border-start border-gold-thin ps-4">
+                    The Purify Protocol is for those whose systems feel "stuck." Whether it is post-surgical swelling or daily bloating, we help clear the path.
+                </p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="candidate-card p-4 h-100 border-sharp-gold bg-emerald-deep text-white">
+                    <h4 class="serif text-gold-metallic h4 mb-4">The Post-Op <br>Patient</h4>
+                    <ul class="candidate-list list-unstyled x-small ls-1 fw-bold opacity-75">
+                        <li>— LIPO / BBL RECOVERY</li>
+                        <li>— TUMMY TUCK HEALING</li>
+                        <li>— FACIAL SURGERY SWELLING</li>
+                        <li>— ORTHOPEDIC POST-OP</li>
+                        <li>— SCAR TISSUE PREVENTION</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="candidate-card p-4 h-100 border-sharp-gold">
+                    <h4 class="serif text-emerald-deep h4 mb-4">The High-Flyer <br>& Traveler</h4>
+                    <ul class="candidate-list list-unstyled x-small ls-1 fw-bold text-muted">
+                        <li>— JET LAG RECOVERY</li>
+                        <li>— SWOLLEN ANKLES/FEET</li>
+                        <li>— SYSTEMIC DEHYDRATION</li>
+                        <li>— LONG-HAUL INFLAMMATION</li>
+                        <li>— CORTISOL (STRESS) FLUSH</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="candidate-card p-4 h-100 border-sharp-gold bg-ivory">
+                    <h4 class="serif text-emerald-deep h4 mb-4">The Puffy <br>& Bloated</h4>
+                    <ul class="candidate-list list-unstyled x-small ls-1 fw-bold text-muted">
+                        <li>— DIGESTIVE BLOATING</li>
+                        <li>— HORMONAL WATER WEIGHT</li>
+                        <li>— GENERAL PUFFINESS</li>
+                        <li>— SLUGGISH METABOLISM</li>
+                        <li>— BRAIN FOG / HEAVINESS</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="candidate-card p-4 h-100 border-sharp-gold">
+                    <h4 class="serif text-emerald-deep h4 mb-4">The Immune <br>Supporter</h4>
+                    <ul class="candidate-list list-unstyled x-small ls-1 fw-bold text-muted">
+                        <li>— SEASONAL ALLERGIES</li>
+                        <li>— CHRONIC FATIGUE</li>
+                        <li>— SLOW HEALING TIME</li>
+                        <li>— SYSTEMIC TOXIN CLEARING</li>
+                        <li>— POST-ILLNESS RECOVERY</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row mt-5 pt-lg-4 justify-content-center text-center">
+            <div class="col-lg-8">
+                <p class="serif text-emerald-deep h5 mb-4">Unsure if your condition is a match?</p>
+                <button class="btn-luxury-outline" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                    Consult with Nathalie
+                </button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    .purify-candidates {
+        background-color: var(--white);
+        padding: 120px 0;
+    }
+
+    .candidate-card {
+        border-radius: 4px;
+        transition: all 0.5s ease;
+    }
+
+    .candidate-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(5, 44, 30, 0.05);
+        border-color: var(--gold-metallic);
+    }
+
+    .candidate-list li {
+        margin-bottom: 12px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    }
+
+    .candidate-list li:last-child {
+        border-bottom: none;
+    }
+
+    .btn-luxury-outline {
+        background: transparent;
+        border: 1px solid var(--emerald-deep);
+        color: var(--emerald-deep);
+        padding: 18px 35px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.75rem;
+        transition: 0.4s;
+    }
+
+    .btn-luxury-outline:hover {
+        background: var(--emerald-deep);
+        color: white;
+    }
+
+    @media (max-width: 991px) {
+        .purify-candidates { padding: 80px 0; }
+    }
+</style>
+
+
+
+<section class="purify-booking joy-both">
+    <div class="container">
+        
+        <div class="row justify-content-center mb-5 pb-lg-5">
+            <div class="col-lg-10">
+                <div class="purify-timeline d-flex justify-content-between align-items-center">
+                    
+                    <div class="t-node text-center">
+                        <span class="t-number serif italic">01</span>
+                        <h4 class="x-small ls-2 fw-bold text-emerald-deep uppercase">Schedule</h4>
+                    </div>
+
+                    <div class="t-line"></div>
+
+                    <div class="t-node text-center">
+                        <span class="t-number serif italic">02</span>
+                        <h4 class="x-small ls-2 fw-bold text-emerald-deep uppercase">Intake</h4>
+                    </div>
+
+                    <div class="t-line"></div>
+
+                    <div class="t-node text-center">
+                        <span class="t-number serif italic">03</span>
+                        <h4 class="x-small ls-2 fw-bold text-emerald-deep uppercase">Detox</h4>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            
+            <div class="col-lg-5">
+                <div class="booking-card-v12 light-mode p-5 h-100 animate__animated animate__fadeInLeft">
+                    <h6 class="ls-wide text-gold-metallic mb-3">FIRST-TIME DETOX</h6>
+                    <h2 class="serif text-emerald-deep h2 mb-4">New Patients.</h2>
+                    <p class="small text-muted mb-5">
+                        Your first session includes a 10-minute consultation. We discuss your surgery history or swelling areas to map your drainage path.
+                    </p>
+                    
+                    <button class="btn-purify-dark w-100" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                        Start My Detox
+                    </button>
+                    
+                    <p class="x-small text-center mt-3 opacity-50 italic">Digital Intake Required After Booking</p>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="booking-card-v12 dark-mode p-5 h-100 animate__animated animate__fadeInRight">
+                    <h6 class="ls-wide text-gold-metallic mb-3">MAINTENANCE FLOW</h6>
+                    <h2 class="serif text-white h2 mb-4">Returning.</h2>
+                    <p class="small text-white opacity-75 mb-5">
+                        Keep your system clean. Select your 60 or 90-minute session to continue your swelling reduction and immune support.
+                    </p>
+                    
+                    <button class="btn-purify-gold w-100" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                        Book Follow-Up
+                    </button>
+                    
+                    <p class="x-small text-center text-white mt-3 opacity-50 italic">Quick-Select Booking Enabled</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<style>
+    .purify-booking {
+        background-color: var(--white);
+        padding: 100px 0;
+    }
+
+    /* THE TIMELINE */
+    .purify-timeline { position: relative; }
+    
+    .t-number {
+        font-size: 2.5rem;
+        line-height: 1;
+        color: var(--emerald-deep);
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .t-line {
+        flex-grow: 1;
+        height: 1px;
+        background: rgba(5, 44, 30, 0.1);
+        margin: 0 20px;
+        margin-bottom: 35px; /* Aligns with numbers */
+    }
+
+    /* THE CARDS */
+    .booking-card-v12 {
+        border-radius: 4px;
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        transition: all 0.5s ease;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .light-mode { 
+        background-color: var(--white); 
+        box-shadow: 20px 20px 0px var(--ivory);
+    }
+
+    .dark-mode { 
+        background-color: var(--emerald-deep) !important; 
+        border-color: var(--emerald-deep);
+    }
+
+    .booking-card-v12:hover {
+        transform: translateY(-10px);
+        border-color: var(--gold-metallic);
+    }
+
+    /* BUTTONS */
+    .btn-purify-dark {
+        background: var(--emerald-deep);
+        color: var(--gold-metallic);
+        border: 1px solid var(--emerald-deep);
+        padding: 20px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.75rem;
+    }
+
+    .btn-purify-gold {
+        background: var(--gold-metallic);
+        color: var(--emerald-deep);
+        border: 1px solid var(--gold-metallic);
+        padding: 20px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.75rem;
+    }
+
+    .btn-purify-dark:hover, .btn-purify-gold:hover {
+        filter: brightness(1.2);
+    }
+
+    @media (max-width: 991px) {
+        .t-line { display: none; }
+        .purify-timeline { flex-direction: column; gap: 30px; }
+        .booking-card-v12 { padding: 40px 30px !important; }
+    }
+</style>
+<div class="modal fade" id="bookingModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-white border-sharp-gold">
+            
+            <div class="modal-header border-0 p-4 pb-0">
+                <div class="modal-head-text">
+                    <h5 class="serif text-emerald-deep h3 mb-1">Initiate <span class="italic text-gold-metallic">Purify.</span></h5>
+                    <p class="x-small text-muted ls-2 mb-0 uppercase">Lymphatic Drainage · Bay Harbor Suite</p>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body p-4">
+                <div class="booking-iframe-container bg-ivory d-flex align-items-center justify-content-center border-sharp-gold overflow-hidden">
+                    
+                    <div class="loader-placeholder text-center p-5" id="iframeLoader">
+                        <i class="ph ph-spinner-gap animate-spin display-4 text-gold-metallic mb-3"></i>
+                        <p class="serif italic text-emerald-deep">Connecting to secure server...</p>
+                    </div>
+
+                    <iframe 
+                        id="bookingIframe"
+                        src="https://your-booking-link-here.com" 
+                        style="width:100%; height:600px; border:none; display:none;" 
+                        onload="document.getElementById('iframeLoader').style.display='none'; this.style.display='block';">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="modal-footer border-0 p-4 justify-content-center bg-ivory">
+                <div class="text-center">
+                    <p class="x-small text-muted mb-1 italic">Secure 256-bit Encrypted Booking</p>
+                    <p class="x-small fw-bold text-emerald-deep ls-1 mb-0">QUESTIONS? TEXT "PURIFY" TO 786-292-7551</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* MODAL DESIGN REFINEMENTS */
+    .modal-content {
+        border-radius: 4px;
+        box-shadow: 0 50px 100px rgba(5, 44, 30, 0.3);
+    }
+
+    .booking-iframe-container {
+        min-height: 500px;
+        position: relative;
+        background-color: #fcfcfc;
+    }
+
+    .border-sharp-gold {
+        border: 1px solid var(--gold-metallic) !important;
+    }
+
+    /* THE LOADING SPINNER */
+    @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+    .animate-spin {
+        animation: spin 2s linear infinite;
+        display: inline-block;
+    }
+
+    .bg-ivory {
+        background-color: #FAF9F3 !important;
+    }
+
+    .btn-close {
+        filter: brightness(0) saturate(100%) invert(13%) sepia(21%) saturate(1592%) hue-rotate(117deg) brightness(92%) contrast(97%); /* Colors it Emerald Deep */
+    }
+
+    /* Handle mobile height */
+    @media (max-width: 767px) {
+        .booking-iframe-container {
+            min-height: 400px;
+        }
+        #bookingIframe {
+            height: 450px !important;
+        }
+    }
+</style>
+
+
+<section class="purify-reviews joy-both">
+    <div class="container">
+        
+        <div class="row mb-5 pb-lg-4 align-items-end">
+            <div class="col-lg-6 animate__animated animate__fadeIn">
+                <h6 class="ls-wide text-gold-metallic mb-3">PATIENT EXPERIENCES</h6>
+                <h2 class="display-3 text-emerald-deep mb-0">Voices of <br><span class="serif italic text-gold-metallic">Clarity.</span></h2>
+            </div>
+            <div class="col-lg-5 offset-lg-1">
+                <p class="text-muted border-start border-gold-thin ps-4 mb-0">
+                    Trusted by post-surgical patients and wellness enthusiasts across Miami for clinical lymphatic drainage and systemic detoxification.
+                </p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            
+            <div class="col-lg-4 animate__animated animate__fadeInUp">
+                <div class="purify-review-card p-5 h-100 border-sharp-gold">
+                    <div class="stars-gold mb-4">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p class="serif text-emerald-deep h4 mb-4">"I had a tummy tuck and the swelling was painful. After just two sessions with Nathalie, I could finally see my results. She is a genius at post-op care."</p>
+                    <div class="review-meta pt-4 border-top">
+                        <span class="d-block fw-bold text-emerald-deep">Sarah L.</span>
+                        <span class="x-small ls-1 text-gold-metallic uppercase">Post-Op Patient · Google Review</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 animate__animated animate__fadeInUp animate__delay-1s">
+                <div class="purify-review-card p-5 h-100 bg-emerald-deep text-white">
+                    <div class="stars-gold mb-4">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p class="serif h4 mb-4">"I struggled with bloating and feeling 'heavy' for months. This treatment is like a reset button for the body. I walked out feeling light, thin, and full of energy."</p>
+                    <div class="review-meta pt-4 border-top border-white-20">
+                        <span class="d-block fw-bold text-white">James K.</span>
+                        <span class="x-small ls-1 text-gold-metallic uppercase">Wellness Client · Verified</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 animate__animated animate__fadeInUp animate__delay-2s">
+                <div class="purify-review-card p-5 h-100 border-sharp-gold">
+                    <div class="stars-gold mb-4">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p class="serif text-emerald-deep h4 mb-4">"I travel 20 days a month and get major jet lag and swollen ankles. The Purify Protocol fixed me in one hour. I won't fly without booking this after."</p>
+                    <div class="review-meta pt-4 border-top">
+                        <span class="d-block fw-bold text-emerald-deep">Rachel V.</span>
+                        <span class="x-small ls-1 text-gold-metallic uppercase">Frequent Traveler · Google Review</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row mt-5 pt-lg-4 text-center">
+            <div class="col-12">
+                <a href="https://www.google.com/search?q=Cathartic+Massage+florida" target="_blank" class="google-trust-link">
+                    <i class="ph ph-google-logo me-2"></i> Join 130+ Happy Patients on Google
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    .purify-reviews {
+        background-color: var(--ivory);
+        padding: 140px 0;
+    }
+
+    .purify-review-card {
+        background-color: #FFFFFF;
+        border-radius: 4px;
+        transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .purify-review-card:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 40px 80px rgba(5, 44, 30, 0.08);
+    }
+
+    .stars-gold {
+        color: var(--gold-metallic);
+        font-size: 0.8rem;
+    }
+
+    .border-white-20 { border-color: rgba(255,255,255,0.1) !important; }
+
+    .google-trust-link {
+        color: var(--emerald-deep);
+        text-decoration: none;
+        font-weight: 800;
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        border-bottom: 2px solid var(--gold-metallic);
+        padding-bottom: 5px;
+        transition: 0.3s;
+    }
+
+    .google-trust-link:hover {
+        color: var(--gold-metallic);
+    }
+
+    @media (max-width: 991px) {
+        .purify-reviews { padding: 80px 0; }
+    }
+</style>
+
+
+<section class="recovery-blueprint joy-both">
+    <div class="container">
+        
+        <div class="row mb-5 pb-lg-3 text-center">
+            <div class="col-12">
+                <h6 class="ls-wide text-gold-metallic mb-3">POST-DETOX GUIDE</h6>
+                <h2 class="display-3 text-emerald-deep mb-4">What to <span class="serif italic">expect.</span></h2>
+                <p class="text-muted mx-auto" style="max-width: 600px;">
+                    Your body will continue to detox for 48 hours after your session. Follow these simple steps to get the best results from your Purify Protocol.
+                </p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            
+            <div class="col-lg-3 col-md-6 animate__animated animate__fadeInUp">
+                <div class="recovery-card p-4 h-100 border-sharp-gold">
+                    <span class="serif text-gold-metallic display-6 mb-3 d-block">01</span>
+                    <h3 class="serif text-emerald-deep h4 mb-3">Hydrate Well</h3>
+                    <p class="small text-muted mb-0">
+                        Drink at least 2 extra glasses of water today. This helps your kidneys flush out the toxins we moved during the session.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 animate__animated animate__fadeInUp animate__delay-1s">
+                <div class="recovery-card p-4 h-100 bg-emerald-deep text-white">
+                    <span class="serif text-gold-metallic display-6 mb-3 d-block">02</span>
+                    <h3 class="serif text-gold-metallic h4 mb-3">The "Flush"</h3>
+                    <p class="small opacity-75 mb-0">
+                        It is normal to use the bathroom more frequently for the next 24 hours. This is a sign that your lymphatic system is successfully draining.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 animate__animated animate__fadeInUp animate__delay-2s">
+                <div class="recovery-card p-4 h-100 border-sharp-gold">
+                    <span class="serif text-gold-metallic display-6 mb-3 d-block">03</span>
+                    <h3 class="serif text-emerald-deep h4 mb-3">Monitor Energy</h3>
+                    <p class="small text-muted mb-0">
+                        You may feel an "energy boost" or deep relaxation. Both are normal as your systemic inflammation goes down.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 animate__animated animate__fadeInUp animate__delay-3s">
+                <div class="recovery-card p-4 h-100 border-sharp-gold">
+                    <span class="serif text-gold-metallic display-6 mb-3 d-block">04</span>
+                    <h3 class="serif text-emerald-deep h4 mb-3">Eat Light</h3>
+                    <p class="small text-muted mb-0">
+                        Avoid heavy, salty meals and alcohol for 24 hours. Salt causes your body to hold onto the fluid we just drained.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row mt-5 pt-lg-4">
+            <div class="col-12">
+                <div class="pro-tip-strip d-flex align-items-center justify-content-center p-4 bg-ivory border-sharp-gold">
+                    <i class="ph ph-info text-gold-metallic fs-3 me-3"></i>
+                    <p class="small text-emerald-deep mb-0"><strong>PRO-TIP:</strong> Wear loose clothing after your session to keep the lymphatic flow moving without restriction.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    .recovery-blueprint {
+        background-color: var(--white);
+        padding: 120px 0;
+    }
+
+    .recovery-card {
+        border-radius: 4px;
+        transition: 0.4s ease;
+    }
+
+    .recovery-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(5, 44, 30, 0.05);
+        border-color: var(--gold-metallic);
+    }
+
+    .bg-ivory { background-color: #FAF9F3 !important; }
+
+    .pro-tip-strip {
+        box-shadow: 10px 10px 0px rgba(212, 175, 55, 0.1);
+    }
+
+    @media (max-width: 991px) {
+        .recovery-blueprint { padding: 80px 0; }
+    }
+</style>
+
+<section class="why-purify joy-both">
+    <div class="container">
+        
+        <div class="row align-items-center g-5">
+            
+            <div class="col-lg-5 animate__animated animate__fadeIn">
+                <h6 class="ls-wide text-gold-metallic mb-3">THE CATHARTIC STANDARD</h6>
+                <h2 class="display-3 text-emerald-deep mb-4">Precision over <br><span class="serif italic text-gold-metallic">pressure.</span></h2>
+                <p class="body-text text-muted mb-5">
+                    Most spas offer "Lymphatic Massage" as a relaxation treatment. At Cathartic, we treat it as a clinical necessity. Nathalie Koffler combines anatomical knowledge with a specialized touch to ensure your system actually drains.
+                </p>
+                
+                <div class="experience-badge p-4 border-sharp-gold bg-ivory d-inline-block">
+                    <span class="h2 serif text-emerald-deep mb-0">15+</span>
+                    <p class="x-small ls-2 fw-bold text-gold-metallic mb-0 uppercase">Years of Clinical <br>Bodywork Expertise</p>
+                </div>
+            </div>
+
+            <div class="col-lg-6 offset-lg-1">
+                <div class="diff-list">
+                    
+                    <div class="diff-item mb-5 animate__animated animate__fadeInRight">
+                        <div class="d-flex align-items-center gap-3 mb-2">
+                            <i class="ph ph-stethoscope text-gold-metallic h4 mb-0"></i>
+                            <h4 class="serif text-emerald-deep h4 mb-0">Surgeon-Trusted Protocol</h4>
+                        </div>
+                        <p class="small text-muted ps-5">
+                            Nathalie is the preferred specialist for Miami’s top plastic surgeons. We understand the specific needs of post-op tissue and how to handle delicate healing areas safely.
+                        </p>
+                    </div>
+
+                    <div class="diff-item mb-5 animate__animated animate__fadeInRight animate__delay-1s">
+                        <div class="d-flex align-items-center gap-3 mb-2">
+                            <i class="ph ph-map-trifold text-gold-metallic h4 mb-0"></i>
+                            <h4 class="serif text-emerald-deep h4 mb-0">Anatomical Mapping</h4>
+                        </div>
+                        <p class="small text-muted ps-5">
+                            We don't use a "one-size-fits-all" routine. We map your specific areas of stagnation—whether it's from surgery, travel, or diet—to get the fluid moving exactly where it needs to go.
+                        </p>
+                    </div>
+
+                    <div class="diff-item animate__animated animate__fadeInRight animate__delay-2s">
+                        <div class="d-flex align-items-center gap-3 mb-2">
+                            <i class="ph ph-door-open text-gold-metallic h4 mb-0"></i>
+                            <h4 class="serif text-emerald-deep h4 mb-0">Private Clinical Suite</h4>
+                        </div>
+                        <p class="small text-muted ps-5">
+                            Located in the heart of Bay Harbor Islands, our suite is a private, quiet sanctuary. No crowded lobbies or noisy spa environments—just focused, one-on-one clinical care.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    .why-purify {
+        background-color: var(--white);
+        padding: 140px 0;
+    }
+
+    .experience-badge {
+        box-shadow: 20px 20px 0px rgba(212, 175, 55, 0.05);
+    }
+
+    .diff-item {
+        position: relative;
+        transition: 0.3s ease;
+    }
+
+    .diff-item:hover {
+        transform: translateX(10px);
+    }
+
+    .diff-item i {
+        font-size: 1.8rem;
+    }
+
+    .border-sharp-gold {
+        border: 1px solid var(--gold-metallic) !important;
+    }
+
+    @media (max-width: 991px) {
+        .why-purify { padding: 80px 0; }
+        .experience-badge { margin-bottom: 40px; }
+    }
+</style>
+
+
+<section class="purify-definition-v19 joy-both">
+    <div class="container">
+        
+        <div class="row align-items-center g-5">
+            
+            <div class="col-lg-6">
+                <h6 class="ls-wide text-gold-metallic mb-3">THE SCIENCE OF DETOX</h6>
+                <h2 class="display-3 text-emerald-deep mb-4">What is <br><span class="serif italic">Lymphatic Drainage?</span></h2>
+                
+                <p class="lead-text-sharp text-emerald-deep mb-5">
+                    Your lymphatic system is your body’s **internal filtration network.** Unlike your heart, it doesn’t have a pump. It relies on movement and specialized pressure to flush out waste, toxins, and excess fluid.
+                </p>
+
+                <div class="clinical-pillars">
+                    <div class="pillar-item mb-4 pb-4 border-bottom-gold-subtle">
+                        <div class="d-flex align-items-center mb-2">
+                            <span class="x-small fw-bold text-gold-metallic ls-2 me-3">01. THE METHOD</span>
+                            <div class="h-line-gold"></div>
+                        </div>
+                        <h4 class="serif text-emerald-deep h5">The Gentle Rhythmn</h4>
+                        <p class="small text-muted mb-0">We use extremely light, rhythmic strokes—not heavy pressure—to stimulate the lymph nodes and encourage fluid to move toward your body's natural drainage points.</p>
+                    </div>
+
+                    <div class="pillar-item">
+                        <div class="d-flex align-items-center mb-2">
+                            <span class="x-small fw-bold text-gold-metallic ls-2 me-3">02. THE RESULT</span>
+                            <div class="h-line-gold"></div>
+                        </div>
+                        <h4 class="serif text-emerald-deep h5">Systemic Decompression</h4>
+                        <p class="small text-muted mb-0">By clearing out stagnant fluid, we reduce internal "pressure." This results in immediate visible slimming, reduced swelling, and a stronger immune system.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5 offset-lg-1 animate__animated animate__fadeIn">
+                <div class="purify-image-box position-relative">
+                    <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80" alt="Detox Ritual" class="img-fluid border-sharp-gold shadow-luxury">
+                    <div class="floating-stat bg-emerald-deep text-white p-4 border-sharp-gold">
+                        <span class="d-block h3 serif text-gold-metallic mb-0">100%</span>
+                        <p class="x-small ls-1 mb-0 uppercase">Manual & Non-Invasive</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    .purify-definition-v19 {
+        background-color: var(--ivory);
+        padding: 140px 0;
+    }
+
+    .lead-text-sharp {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        border-left: 3px solid var(--gold-metallic);
+        padding-left: 25px;
+    }
+
+    .h-line-gold {
+        flex-grow: 1;
+        height: 1px;
+        background: rgba(212, 175, 55, 0.3);
+    }
+
+    .border-bottom-gold-subtle {
+        border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+    }
+
+    /* THE IMAGE BOX */
+    .purify-image-box img {
+        border-radius: 4px;
+        box-shadow: 20px 20px 0px var(--white);
+    }
+
+    .floating-stat {
+        position: absolute;
+        top: -30px;
+        right: -30px;
+        min-width: 180px;
+        text-align: center;
+        box-shadow: 0 20px 40px rgba(5, 44, 30, 0.2);
+    }
+
+    @media (max-width: 991px) {
+        .purify-definition-v19 { padding: 80px 0; }
+        .purify-image-box { margin-top: 60px; }
+        .floating-stat { position: static; margin-bottom: 20px; }
+    }
+</style>
+
+
+
+
+
+
+<section class="purify-faq-v14 joy-both">
+    <div class="container">
+        
+        <div class="row mb-5 pb-lg-3">
+            <div class="col-lg-6">
+                <h6 class="ls-wide text-gold-metallic mb-3">CONCIERGE GUIDE</h6>
+                <h2 class="display-3 text-emerald-deep mb-0">System <span class="serif italic">FAQs.</span></h2>
+            </div>
+        </div>
+
+        <div class="row g-5">
+            
+            <div class="col-lg-4">
+                <h4 class="serif text-gold-metallic h5 mb-4 border-bottom pb-2">01 — Preparation</h4>
+                <div class="accordion accordion-flush sharp-faq" id="faqPrep">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#p1">What should I wear?</button></h2>
+                        <div id="p1" class="accordion-collapse collapse" data-bs-parent="#faqPrep"><div class="accordion-body">Loose, comfortable clothing is best. For the session, you will be professionally draped with a sheet at all times.</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#p2">Should I hydrate before?</button></h2>
+                        <div id="p2" class="accordion-collapse collapse" data-bs-parent="#faqPrep"><div class="accordion-body">Yes. Drinking a glass of water before you arrive helps prime your system for the drainage process.</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#p3">Can I eat before?</button></h2>
+                        <div id="p3" class="accordion-collapse collapse" data-bs-parent="#faqPrep"><div class="accordion-body">Keep it light. Avoid heavy meals 1 hour before, as we will be working on the abdominal area to activate lymph nodes.</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#p4">Do I need doctor's clearance?</button></h2>
+                        <div id="p4" class="accordion-collapse collapse" data-bs-parent="#faqPrep"><div class="accordion-body">If you are post-surgery, please ensure your surgeon has cleared you for manual lymphatic drainage (usually 1-2 weeks post-op).</div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <h4 class="serif text-gold-metallic h5 mb-4 border-bottom pb-2">02 — The Session</h4>
+                <div class="accordion accordion-flush sharp-faq" id="faqSession">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#s1">Does it hurt?</button></h2>
+                        <div id="s1" class="accordion-collapse collapse" data-bs-parent="#faqSession"><div class="accordion-body">Not at all. This is a very light, rhythmic touch. It is designed to be incredibly relaxing, not painful like deep tissue.</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#s2">Is it a regular massage?</button></h2>
+                        <div id="s2" class="accordion-collapse collapse" data-bs-parent="#faqSession"><div class="accordion-body">No. We don't use oils or deep pressure. We use precise, manual strokes to "pump" fluid through your lymphatic vessels.</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#s3">What about my stitches?</button></h2>
+                        <div id="s3" class="accordion-collapse collapse" data-bs-parent="#faqSession"><div class="accordion-body">Nathalie is trained to work safely around incisions. We never apply pressure directly to fresh stitches or wounds.</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#s4">How long is each session?</button></h2>
+                        <div id="s4" class="accordion-collapse collapse" data-bs-parent="#faqSession"><div class="accordion-body">We offer 60-minute sessions for targeted work or 90-minute sessions for a full-body systemic detox.</div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <h4 class="serif text-gold-metallic h5 mb-4 border-bottom pb-2">03 — Recovery & Results</h4>
+                <div class="accordion accordion-flush sharp-faq" id="faqAfter">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#a1">Why do I have to pee?</button></h2>
+                        <div id="a1" class="accordion-collapse collapse" data-bs-parent="#faqAfter"><div class="accordion-body">That is the goal! The fluid we drain is processed by your kidneys. Frequent urination is the sign that the detox is working.</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#a2">How many sessions do I need?</button></h2>
+                        <div id="a2" class="accordion-collapse collapse" data-bs-parent="#faqAfter"><div class="accordion-body">For wellness, once a month is great. For post-surgery recovery, 2-3 sessions per week are usually recommended initially.</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#a3">Can I drink alcohol after?</button></h2>
+                        <div id="a3" class="accordion-collapse collapse" data-bs-parent="#faqAfter"><div class="accordion-body">We recommend skipping alcohol for 24 hours. Your liver is busy processing the detox; don't give it extra work!</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#a4">Is there any downtime?</button></h2>
+                        <div id="a4" class="accordion-collapse collapse" data-bs-parent="#faqAfter"><div class="accordion-body">None. You may feel slightly tired or "light," but most clients go right back to their day feeling refreshed.</div></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    .purify-faq-v14 {
+        background-color: var(--white);
+        padding: 120px 0;
+    }
+
+    /* THE ACCORDION UX */
+    .sharp-faq .accordion-item {
+        background-color: transparent;
+        border-bottom: 1px solid rgba(5, 44, 30, 0.1) !important;
+    }
+
+    .sharp-faq .accordion-button {
+        padding: 20px 0;
+        background-color: transparent !important;
+        box-shadow: none !important;
+        font-family: var(--serif);
+        font-size: 1.1rem;
+        color: var(--emerald-deep);
+        transition: 0.3s;
+    }
+
+    .sharp-faq .accordion-button:not(.collapsed) {
+        color: var(--gold-metallic);
+    }
+
+    .sharp-faq .accordion-body {
+        padding: 0 0 20px 0;
+        font-size: 0.95rem;
+        color: #666;
+        line-height: 1.6;
+    }
+
+    /* GOLD CHEVRON ICON */
+    .sharp-faq .accordion-button::after {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23D4AF37'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+    }
+
+    @media (max-width: 991px) {
+        .purify-faq-v14 { padding: 80px 0; }
+    }
+</style>
+
+
+
+<section class="purify-cta-v20 joy-both">
+    <div class="container">
+        
+        <div class="cta-shield-purify d-flex flex-column flex-lg-row align-items-center justify-content-between animate__animated animate__fadeInUp">
+            
+            <div class="cta-text-side">
+                <div class="d-flex align-items-center gap-3 mb-2">
+                    <span class="x-small text-gold-metallic ls-3 fw-bold uppercase">Systemic Reset</span>
+                    <div class="gold-line-short"></div>
+                </div>
+                <h2 class="serif text-white h1 mb-2">Ready to restore <br>your <span class="italic text-gold-metallic">natural flow?</span></h2>
+                <p class="x-small text-white opacity-50 ls-1 mb-0 uppercase">BAY HARBOR ISLANDS · CLINICAL LYMPHATIC SPECIALIST</p>
+            </div>
+
+            <div class="cta-action-side mt-4 mt-lg-0 text-center text-lg-end">
+                <div class="d-flex flex-column flex-sm-row gap-3 align-items-center">
+                    <button class="btn-purify-action" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                        Secure My Detox <i class="ph ph-drop-half-bottom ms-2"></i>
+                    </button>
+                    <a href="tel:7862927551" class="text-white text-decoration-none x-small ls-2 fw-bold hover-gold border-start border-white-20 ps-4 ms-2 d-none d-sm-block">
+                        786.292.7551
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="text-center mt-5">
+            <p class="x-small text-muted ls-2 uppercase opacity-50">1005 Kane Concourse · Suite #211 · Bay Harbor Islands, FL</p>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    .purify-cta-v20 {
+        padding: 100px 0 60px 0;
+        background-color: var(--white);
+    }
+
+    .cta-shield-purify {
+        background-color: var(--emerald-deep) !important;
+        border: 1px solid var(--gold-metallic);
+        padding: 50px 60px;
+        border-radius: 4px;
+        box-shadow: 0 30px 60px rgba(5, 44, 30, 0.2);
+        position: relative;
+    }
+
+    /* THE LINE ACCENT */
+    .gold-line-short {
+        width: 30px;
+        height: 1px;
+        background: var(--gold-metallic);
+    }
+
+    /* THE BUTTON */
+    .btn-purify-action {
+        background: var(--gold-metallic);
+        color: var(--emerald-deep);
+        border: 1px solid var(--gold-metallic);
+        padding: 18px 40px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.75rem;
+        transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        border-radius: 2px;
+        white-space: nowrap;
+    }
+
+    .btn-purify-action:hover {
+        background: white;
+        color: var(--emerald-deep);
+        border-color: white;
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+
+    /* HELPERS */
+    .border-white-20 { border-color: rgba(255,255,255,0.2) !important; }
+    .hover-gold:hover { color: var(--gold-metallic) !important; transition: 0.3s; }
+
+    @media (max-width: 991px) {
+        .purify-cta-v20 { padding: 60px 0; }
+        .cta-shield-purify { padding: 40px 30px; text-align: center; }
+        .cta-text-side { margin-bottom: 30px; }
+        .gold-line-short { display: none; }
+        .d-flex { justify-content: center; }
+        .border-start { border: none !important; padding: 0 !important; margin: 0 !important; }
+    }
+</style>
+{% endblock body %}

@@ -1,0 +1,1650 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header %}
+
+{% endblock header %}
+
+{% block css %}
+    
+{% endblock css %}
+    
+
+
+{% block body %}
+    
+<style>
+    
+    
+    /* THE READABILITY FIX: Hero Section */
+    .hero-v2 {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        background-color: var(--emerald-deep);
+        overflow: hidden;
+    }
+
+    .hero-split {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 100%;
+        width: 100%;
+    }
+
+    /* Text Side: Absolute Clarity */
+    .hero-content-side {
+        padding: 0 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: var(--emerald-deep);
+        z-index: 2;
+    }
+
+    /* Image Side: Sharp Visuals */
+    .hero-image-side {
+        position: relative;
+        background-image: url('https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&q=80');
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* The "Apple" Gradient Edge: Blending Image to Text for Readability */
+    .hero-image-side::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; width: 30%; height: 100%;
+        background: linear-gradient(to right, var(--emerald-deep), transparent);
+    }
+
+    .text-gold { color: var(--gold-metallic); }
+    .ls-wide { letter-spacing: 0.2em; text-transform: uppercase; font-size: 0.75rem; font-weight: 600; }
+
+    /* SHARP ACTION BUTTON */
+    .btn-luxury-sharp {
+        display: inline-block;
+        padding: 22px 45px;
+        background: var(--gold-metallic);
+        color: var(--emerald-deep);
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        border: 1px solid var(--gold-metallic);
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        margin-top: 2rem;
+    }
+
+    .btn-luxury-sharp:hover {
+        background: transparent;
+        color: var(--gold-metallic);
+        transform: translateY(-5px);
+    }
+
+    /* MOBILE RESPONSIVE FIX */
+    @media (max-width: 992px) {
+        .hero-split { grid-template-columns: 1fr; }
+        .hero-image-side { display: none; }
+        .hero-content-side { padding: 40px 20px; text-align: center; }
+        section { padding: 80px 0; }
+    }
+</style>
+
+<header class="hero-kinetic-v3">
+    <div class="hero-bg-wrapper">
+        <div class="hero-video-overlay"></div>
+        <img src="https://placehold.co/1920x1080/052C1E/052C1E?text=+" class="hero-img-zoom" alt="Sanctuary Atmosphere">
+    </div>
+
+    <div class="container h-100 position-relative z-2">
+        <div class="row h-100 align-items-center">
+            <div class="col-lg-8">
+                <div class="hero-content-box animate__animated animate__fadeInUp">
+                    
+                    <div class="d-flex align-items-center mb-4">
+                        <span class="gold-badge-sm">EST. BAY HARBOR ISLANDS</span>
+                        <div class="badge-line"></div>
+                    </div>
+
+                    <h1 class="display-1 text-white mb-4">
+                        The Architecture of <br>
+                        <span class="serif italic text-gold-metallic kinetic-text">Release.</span>
+                    </h1>
+
+                    <p class="hero-subtext text-white opacity-75 mb-5">
+                        Beyond the ordinary massage. Nathalie Koffler facilitates a <span class="fw-bold">biological reset</span> for high-performance bodies. Clinical precision meets your deepest exhale.
+                    </p>
+
+                    <div class="d-flex flex-column flex-sm-row gap-4 align-items-sm-center">
+                        <a href="#book" class="btn-hero-gold">
+                            <span class="btn-text">Secure Your Session</span>
+                            <i class="ph ph-arrow-right ms-2"></i>
+                        </a>
+                        <a href="#modalities" class="text-white text-decoration-none ls-2 small fw-bold hover-gold">
+                            EXPLORE THE SCIENCE <i class="ph ph-plus ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="scroll-stepper">
+        <span class="scroll-text">SCROLL TO BEGIN</span>
+        <div class="scroll-line">
+            <div class="scroll-fill"></div>
+        </div>
+    </div>
+</header>
+
+<style>
+    /* THE ENGINE: KINETIC HERO V3 */
+    .hero-kinetic-v3 {
+        height: 100vh;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        background-color: var(--emerald-deep);
+        display: flex;
+        align-items: center;
+    }
+
+    /* THE ATMOSPHERIC ZOOM (KEN BURNS EFFECT) */
+    .hero-bg-wrapper {
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        z-index: 1;
+    }
+
+    .hero-img-zoom {
+        width: 100%; height: 100%;
+        object-fit: cover;
+        /* Replace placeholder with high-end interior shot of the studio */
+        background-image: url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&q=80');
+        background-size: cover;
+        animation: kenBurns 20s infinite alternate;
+        filter: brightness(0.4) contrast(1.1);
+    }
+
+    .hero-video-overlay {
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: linear-gradient(to right, var(--emerald-deep) 20%, transparent 80%);
+        z-index: 2;
+    }
+
+    /* THE TYPOGRAPHY DEPTH */
+    .display-1 {
+        font-weight: 700;
+        line-height: 0.95;
+        letter-spacing: -2px;
+    }
+
+    .hero-subtext {
+        font-size: 1.25rem;
+        max-width: 550px;
+        line-height: 1.6;
+        border-left: 2px solid var(--gold-metallic);
+        padding-left: 30px;
+    }
+
+    .gold-badge-sm {
+        color: var(--gold-metallic);
+        font-size: 0.7rem;
+        font-weight: 900;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+    }
+
+    .badge-line {
+        width: 50px;
+        height: 1px;
+        background: var(--gold-metallic);
+        margin-left: 15px;
+    }
+
+    /* THE BUTTON: BREATHING GOLD */
+    .btn-hero-gold {
+        background: var(--gold-metallic);
+        color: var(--emerald-deep);
+        padding: 22px 45px;
+        text-decoration: none;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border-radius: 4px;
+        display: inline-flex;
+        align-items: center;
+        transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4);
+        animation: pulseGold 3s infinite;
+    }
+
+    .btn-hero-gold:hover {
+        background: #FFFFFF;
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+
+    /* THE SCROLL STEPPER */
+    .scroll-stepper {
+        position: absolute;
+        bottom: 40px;
+        right: 60px;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .scroll-text {
+        writing-mode: vertical-rl;
+        color: var(--gold-metallic);
+        font-size: 0.65rem;
+        font-weight: 700;
+        letter-spacing: 3px;
+        opacity: 0.6;
+    }
+
+    .scroll-line {
+        width: 1px;
+        height: 80px;
+        background: rgba(255, 255, 255, 0.2);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .scroll-fill {
+        width: 100%;
+        height: 100%;
+        background: var(--gold-metallic);
+        position: absolute;
+        top: -100%;
+        animation: scrollDown 2s infinite cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* ANIMATIONS */
+    @keyframes kenBurns {
+        0% { transform: scale(1); }
+        100% { transform: scale(1.15); }
+    }
+
+    @keyframes scrollDown {
+        0% { top: -100%; }
+        100% { top: 100%; }
+    }
+
+    @keyframes pulseGold {
+        0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+        70% { box-shadow: 0 0 0 20px rgba(212, 175, 55, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+    }
+
+    .hover-gold:hover {
+        color: var(--gold-metallic) !important;
+        transition: 0.3s;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 991px) {
+        .display-1 { font-size: 3.5rem; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="facilitator-v3 joy">
+    <div class="container">
+        <div class="row align-items-stretch g-0 border-sharp-gold bg-white">
+            
+            <div class="col-lg-5 animate__animated animate__fadeIn">
+                <div class="facilitator-frame">
+                    <img src="https://placehold.co/800x1200/052C1E/D4AF37?text=Portrait+of+Authority" 
+                         alt="The Facilitator" class="img-fluid h-100 w-100 object-fit-cover">
+                    <div class="facilitator-license-tag">
+                        <span class="ls-wide">MA 96696</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7 animate__animated animate__fadeInRight">
+                <div class="facilitator-body p-lg-5 p-4 d-flex flex-column justify-content-center h-100">
+                    <h2 class="display-3 text-emerald-deep mb-4">Nathalie <br><span class="serif italic">Koffler.</span></h2>
+                    
+                    <div class="philosophy-text-block">
+                        <p class="lead-text mb-4">
+                            "Healing is not an act of force; it is a facilitated return to one’s natural state of grace."
+                        </p>
+                        <p class="body-text mb-4">
+                            With over a decade of clinical observation and a deep mastery of Reflexology and Lymphatic Arts, the founder of <strong>Cathartic Massage</strong> operates on a singular premise: that the body stores the physical echoes of a high-performance life.
+                        </p>
+                        <p class="body-text mb-5">
+                            In this Bay Harbor sanctuary, she moves beyond the ordinary. She acts as a facilitator, utilizing clinical precision to unlock physical stagnation and intuitive touch to soothe the nervous system. Every session is a bespoke choreography designed to restore your baseline.
+                        </p>
+                    </div>
+
+                    <div class="facilitator-footer d-flex align-items-end justify-content-between pt-4 border-top">
+                        <div class="credential-label">
+                            <span class="d-block fw-bold text-emerald-deep">Licensed Massage Therapist</span>
+                            <span class="small text-gold-metallic ls-2 uppercase">Reflexology & Lymphatic Specialist</span>
+                        </div>
+                        <div class="facilitator-signature serif text-emerald-deep opacity-50 h2 mb-0">
+                            Facilitator
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    /* SCOPED STYLES FOR SECTION 02 */
+    .facilitator-v3 {
+        background-color: var(--ivory);
+    }
+
+    .border-sharp-gold {
+        border: 1px solid var(--gold-metallic);
+    }
+
+    /* IMAGE HANDLING */
+    .facilitator-frame {
+        position: relative;
+        height: 100%;
+        min-height: 500px;
+        background-color: var(--emerald-deep);
+    }
+
+    .facilitator-license-tag {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: var(--gold-metallic);
+        color: var(--emerald-deep);
+        padding: 12px 24px;
+        font-weight: 800;
+        font-size: 0.7rem;
+        letter-spacing: 2px;
+    }
+
+    /* TEXT READABILITY ENGINE */
+    .facilitator-body {
+        background-color: var(--white);
+    }
+
+    .lead-text {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.5rem;
+        line-height: 1.4;
+        color: var(--emerald-deep);
+        font-style: italic;
+        border-left: 3px solid var(--gold-metallic);
+        padding-left: 25px;
+    }
+
+    .body-text {
+        font-family: 'Inter', sans-serif;
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: var(--emerald-deep);
+        opacity: 0.9;
+    }
+
+    /* FOOTER DETAILS */
+    .facilitator-footer {
+        border-color: rgba(5, 44, 30, 0.1) !important;
+    }
+
+    .ls-2 { letter-spacing: 2px; }
+    .uppercase { text-transform: uppercase; }
+
+    /* RESPONSIVE BEHAVIOR */
+    @media (max-width: 991px) {
+        .facilitator-frame {
+            min-height: 400px;
+        }
+        .lead-text {
+            font-size: 1.25rem;
+        }
+    }
+</style>
+
+
+
+
+
+
+
+<section class="sanctuary-gallery joy">
+    <div class="container">
+        
+        <div class="row mb-5 pb-lg-4 animate__animated animate__fadeIn">
+            <div class="col-lg-8">
+                <h2 class="display-3 text-emerald-deep mb-4">A Masterclass in <br><span class="serif italic">Environmental Calm.</span></h2>
+            </div>
+            <div class="col-lg-4 d-flex align-items-end">
+                <p class="text-emerald-deep opacity-75 border-start border-gold-thin ps-4 mb-3">
+                    Located at 1005 Kane Concourse, our space is designed to lower your heart rate the moment the door closes behind you.
+                </p>
+            </div>
+        </div>
+
+        <div class="sanctuary-grid">
+            
+            <div class="sanctuary-item item-large animate__animated animate__zoomIn">
+                <div class="sanctuary-frame">
+                    <img src="https://placehold.co/1200x800/052C1E/D4AF37?text=Architectural+Silence" alt="The Studio Space" class="img-fluid">
+                    <div class="sanctuary-overlay">
+                        <div class="p-4">
+                            <span class="x-small text-gold-metallic ls-3">VISUAL CLARITY</span>
+                            <h3 class="serif text-white h4 mb-0">The Treatment Suite</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sanctuary-item item-vertical animate__animated animate__fadeInUp animate__delay-1s">
+                <div class="sanctuary-frame bg-white border-sharp-gold p-5 d-flex flex-column justify-content-center text-center">
+                    <i class="ph ph-wind text-gold-metallic fs-1 mb-4"></i>
+                    <h3 class="serif text-emerald-deep h3 mb-3">Olfactory Calm</h3>
+                    <p class="small text-emerald-deep opacity-75">A proprietary blend of Eucalyptus and Palo Santo, diffused at specific intervals to clear mental congestion.</p>
+                </div>
+            </div>
+
+            <div class="sanctuary-item animate__animated animate__fadeInUp animate__delay-2s">
+                <div class="sanctuary-frame">
+                    <img src="https://placehold.co/600x600/052C1E/F1E5AC?text=Tactile+Linen" alt="Linens" class="img-fluid">
+                    <div class="sanctuary-overlay-static">
+                        <span class="x-small text-white ls-2 fw-bold">800 TC ORGANIC COTTON</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sanctuary-item animate__animated animate__fadeInUp animate__delay-3s">
+                <div class="sanctuary-frame bg-emerald-deep p-4 d-flex align-items-end">
+                    <div>
+                        <h4 class="serif text-gold-metallic h5">Soft-Shadow Theory</h4>
+                        <p class="x-small text-white opacity-50 mb-0">Warm 2700K lighting designed to trigger immediate melatonin production.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    /* SCOPED STYLES FOR THE SANCTUARY SECTION */
+    .sanctuary-gallery {
+        background-color: var(--white); /* Crisp background for sharp grid */
+        padding: var(--section-padding) 0;
+    }
+
+    /* THE MOSAIC ENGINE (Rule #2 Consistency) */
+    .sanctuary-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 350px);
+        gap: 20px;
+    }
+
+    .sanctuary-item {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .item-large {
+        grid-column: span 2;
+    }
+
+    .item-vertical {
+        grid-row: span 2;
+    }
+
+    .sanctuary-frame {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .sanctuary-frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 1.2s ease;
+    }
+
+    .sanctuary-item:hover .sanctuary-frame img {
+        transform: scale(1.1);
+    }
+
+    /* OVERLAYS & TEXT PROTECTION (Sharp Readability) */
+    .sanctuary-overlay {
+        position: absolute;
+        bottom: 0; left: 0; width: 100%;
+        background: linear-gradient(to top, var(--emerald-deep) 0%, transparent 100%);
+        color: white;
+    }
+
+    .sanctuary-overlay-static {
+        position: absolute;
+        top: 20px; left: 20px;
+        background: rgba(5, 44, 30, 0.8);
+        padding: 8px 15px;
+        backdrop-filter: blur(5px);
+    }
+
+    .border-gold-thin {
+        border-color: var(--gold-metallic) !important;
+        border-width: 2px !important;
+    }
+
+    /* RESPONSIVE GRID */
+    @media (max-width: 991px) {
+        .sanctuary-grid {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+        }
+        .item-large, .item-vertical {
+            grid-column: span 1;
+            grid-row: span 1;
+            min-height: 350px;
+        }
+    }
+</style>
+
+
+
+
+
+
+
+
+
+<section class="service-experience-v04 joy">
+    <div class="container">
+        
+        <div class="row mb-5 pb-lg-5 animate__animated animate__fadeIn">
+            <div class="col-lg-7">
+                <h2 class="display-3 text-emerald-deep mb-4"><span class="serif italic"> OUR SERVICES</span></h2>
+            </div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            
+            <div class="col-lg-4 col-md-6 animate__animated animate__fadeInUp">
+                <div class="path-card border-sharp-gold bg-white p-5 h-100">
+                    <div class="path-header mb-4">
+                        <i class="ph ph-target text-gold-metallic fs-1"></i>
+                    </div>
+                    <h3 class="serif text-emerald-deep h3 mb-3">Deep Tissue</h3>
+                    <p class="small text-muted mb-4">For those with "knots," back pain, or a stiff neck. We go deep into the muscle to fix long-term soreness.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-auto pt-4 border-top">
+                        <span class="fw-bold text-emerald-deep">$150</span>
+                        <span class="small ls-2 opacity-50">60 MIN</span>
+                    </div>
+                </div>
+            </div>
+
+           <div class="col-lg-4 col-md-6 animate__animated animate__fadeInUp animate__delay-1s">
+                <div class="path-card-inverted bg-emerald-deep p-5 h-100 text-white">
+                    <div class="path-header mb-4">
+                        <i class="ph ph-cloud-snow text-gold-metallic fs-1"></i>
+                    </div>
+                    <h3 class="serif text-gold-metallic h3 mb-3">Total Calm</h3>
+                    <p class="small opacity-75 mb-4">For the stressed mind. A gentle, flowing session to help you sleep better and lower your stress levels.</p>
+                    
+                    <div class="d-flex justify-content-between align-items-center mt-auto pt-4 border-top border-secondary">
+                        <span class="fw-bold text-gold-metallic">$120</span>
+                        <span class="small ls-2 opacity-50 text-white">60 MIN</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 animate__animated animate__fadeInUp animate__delay-2s">
+                <div class="path-card border-sharp-gold bg-white p-5 h-100">
+                    <div class="path-header mb-4">
+                        <i class="ph ph-drop-half-bottom text-gold-metallic fs-1"></i>
+                    </div>
+                    <h3 class="serif text-emerald-deep h3 mb-3">The Detox</h3>
+                    <p class="small text-muted mb-4">A very light touch "Lymphatic" session to reduce bloating, swelling, and clear out toxins from your system.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-auto pt-4 border-top">
+                        <span class="fw-bold text-emerald-deep">$120</span>
+                        <span class="small ls-2 opacity-50">60 MIN</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 animate__animated animate__fadeInUp">
+                <div class="path-card border-sharp-gold bg-white p-5 h-100">
+                    <h3 class="serif text-emerald-deep h4 mb-3">Stretching & Cups</h3>
+                    <p class="small text-muted mb-4">Best for athletes or active people. We use special suction cups and stretching to unlock your joints.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-auto pt-4 border-top">
+                        <span class="fw-bold text-emerald-deep">$140</span>
+                        <span class="small ls-2 opacity-50">60 MIN</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 animate__animated animate__fadeInUp animate__delay-1s">
+                <div class="path-card border-sharp-gold bg-white p-5 h-100">
+                    <h3 class="serif text-emerald-deep h4 mb-3">Reflexology</h3>
+                    <p class="small text-muted mb-4">Full focus on the feet. By pressing specific points on your soles, we heal your entire body.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-auto pt-4 border-top">
+                        <span class="fw-bold text-emerald-deep">$130</span>
+                        <span class="small ls-2 opacity-50">60 MIN</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 animate__animated animate__fadeInUp animate__delay-2s">
+                <div class="path-card border-sharp-gold bg-white p-5 h-100">
+                    <h3 class="serif text-emerald-deep h4 mb-3">Prenatal</h3>
+                    <p class="small text-muted mb-4">Safe, comforting care for moms-to-be. We focus on relieving leg swelling and lower back strain.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-auto pt-4 border-top">
+                        <span class="fw-bold text-emerald-deep">$120</span>
+                        <span class="small ls-2 opacity-50">60 MIN</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row mt-5 pt-lg-5">
+            <div class="col-12 bg-ivory-dark p-5 text-center border-sharp-gold">
+                <h3 class="serif text-emerald-deep mb-3">Too tired to leave the house?</h3>
+                <p class="text-muted mb-4">We bring the spa to your home or hotel room. Just ask for a "House Call."</p>
+                <a href="tel:7862927551" class="btn-luxury-sharp">Call to Book: 786-292-7551</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    .service-experience-v4 {
+        background-color: var(--ivory);
+        padding: var(--section-padding) 0;
+    }
+
+    /* 1. Use the main metallic gold (#D4AF37) for headers & icons on dark BG */
+    .text-gold-metallic { color: var(--gold-metallic) !important; }
+
+    /* 2. Create a specialized hover state for the inverted card */
+    .path-card-inverted {
+        border: 1px solid transparent;
+        border-radius: 4px; /* Sharp Luxury Radius */
+        transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        display: flex;
+        flex-direction: column;
+        background-color: var(--emerald-deep) !important;
+    }
+
+    /* 3. On hover, the inverted card should pop with a gold border */
+    .path-card-inverted:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 30px 60px rgba(5, 44, 30, 0.2); /* Deepen the shadow for pop */
+        border-color: var(--gold-metallic) !important; /* Gold border appears on hover */
+    }
+
+    /* Ensure secondary borders within the card are visible but subtle */
+    .path-card-inverted .border-top {
+        border-color: rgba(212, 175, 55, 0.2) !important; /* Subtle gold tint border */
+    }
+    .path-card {
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        border-radius: 4px; /* Sharp corners for high-end feel */
+        transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .path-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(5, 44, 30, 0.1);
+        border-color: var(--gold-metallic);
+    }
+
+    .bg-ivory-dark { background-color: #F4F2E9; }
+
+    /* LAYMAN READABILITY FIXES */
+    .lead-text-sharp {
+        font-size: 1.25rem;
+        line-height: 1.6;
+    }
+
+    .ls-2 { letter-spacing: 2px; }
+
+    @media (max-width: 768px) {
+        .path-card { padding: 30px !important; }
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="why-us-v5 joy">
+    <div class="container">
+        
+        <div class="row mb-5 pb-lg-5 animate__animated animate__fadeIn">
+            <div class="col-lg-8">
+                <h6 class="ls-wide text-gold-metallic mb-3">Why Choose Us</h6>
+                <h2 class="display-3 text-emerald-deep mb-4">Redefining the <br><span class="serif italic">Ordinary.</span></h2>
+                <p class="lead-text-sharp text-emerald-deep opacity-75">
+                    In Bay Harbor Islands, a massage is common. A "Cathartic" experience is rare. 
+                </p>
+            </div>
+        </div>
+
+        <div class="row g-5 mb-5">
+            <div class="col-lg-4 animate__animated animate__fadeInUp">
+                <div class="pillar-box">
+                    <h3 class="serif text-emerald-deep h3 mb-3">01. Clinical Mastery</h3>
+                    <p class="small text-muted">Nathalie is a licensed specialist. She understands how your nerves and muscles work together to store or release stress.</p>
+                    <div class="sharp-line-gold"></div>
+                </div>
+            </div>
+            <div class="col-lg-4 animate__animated animate__fadeInUp animate__delay-1s">
+                <div class="pillar-box">
+                    <h3 class="serif text-emerald-deep h3 mb-3">02. Tailored For You</h3>
+                    <p class="small text-muted">No "routine" massages. Every session is built on the spot to fix exactly where you hurt today.</p>
+                    <div class="sharp-line-gold"></div>
+                </div>
+            </div>
+            <div class="col-lg-4 animate__animated animate__fadeInUp animate__delay-2s">
+                <div class="pillar-box">
+                    <h3 class="serif text-emerald-deep h3 mb-3">03. Total Privacy</h3>
+                    <p class="small text-muted">A single-client suite at 1005 Kane Concourse. No waiting rooms, no crowds. Just quiet healing.</p>
+                    <div class="sharp-line-gold"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row pt-lg-5">
+            <div class="col-12">
+                <div class="stat-container bg-emerald-deep p-5 border-sharp-gold d-flex flex-wrap justify-content-between text-center text-lg-start">
+                    
+                    <div class="stat-block mb-4 mb-lg-0">
+                        <h4 class="display-4 serif text-gold-metallic mb-0"><span class="num-scroll" data-target="10">0</span>+</h4>
+                        <span class="small text-white opacity-50 ls-2 uppercase">Years in Practice</span>
+                    </div>
+
+                    <div class="stat-block mb-4 mb-lg-0">
+                        <h4 class="display-4 serif text-gold-metallic mb-0"><span class="num-scroll" data-target="100">0</span>%</h4>
+                        <span class="small text-white opacity-50 ls-2 uppercase">Custom Methods</span>
+                    </div>
+
+                    <div class="stat-block">
+                        <h4 class="display-4 serif text-gold-metallic mb-0"><span class="num-scroll" data-target="96696">0</span></h4>
+                        <span class="small text-white opacity-50 ls-2 uppercase">Verified Medical License</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* CSS: SHARP LUXURY LOGIC */
+    .why-us-v5 {
+        background-color: var(--white);
+    }
+
+    .pillar-box {
+        position: relative;
+        padding-bottom: 20px;
+    }
+
+    .sharp-line-gold {
+        width: 40px;
+        height: 2px;
+        background-color: var(--gold-metallic);
+        transition: width 0.6s ease;
+    }
+
+    .pillar-box:hover .sharp-line-gold {
+        width: 100%;
+    }
+
+    /* STAT CONTAINER */
+    .stat-container {
+        border-radius: 4px; /* Sharp corners */
+        border: 1px solid var(--gold-metallic);
+    }
+
+    .stat-block .display-4 {
+        font-variant-numeric: tabular-nums; /* Prevents numbers from jumping */
+    }
+
+    .ls-2 { letter-spacing: 2px; }
+    .uppercase { text-transform: uppercase; }
+
+    @media (max-width: 991px) {
+        .stat-block { width: 100%; }
+    }
+</style>
+
+<script>
+    /* JS: SIMPLE & ROBUST COUNTER */
+    const startCounters = () => {
+        const counters = document.querySelectorAll('.num-scroll');
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const speed = 200; // Adjust for smoothness
+                const inc = target / speed;
+
+                if (count < target) {
+                    // Fast-track the large license number so it doesn't take forever
+                    if(target > 1000) {
+                        counter.innerText = Math.ceil(count + (target / 30));
+                    } else {
+                        counter.innerText = Math.ceil(count + inc);
+                    }
+                    setTimeout(updateCount, 15);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            updateCount();
+        });
+    };
+
+    // Trigger when user scrolls to the section
+    const observer = new IntersectionObserver((entries) => {
+        if(entries[0].isIntersecting) {
+            startCounters();
+            observer.disconnect(); // Run only once
+        }
+    }, { threshold: 0.4 });
+
+    observer.observe(document.querySelector('.stat-container'));
+</script>
+
+
+
+
+
+
+
+
+
+<section class="reviews-masonry-section joy">
+    <div class="container">
+        
+        <div class="row mb-5 pb-lg-4 animate__animated animate__fadeIn">
+            <div class="col-lg-8">
+                <h6 class="ls-wide text-gold-metallic mb-3">THE VOICES</h6>
+                <h2 class="display-3 text-emerald-deep mb-4">Trusted by the <br><span class="serif italic">Community.</span></h2>
+            </div>
+        </div>
+
+        <div class="reviews-columns">
+            
+            <div class="review-card animate__animated animate__fadeInUp">
+                <div class="stars-gold mb-3"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                <p class="serif h5 text-emerald-deep mb-3">"Nathalie is a miracle worker. My chronic back pain was gone after two sessions."</p>
+                <div class="review-meta">
+                    <span class="fw-bold d-block">Sarah M.</span>
+                    <span class="x-small ls-2 opacity-50 uppercase">Verified Google Review</span>
+                </div>
+            </div>
+
+            <div class="review-card animate__animated animate__fadeInUp animate__delay-1s">
+                <div class="stars-gold mb-3"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                <p class="serif h5 text-emerald-deep mb-3">"The best lymphatic drainage in Florida. Reduced my post-op swelling instantly."</p>
+                <div class="review-meta">
+                    <span class="fw-bold d-block">Jessica R.</span>
+                    <span class="x-small ls-2 opacity-50 uppercase">Verified Google Review</span>
+                </div>
+            </div>
+
+            <div class="review-card animate__animated animate__fadeInUp animate__delay-2s">
+                <div class="stars-gold mb-3"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                <p class="serif h5 text-emerald-deep mb-3">"Expert knowledge. She explains exactly what’s happening in your body."</p>
+                <div class="review-meta">
+                    <span class="fw-bold d-block">David L.</span>
+                    <span class="x-small ls-2 opacity-50 uppercase">Verified Google Review</span>
+                </div>
+            </div>
+
+            <div class="review-card animate__animated animate__fadeInUp">
+                <div class="stars-gold mb-3"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                <p class="serif h5 text-emerald-deep mb-3">"I felt like a new person. The atmosphere at Kane Concourse is so peaceful."</p>
+                <div class="review-meta">
+                    <span class="fw-bold d-block">Elena S.</span>
+                    <span class="x-small ls-2 opacity-50 uppercase">Verified Google Review</span>
+                </div>
+            </div>
+
+            <div class="review-card animate__animated animate__fadeInUp animate__delay-1s">
+                <div class="stars-gold mb-3"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                <p class="serif h5 text-emerald-deep mb-3">"Her reflexology session fixed my sleep issues. I haven't slept this well in years."</p>
+                <div class="review-meta">
+                    <span class="fw-bold d-block">Robert T.</span>
+                    <span class="x-small ls-2 opacity-50 uppercase">Verified Google Review</span>
+                </div>
+            </div>
+
+            <div class="review-card animate__animated animate__fadeInUp animate__delay-2s">
+                <div class="stars-gold mb-3"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                <p class="serif h5 text-emerald-deep mb-3">"The only place I trust for prenatal massage. So gentle and restorative."</p>
+                <div class="review-meta">
+                    <span class="fw-bold d-block">Amanda G.</span>
+                    <span class="x-small ls-2 opacity-50 uppercase">Verified Google Review</span>
+                </div>
+            </div>
+
+           
+
+        </div>
+
+        <div class="row mt-5 pt-lg-4 text-center">
+            <div class="col-12">
+                <a href="https://www.google.com/search?q=Cathartic+Massage+florida&num=10&sca_esv=86cb2b2550399d81&rlz=1C1CHZN_enIN1187IN1190&sxsrf=ANbL-n7bbqRrKDFzW8pqRwSJXQjdTlEpqQ%3A1774042577644&ei=0b29aZyCJ7yH4-EPxN2VmAI&biw=1536&bih=695&ved=0ahUKEwjcrqDNt6-TAxW8wzgGHcRuBSMQ4dUDCBE&uact=5&oq=Cathartic+Massage+florida&gs_lp=Egxnd3Mtd2l6LXNlcnAiGUNhdGhhcnRpYyBNYXNzYWdlIGZsb3JpZGEyBRAhGKABMgUQIRigAUiQC1AAWPoJcAB4AZABAJgBlAKgAY0KqgEFMC40LjO4AQPIAQD4AQGYAgegArAKwgIFEAAYgATCAgYQABgWGB7CAgsQABiABBiKBRiGA8ICBRAAGO8FwgIIEAAYgAQYogSYAwCSBwUwLjQuM6AHgxSyBwUwLjQuM7gHsArCBwUwLjUuMsgHE4AIAQ&sclient=gws-wiz-serp#lrd=0x88d9b3ed4885d687:0x310d46d44d57e03b,1,,,," 
+                target="_blank" class="btn-google-luxury">
+                    <i class="ph ph-google-logo me-2"></i> Read All 132 Reviews on Google
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* SCOPED REVIEWS MASONRY STYLES */
+    .reviews-masonry-section {
+        background-color: var(--ivory);
+    }
+
+    /* THE MASONRY ENGINE */
+    .reviews-columns {
+        column-count: 3;
+        column-gap: 30px;
+    }
+
+    .review-card {
+        background-color: #FFFFFF;
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        border-radius: 4px; /* Sharp Luxury */
+        padding: 40px;
+        margin-bottom: 30px;
+        break-inside: avoid;
+        display: inline-block;
+        width: 100%;
+        transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .review-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(5, 44, 30, 0.08);
+        border-color: var(--gold-metallic);
+    }
+
+    /* STARS & TEXT */
+    .stars-gold {
+        color: var(--gold-metallic);
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+    }
+
+    .review-meta {
+        border-top: 1px solid rgba(5, 44, 30, 0.05);
+        padding-top: 20px;
+        margin-top: 20px;
+    }
+
+    /* GOOGLE BUTTON */
+    .btn-google-luxury {
+        display: inline-block;
+        padding: 18px 35px;
+        border: 1px solid var(--emerald-deep);
+        color: var(--emerald-deep);
+        text-decoration: none;
+        font-weight: 800;
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        transition: 0.3s;
+    }
+
+    .btn-google-luxury:hover {
+        background-color: var(--emerald-deep);
+        color: var(--white);
+    }
+
+    /* RESPONSIVE COLUMNS */
+    @media (max-width: 1200px) {
+        .reviews-columns { column-count: 2; }
+    }
+    @media (max-width: 768px) {
+        .reviews-columns { column-count: 1; }
+        .review-card { padding: 30px; }
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="benefits-evolution-v2 joy">
+    <div class="container">
+        
+        <div class="row mb-5 pb-lg-5 animate__animated animate__fadeIn">
+            <div class="col-lg-8">
+                <h6 class="ls-wide text-gold-metallic mb-3">Benfits</h6>
+                <h2 class="display-3 text-emerald-deep mb-4">Total System <br><span class="serif italic">Recalibration.</span></h2>
+                <p class="lead-text-sharp text-emerald-deep opacity-75" style="max-width: 600px;">
+                    We move beyond temporary relief. Our 6-pillar approach ensures every biological system is tuned for peak performance and absolute peace.
+                </p>
+            </div>
+        </div>
+
+        <div class="row g-0 border-sharp-gold overflow-hidden animate__animated animate__fadeInUp">
+            
+            <div class="col-lg-4 col-md-6 border-bottom-gold border-end-gold">
+                <div class="benefit-card-v7 p-5 h-100">
+                    <div class="benefit-icon-sharp mb-4">
+                        <i class="ph ph-brain text-gold-metallic fs-2"></i>
+                    </div>
+                    <h3 class="serif text-emerald-deep h3 mb-3">Mental Clarity</h3>
+                    <p class="small text-muted mb-4">Stop the "brain fog." We quiet the noise in your head by lowering stress hormones, leaving you sharp and focused.</p>
+                    <span class="x-small text-gold-metallic ls-2 fw-bold">THE COGNITIVE SHIFT</span>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 border-bottom-gold border-end-gold">
+                <div class="benefit-card-v7 p-5 h-100 bg-ivory-ultra-light">
+                    <div class="benefit-icon-sharp mb-4">
+                        <i class="ph ph-lightning text-gold-metallic fs-2"></i>
+                    </div>
+                    <h3 class="serif text-emerald-deep h3 mb-3">Physical Flow</h3>
+                    <p class="small text-muted mb-4">Unlock the "knots" in your neck and back. We restore your natural range of motion so you move without restriction.</p>
+                    <span class="x-small text-gold-metallic ls-2 fw-bold">THE KINETIC SHIFT</span>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 border-bottom-gold">
+                <div class="benefit-card-v7 p-5 h-100">
+                    <div class="benefit-icon-sharp mb-4">
+                        <i class="ph ph-drop-half-bottom text-gold-metallic fs-2"></i>
+                    </div>
+                    <h3 class="serif text-emerald-deep h3 mb-3">Deep Detox</h3>
+                    <p class="small text-muted mb-4">Flush out toxins and reduce bloating. Our touch moves fluid through your body to clear swelling and boost immunity.</p>
+                    <span class="x-small text-gold-metallic ls-2 fw-bold">THE CELLULAR SHIFT</span>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 border-end-gold">
+                <div class="benefit-card-v7 p-5 h-100 bg-ivory-ultra-light">
+                    <div class="benefit-icon-sharp mb-4">
+                        <i class="ph ph-moon text-gold-metallic fs-2"></i>
+                    </div>
+                    <h3 class="serif text-emerald-deep h3 mb-3">Restorative Sleep</h3>
+                    <p class="small text-muted mb-4">Fall asleep faster and stay asleep longer. We trigger the body's natural "rest" mode for high-quality recovery.</p>
+                    <span class="x-small text-gold-metallic ls-2 fw-bold">THE CIRCADIAN SHIFT</span>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 border-end-gold">
+                <div class="benefit-card-v7 p-5 h-100">
+                    <div class="benefit-icon-sharp mb-4">
+                        <i class="ph ph-shield-plus text-gold-metallic fs-2"></i>
+                    </div>
+                    <h3 class="serif text-emerald-deep h3 mb-3">Immune Shield</h3>
+                    <p class="small text-muted mb-4">A healthy body starts with the lymph nodes. We strengthen your natural defenses to keep you resilient year-round.</p>
+                    <span class="x-small text-gold-metallic ls-2 fw-bold">THE PROTECTIVE SHIFT</span>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="benefit-card-v7 p-5 h-100 bg-ivory-ultra-light">
+                    <div class="benefit-icon-sharp mb-4">
+                        <i class="ph ph-waveform text-gold-metallic fs-2"></i>
+                    </div>
+                    <h3 class="serif text-emerald-deep h3 mb-3">Nervous Balance</h3>
+                    <p class="small text-muted mb-4">Calm your frayed nerves. We target the Vagus nerve to reset your internal balance and stop the "anxious" feeling.</p>
+                    <span class="x-small text-gold-metallic ls-2 fw-bold">THE NEURAL SHIFT</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row mt-5 pt-lg-4">
+            <div class="col-12 text-center">
+                <div class="impact-tag p-4 border-sharp-gold d-inline-block">
+                    <p class="serif text-emerald-deep h4 mb-0">Experience the result of <span class="text-gold-metallic">clinical precision</span> meets <span class="text-gold-metallic">intuitive touch.</span></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* SCOPED STYLES FOR THE 6-PILLAR EVOLUTION */
+    .benefits-evolution-v2 {
+        background-color: #FFFFFF; /* PURE WHITE BACKGROUND */
+    }
+
+    /* THE SHARP CONTAINER */
+    .border-sharp-gold {
+        border: 1px solid var(--gold-metallic);
+        border-radius: 4px;
+        background-color: #FFFFFF;
+    }
+
+    /* BORDER GRID LOGIC */
+    .border-bottom-gold { border-bottom: 1px solid rgba(212, 175, 55, 0.2); }
+    .border-end-gold { border-right: 1px solid rgba(212, 175, 55, 0.2); }
+
+    /* SUBTLE ALTERNATING COLOR */
+    .bg-ivory-ultra-light { background-color: #FCFBF7; }
+
+    /* CARD INTERACTION */
+    .benefit-card-v7 {
+        transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        position: relative;
+    }
+
+    .benefit-card-v7:hover {
+        background-color: var(--white);
+        box-shadow: inset 0 0 0 2px var(--gold-metallic);
+        z-index: 5;
+    }
+
+    /* ICON DESIGN */
+    .benefit-icon-sharp {
+        width: 50px;
+        height: 50px;
+        border: 1px solid var(--gold-metallic);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px; /* Sharp Square Radius */
+        transition: 0.4s;
+    }
+
+    .benefit-card-v7:hover .benefit-icon-sharp {
+        background-color: var(--gold-metallic);
+    }
+
+    .benefit-card-v7:hover .benefit-icon-sharp i {
+        color: #FFFFFF !important;
+    }
+
+    /* TEXT REFINEMENT */
+    .impact-tag {
+        border-radius: 4px;
+        background-color: #FFFFFF;
+    }
+
+    .ls-2 { letter-spacing: 2px; }
+
+    /* MOBILE GRID ADJUSTMENTS */
+    @media (max-width: 991px) {
+        .border-end-gold { border-right: none; }
+        .border-bottom-gold { border-bottom: 1px solid rgba(212, 175, 55, 0.2); }
+        .col-lg-4:nth-child(5) { border-bottom: 1px solid rgba(212, 175, 55, 0.2); }
+    }
+</style>
+
+
+
+
+
+
+
+
+
+<section class="micro-cta-section joy">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 animate__animated animate__fadeInUp">
+                
+                <div class="cta-micro-card bg-white border-sharp-gold p-5 text-center">
+                    
+                    <h6 class="ls-wide text-gold-metallic mb-3">SECURE YOUR SESSION</h6>
+                    <h2 class="display-5 text-emerald-deep mb-4">Ready to start <br>your <span class="serif italic">recovery?</span></h2>
+                    
+                    <p class="text-emerald-deep opacity-75 mb-5 mx-auto" style="max-width: 450px;">
+                        Join the elite at Bay Harbor Islands. Limited appointments are available this week for new clients.
+                    </p>
+
+                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                        <a href="#" class="btn-sharp-gold-fill">Book Now</a>
+                        <a href="tel:7862927551" class="btn-sharp-emerald-outline">Call to Reserve</a>
+                    </div>
+
+                    <div class="mt-4 pt-2">
+                        <span class="x-small text-emerald-deep opacity-50 ls-2">1005 KANE CONCOURSE · SUITE #211</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* SCOPED MICRO-CTA STYLES */
+    .micro-cta-section {
+        background-color: var(--ivory); /* Ivory background makes the White card pop */
+    }
+
+    .cta-micro-card {
+        border: 1px solid var(--gold-metallic);
+        border-radius: 4px; /* Sharp Luxury Radius */
+        box-shadow: 0 20px 50px rgba(5, 44, 30, 0.05);
+        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .cta-micro-card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 30px 70px rgba(5, 44, 30, 0.1);
+    }
+
+    /* BUTTON 01: GOLD FILL */
+    .btn-sharp-gold-fill {
+        display: inline-block;
+        padding: 18px 35px;
+        background: var(--gold-metallic);
+        color: var(--emerald-deep);
+        text-decoration: none;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.8rem;
+        border-radius: 4px;
+        transition: 0.4s;
+        border: 1px solid var(--gold-metallic);
+    }
+
+    .btn-sharp-gold-fill:hover {
+        background: var(--emerald-deep);
+        color: var(--gold-soft);
+        border-color: var(--emerald-deep);
+    }
+
+    /* BUTTON 02: EMERALD OUTLINE */
+    .btn-sharp-emerald-outline {
+        display: inline-block;
+        padding: 18px 35px;
+        background: transparent;
+        color: var(--emerald-deep);
+        text-decoration: none;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.8rem;
+        border-radius: 4px;
+        transition: 0.4s;
+        border: 1px solid var(--emerald-deep);
+    }
+
+    .btn-sharp-emerald-outline:hover {
+        background: var(--ivory);
+        transform: translateY(-3px);
+    }
+
+    /* TYPOGRAPHY REFINEMENTS */
+    .ls-wide { letter-spacing: 4px; }
+    .ls-2 { letter-spacing: 2px; }
+    .x-small { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; }
+
+    @media (max-width: 576px) {
+        .cta-micro-card { padding: 40px 20px !important; }
+    }
+</style>
+
+
+<section class="master-faq-v5 joy">
+    <div class="container">
+        
+        <div class="row mb-5 pb-lg-4 animate__animated animate__fadeIn">
+            <div class="col-lg-8">
+                <h6 class="ls-wide text-gold-metallic mb-3">11 — THE RITUAL GUIDE</h6>
+                <h2 class="display-3 text-emerald-deep mb-4">Common <span class="serif italic">Inquiries.</span></h2>
+                <p class="lead-text-sharp text-emerald-deep opacity-75">
+                    Select a category to find specific answers regarding your visit, our clinical methods, and concierge services.
+                </p>
+            </div>
+        </div>
+
+        <ul class="nav nav-pills sharp-pills mb-5 d-flex justify-content-start gap-2 animate__animated animate__fadeInUp" id="faqTabs" role="tablist">
+            <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#tab-general">The Basics</button></li>
+            <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-treatments">Treatments</button></li>
+            <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-logistics">The Studio</button></li>
+            <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-concierge">House Calls</button></li>
+            <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-policies">Policies</button></li>
+        </ul>
+
+        <div class="tab-content" id="faqTabContent">
+            
+            <div class="tab-pane fade show active" id="tab-general">
+                <div class="accordion accordion-flush sharp-accordion" id="accGeneral">
+                    <div class="accordion-item mb-2 border-sharp-gold">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed serif h5 text-emerald-deep" data-bs-toggle="collapse" data-bs-target="#gen1">What is "Cathartic" massage exactly?</button></h2>
+                        <div id="gen1" class="accordion-collapse collapse" data-bs-parent="#accGeneral"><div class="accordion-body opacity-75">It is a result-driven approach designed to release deep-seated physical and emotional tension stored in the body's tissues.</div></div>
+                    </div>
+                    <div class="accordion-item mb-2 border-sharp-gold"><h2 class="accordion-header"><button class="accordion-button collapsed serif h5 text-emerald-deep" data-bs-toggle="collapse" data-bs-target="#gen2">Is this my first visit? What happens?</button></h2><div id="gen2" class="accordion-collapse collapse" data-bs-parent="#accGeneral"><div class="accordion-body opacity-75">We begin with a 5-minute intake to understand your pain points and goals before starting the session.</div></div></div>
+                    <div class="accordion-item mb-2 border-sharp-gold"><h2 class="accordion-header"><button class="accordion-button collapsed serif h5 text-emerald-deep" data-bs-toggle="collapse" data-bs-target="#gen3">Should I tip my therapist?</button></h2><div id="gen3" class="accordion-collapse collapse" data-bs-parent="#accGeneral"><div class="accordion-body opacity-75">Gratuity is never expected but always appreciated for exceptional service.</div></div></div>
+                    <div class="accordion-item mb-2 border-sharp-gold"><h2 class="accordion-header"><button class="accordion-button collapsed serif h5 text-emerald-deep" data-bs-toggle="collapse" data-bs-target="#gen4">How often should I come?</button></h2><div id="gen4" class="accordion-collapse collapse" data-bs-parent="#accGeneral"><div class="accordion-body opacity-75">For chronic pain, once a week is ideal. For general wellness, once a month is perfect.</div></div></div>
+                    <div class="accordion-item mb-2 border-sharp-gold"><h2 class="accordion-header"><button class="accordion-button collapsed serif h5 text-emerald-deep" data-bs-toggle="collapse" data-bs-target="#gen5">Will it be painful?</button></h2><div id="gen5" class="accordion-collapse collapse" data-bs-parent="#accGeneral"><div class="accordion-body opacity-75">We work within your comfort level. "Good pain" is okay; sharp pain is not. We listen to you.</div></div></div>
+                    <div class="accordion-item mb-2 border-sharp-gold"><h2 class="accordion-header"><button class="accordion-button collapsed serif h5 text-emerald-deep" data-bs-toggle="collapse" data-bs-target="#gen6">Do I need to undress fully?</button></h2><div id="gen6" class="accordion-collapse collapse" data-bs-parent="#accGeneral"><div class="accordion-body opacity-75">You undress to your level of comfort. You are professionally covered by a sheet at all times.</div></div></div>
+                    <div class="accordion-item mb-2 border-sharp-gold"><h2 class="accordion-header"><button class="accordion-button collapsed serif h5 text-emerald-deep" data-bs-toggle="collapse" data-bs-target="#gen7">Can I talk during the session?</button></h2><div id="gen7" class="accordion-collapse collapse" data-bs-parent="#accGeneral"><div class="accordion-body opacity-75">This is your time. If talking helps you relax, please do. If you prefer silence, we honor that.</div></div></div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="tab-treatments">
+                <div class="accordion accordion-flush sharp-accordion" id="accTreat">
+                    <div class="accordion-item mb-2 border-sharp-gold"><h2 class="accordion-header"><button class="accordion-button collapsed serif h5 text-emerald-deep" data-bs-toggle="collapse" data-bs-target="#tr1">What is Lymphatic Drainage for?</button></h2><div id="tr1" class="accordion-collapse collapse" data-bs-parent="#accTreat"><div class="accordion-body opacity-75">It’s a light touch session to clear out "body waste," reduce bloating, and help with swelling after surgery.</div></div></div>
+                    <div class="accordion-item mb-2 border-sharp-gold"><h2 class="accordion-header"><button class="accordion-button collapsed serif h5 text-emerald-deep" data-bs-toggle="collapse" data-bs-target="#tr2">Will the cups leave marks?</button></h2><div id="tr2" class="accordion-collapse collapse" data-bs-parent="#accTreat"><div class="accordion-body opacity-75">They may leave temporary circles (bruise-like marks) for a few days. This is normal and shows the blood is moving.</div></div></div>
+                    <div class="accordion-item mb-2 border-sharp-gold"><h2 class="accordion-header"><button class="accordion-button collapsed serif h5 text-emerald-deep" data-bs-toggle="collapse" data-bs-target="#tr3">Is Deep Tissue too intense for me?</button></h2><div id="tr3" class="accordion-collapse collapse" data-bs-parent="#accTreat"><div class="accordion-body opacity-75">Not necessarily. We use firm pressure but adjust it based on how your muscles respond.</div></div></div>
+                    <div class="accordion-item mb-2 border-sharp-gold"><h2 class="accordion-header"><button class="accordion-button collapsed serif h5 text-emerald-deep" data-bs-toggle="collapse" data-bs-target="#tr4">What should I wear for Stretching?</button></h2><div id="tr4" class="accordion-collapse collapse" data-bs-parent="#accTreat"><div class="accordion-body opacity-75">Please bring or wear loose, flexible gym clothes for this specific session.</div></div></div>
+                    <div class="accordion-item mb-2 border-sharp-gold"><h2 class="accordion-header"><button class="accordion-button collapsed serif h5 text-emerald-deep" data-bs-toggle="collapse" data-bs-target="#tr5">Is Prenatal Massage safe in the 1st trimester?</button></h2><div id="tr5" class="accordion-collapse collapse" data-bs-parent="#accTreat"><div class="accordion-body opacity-75">We generally recommend waiting until the 2nd trimester for professional massage care.</div></div></div>
+                    <div class="accordion-item mb-2 border-sharp-gold"><h2 class="accordion-header"><button class="accordion-button collapsed serif h5 text-emerald-deep" data-bs-toggle="collapse" data-bs-target="#tr6">How does Reflexology help my whole body?</button></h2><div id="tr6" class="accordion-collapse collapse" data-bs-parent="#accTreat"><div class="accordion-body opacity-75">The feet have points connected to your organs and nerves. Pressing them triggers a full-body healing response.</div></div></div>
+                    <div class="accordion-item mb-2 border-sharp-gold"><h2 class="accordion-header"><button class="accordion-button collapsed serif h5 text-emerald-deep" data-bs-toggle="collapse" data-bs-target="#tr7">Can I combine two services?</button></h2><div id="tr7" class="accordion-collapse collapse" data-bs-parent="#accTreat"><div class="accordion-body opacity-75">Yes. Many clients combine Deep Tissue with Cupping for maximum pain relief.</div></div></div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="tab-logistics">
+                <div class="p-5 border-sharp-gold text-center">
+                    <h3 class="serif text-emerald-deep">Logistics Details</h3>
+                    <p class="text-muted">Parking at 1005 Kane Concourse is available on-street or in nearby garages. Please arrive 10 mins early.</p>
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* MASTER FAQ CSS: SHARP & HIGH CONTRAST */
+    .master-faq-v5 {
+        background-color: #FFFFFF;
+        padding: var(--section-padding) 0;
+    }
+
+    /* SHARP NAV PILLS (APPLE-INSPIRED) */
+    .sharp-pills .nav-link {
+        background: transparent;
+        color: var(--emerald-deep);
+        border: 1px solid rgba(5, 44, 30, 0.1);
+        border-radius: 4px;
+        padding: 12px 25px;
+        font-weight: 700;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: 0.3s;
+    }
+
+    .sharp-pills .nav-link.active {
+        background-color: var(--emerald-deep) !important;
+        color: var(--gold-metallic) !important;
+        border-color: var(--emerald-deep);
+    }
+
+    .sharp-pills .nav-link:hover:not(.active) {
+        border-color: var(--gold-metallic);
+        background-color: var(--ivory);
+    }
+
+    /* THE ACCORDION: CLINICAL CLEAN */
+    .sharp-accordion .accordion-item {
+        background-color: #FFFFFF;
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        border-radius: 4px !important;
+        overflow: hidden;
+    }
+
+    .sharp-accordion .accordion-button {
+        background-color: transparent !important;
+        padding: 25px 30px;
+        box-shadow: none !important;
+        transition: 0.3s;
+    }
+
+    .sharp-accordion .accordion-button:not(.collapsed) {
+        color: var(--gold-metallic) !important;
+        background-color: #FAF9F3 !important;
+    }
+
+    .sharp-accordion .accordion-body {
+        padding: 0 30px 30px 30px;
+        line-height: 1.8;
+        font-size: 1.05rem;
+    }
+
+    /* CUSTOM GOLD CHEVRON */
+    .sharp-accordion .accordion-button::after {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23D4AF37'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+    }
+</style>
+
+
+
+
+<section class="journal-editorial-v6 joy-both">
+    <div class="container">
+        
+        <div class="row mb-5 pb-lg-5 animate__animated animate__fadeIn">
+            <div class="col-lg-7">
+                <h2 class="display-3 text-emerald-deep mb-4">Blogs</h2>
+          </div>
+        </div>
+
+        <div class="row g-4">
+            
+            <div class="col-lg-8 animate__animated animate__fadeInUp">
+                <div class="journal-card featured-card bg-emerald-deep overflow-hidden">
+                    <div class="row g-0 h-100">
+                        <div class="col-md-6 order-md-2">
+                            <div class="journal-img-frame">
+                                <img src="https://placehold.co/800x1000/052C1E/D4AF37?text=The+Sleep+Code" alt="Sleep Science" class="img-fluid h-100 w-100 object-fit-cover">
+                            </div>
+                        </div>
+                        <div class="col-md-6 order-md-1 d-flex align-items-center">
+                            <div class="p-5">
+                                <span class="x-small text-gold-metallic ls-3 mb-3 d-block">RECOVERY SPECIAL</span>
+                                <h3 class="serif text-white h2 mb-4">The Sleep Code: Why you’re still tired.</h3>
+                                <p class="small text-white opacity-75 mb-5">Understanding how your nervous system prevents deep rest, and how a 60-minute session resets your internal clock.</p>
+                                <a href="#" class="btn-journal-link text-gold-metallic">Study the Manuscript <i class="ph ph-arrow-right ms-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 animate__animated animate__fadeInUp animate__delay-1s">
+                <div class="journal-card bg-white border-sharp-gold p-5 h-100 d-flex flex-column">
+                    <span class="x-small text-gold-metallic ls-3 mb-3 d-block">CLINICAL FOCUS</span>
+                    <h3 class="serif text-emerald-deep h3 mb-4">Swelling & Surgery: The Truth.</h3>
+                    <p class="small text-muted mb-5">Everything you need to know about healing faster after a procedure using manual lymphatic drainage.</p>
+                    <div class="mt-auto pt-4 border-top border-gold-subtle d-flex justify-content-between align-items-center">
+                        <span class="x-small fw-bold text-emerald-deep">6 MIN READ</span>
+                        <a href="#" class="text-gold-metallic"><i class="ph ph-plus-circle fs-3"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 animate__animated animate__fadeInUp">
+                <div class="journal-card bg-white border-sharp-gold p-5 h-100 d-flex flex-column">
+                    <span class="x-small text-gold-metallic ls-3 mb-3 d-block">THE EXECUTIVE</span>
+                    <h3 class="serif text-emerald-deep h3 mb-4">Why your shoulders are always tight.</h3>
+                    <p class="small text-muted mb-5">It's not just your desk setup. Discover how the "stress-breath" locks your upper body in a cycle of pain.</p>
+                    <div class="mt-auto pt-4 border-top border-gold-subtle d-flex justify-content-between align-items-center">
+                        <span class="x-small fw-bold text-emerald-deep">4 MIN READ</span>
+                        <a href="#" class="text-gold-metallic"><i class="ph ph-plus-circle fs-3"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-8 animate__animated animate__fadeInUp animate__delay-1s">
+                <div class="journal-card bg-ivory-light border-sharp-gold p-5 h-100">
+                    <div class="row align-items-center">
+                        <div class="col-md-7">
+                            <span class="x-small text-gold-metallic ls-3 mb-3 d-block">DAILY RITUALS</span>
+                            <h3 class="serif text-emerald-deep h2 mb-4">The 10-Minute Morning Ritual for a Calm Day.</h3>
+                            <p class="small text-muted mb-0">Three simple movements to wake up your lymphatic system and lower cortisol before your first cup of coffee.</p>
+                        </div>
+                        <div class="col-md-5 text-md-end mt-4 mt-md-0">
+                            <a href="#" class="btn-luxury-sharp-small">Read Full Guide</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* SCOPED JOURNAL STYLES */
+    .journal-editorial-v6 {
+        background-color: #FFFFFF; /* Pure White for Clarity */
+        padding: var(--section-padding) 0;
+    }
+
+    .journal-card {
+        border-radius: 4px; /* Sharp Luxury Radius */
+        transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        position: relative;
+    }
+
+    .featured-card {
+        border: 1px solid var(--emerald-deep);
+    }
+
+    .journal-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 30px 60px rgba(5, 44, 30, 0.1);
+    }
+
+    .journal-img-frame {
+        height: 100%;
+        min-height: 350px;
+        transition: transform 1.2s ease;
+    }
+
+    .journal-card:hover .journal-img-frame {
+        transform: scale(1.05);
+    }
+
+    /* TYPOGRAPHY & LINKS */
+    .btn-journal-link {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+        border-bottom: 2px solid var(--gold-metallic);
+        padding-bottom: 5px;
+        transition: 0.3s;
+    }
+
+    .btn-journal-link:hover {
+        color: #FFFFFF;
+        border-bottom-color: #FFFFFF;
+    }
+
+    .border-gold-subtle {
+        border-color: rgba(212, 175, 55, 0.2) !important;
+    }
+
+    .bg-ivory-light { background-color: #FCFBF7; }
+
+    /* BUTTON SYNC */
+    .btn-luxury-sharp-small {
+        display: inline-block;
+        padding: 15px 30px;
+        background: var(--emerald-deep);
+        color: var(--gold-metallic);
+        text-decoration: none;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.7rem;
+        border-radius: 4px;
+        transition: 0.3s;
+    }
+
+    .btn-luxury-sharp-small:hover {
+        background: var(--gold-metallic);
+        color: var(--emerald-deep);
+    }
+
+    /* RESPONSIVE SCALE */
+    @media (max-width: 991px) {
+        .journal-img-frame { min-height: 300px; }
+    }
+</style>
+{% endblock body %}
+    
+
+
+{% block js %}
+    
+{% endblock js %}
+    
