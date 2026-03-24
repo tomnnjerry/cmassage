@@ -1,0 +1,1209 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header %}
+
+{% endblock header %}
+
+{% block css %}
+    
+{% endblock css %}
+    
+
+
+{% block body %}
+    
+<section class="service-hero-v3 reflexology-hero">
+    <div class="hero-image-overlay">
+        <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&q=80" alt="Reflexology Precision Therapy">
+        <div class="gradient-shield-reflex"></div>
+    </div>
+
+    <div class="container position-relative z-5">
+        <div class="row">
+            <div class="col-lg-7">
+                
+                <div class="hero-text-block animate__animated animate__fadeInUp">
+                    <span class="modality-tag text-gold-metallic ls-3 mb-3 d-block fw-bold uppercase x-small">The Precision Protocol</span>
+                    
+                    <h1 class="display-1 text-white mb-4">
+                        Reflexology <br>
+                        <span class="serif italic text-gold-metallic">Precision</span>
+                    </h1>
+
+                    <div class="description-box mb-5">
+                        <p class="lead text-white opacity-75">
+                            A targeted neurological reset. By applying precise pressure to the reflex zones of the feet and hands, we trigger a systemic healing response, clearing energy pathways and restoring organ function.
+                        </p>
+                    </div>
+
+                    <div class="action-row d-flex align-items-center gap-5">
+                        <button class="btn-luxury-sharp" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                            Secure Your Reset
+                        </button>
+
+                        <div class="v-stats d-flex gap-4 border-start border-gold-thin ps-4">
+                            <div class="stat-item">
+                                <span class="d-block text-gold-metallic h5 mb-0">45/60</span>
+                                <span class="x-small text-white opacity-50 ls-2 uppercase">Min</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="d-block text-gold-metallic h5 mb-0">LVL 03</span>
+                                <span class="x-small text-white opacity-50 ls-2 uppercase">Intensity</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="clinical-tag animate__animated animate__fadeInRight">
+        <span class="ls-2">SYSTEMIC NEURO-MAPPING · BAY HARBOR</span>
+    </div>
+</section>
+
+<style>
+    .service-hero-v3.reflexology-hero {
+        min-height: 90vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+        background-color: var(--emerald-deep);
+        padding: 100px 0;
+        overflow: hidden;
+    }
+
+    /* THE IMAGE: Deep shadows, high detail */
+    .hero-image-overlay {
+        position: absolute;
+        top: 0; right: 0; width: 60%; height: 100%;
+        z-index: 1;
+    }
+    .hero-image-overlay img {
+        width: 100%; height: 100%; object-fit: cover;
+        filter: grayscale(30%) brightness(0.4);
+    }
+    
+    .gradient-shield-reflex {
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: linear-gradient(to right, var(--emerald-deep) 35%, transparent 100%);
+    }
+
+    .display-1 { font-weight: 800; letter-spacing: -2px; line-height: 0.9; }
+
+    .description-box {
+        max-width: 550px;
+        border-left: 2px solid var(--gold-metallic);
+        padding-left: 30px;
+    }
+
+    .border-gold-thin { border-color: rgba(212, 175, 55, 0.3) !important; }
+
+    .clinical-tag {
+        position: absolute;
+        bottom: 0; right: 0;
+        background: var(--gold-metallic);
+        color: var(--emerald-deep);
+        padding: 15px 40px;
+        font-size: 0.65rem;
+        font-weight: 900;
+        z-index: 10;
+    }
+
+    .btn-luxury-sharp {
+        background: var(--gold-metallic);
+        color: var(--emerald-deep);
+        padding: 20px 40px;
+        border: none;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.75rem;
+        transition: 0.4s;
+    }
+    .btn-luxury-sharp:hover { background: white; transform: translateY(-5px); }
+
+    @media (max-width: 991px) {
+        .hero-image-overlay { width: 100%; opacity: 0.4; }
+        .display-1 { font-size: 3.5rem; }
+    }
+</style>
+
+
+<section class="reflex-benefits joy-both">
+    <div class="container">
+        
+        <div class="row mb-5 pb-lg-3 text-center">
+            <div class="col-12">
+                <h6 class="ls-wide text-gold-metallic mb-3">SYSTEMIC MAPPING</h6>
+                <h2 class="display-3 text-emerald-deep mb-4">The remote control <span class="serif italic">for your health</span></h2>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            
+            <div class="col-lg-3 col-md-6 animate__animated animate__fadeInUp">
+                <div class="reflex-card p-4 h-100 border-sharp-gold bg-emerald-deep text-white">
+                    <div class="reflex-icon mb-4 bg-white">
+                        <i class="ph ph-target text-emerald-deep fs-2"></i>
+                    </div>
+                    <h3 class="serif text-gold-metallic h4 mb-3">Neurological Reset</h3>
+                    <p class="small opacity-75 mb-0">
+                        We send calming signals to the central nervous system. This is exceptionally effective for reducing anxiety and managing chronic stress from the "bottom up."
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 animate__animated animate__fadeInUp animate__delay-1s">
+                <div class="reflex-card p-4 h-100 border-sharp-gold">
+                    <div class="reflex-icon mb-4">
+                        <i class="ph ph-shield-plus text-gold-metallic fs-2"></i>
+                    </div>
+                    <h3 class="serif text-emerald-deep h4 mb-3">Organ Calibration</h3>
+                    <p class="small text-muted mb-0">
+                        By targeting specific reflex zones, we can assist in improving digestive function, boosting the immune system, and supporting natural detoxification.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 animate__animated animate__fadeInUp animate__delay-2s">
+                <div class="reflex-card p-4 h-100 border-sharp-gold">
+                    <div class="reflex-icon mb-4">
+                        <i class="ph ph-lightning text-gold-metallic fs-2"></i>
+                    </div>
+                    <h3 class="serif text-emerald-deep h4 mb-3">Energy Flow</h3>
+                    <p class="small text-muted mb-0">
+                        Reflexology clears "congested" energy pathways. You’ll experience improved circulation and a sense of renewed vitality throughout your entire system.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 animate__animated animate__fadeInUp animate__delay-3s">
+                <div class="reflex-card p-4 h-100 border-sharp-gold">
+                    <div class="reflex-icon mb-4">
+                        <i class="ph ph-footprint text-gold-metallic fs-2"></i>
+                    </div>
+                    <h3 class="serif text-emerald-deep h4 mb-3">Localized Relief</h3>
+                    <p class="small text-muted mb-0">
+                        Beyond the systemic benefits, it provides deep relief for plantar fasciitis, tired arches, and the daily strain of being on your feet in the city.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    .reflex-benefits {
+        background-color: var(--white);
+        padding: 120px 0;
+    }
+
+    .reflex-card {
+        border-radius: 4px;
+        transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .reflex-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 30px 60px rgba(5, 44, 30, 0.08);
+        border-color: var(--gold-metallic);
+    }
+
+    .reflex-icon {
+        width: 55px;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--ivory);
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        border-radius: 2px;
+    }
+
+    .bg-emerald-deep {
+        background-color: var(--emerald-deep) !important;
+    }
+
+    @media (max-width: 991px) {
+        .reflex-benefits { padding: 80px 0; }
+    }
+</style>
+
+
+
+<section class="reflex-candidates joy-both">
+    <div class="container">
+        
+        <div class="row mb-5 pb-lg-4">
+            <div class="col-lg-6">
+                <h6 class="ls-wide text-gold-metallic mb-3">NEURO-MATCH</h6>
+                <h2 class="display-3 text-emerald-deep mb-4">Is this right <br><span class="serif italic text-gold-metallic">for you?</span></h2>
+            </div>
+            <div class="col-lg-5 offset-lg-1 d-flex align-items-end">
+                <p class="body-text text-muted border-start border-gold-thin ps-4">
+                    Reflexology is a unique clinical modality. It is ideal for those seeking deep systemic results through targeted, non-invasive pressure on the extremities.
+                </p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="candidate-card-v36 p-4 h-100 border-sharp-gold bg-emerald-deep text-white">
+                    <h4 class="serif text-gold-metallic h4 mb-4">The Stressed <br>Professional</h4>
+                    <p class="x-small ls-1 opacity-75 mb-4">SYSTEMIC IMPACT ON:</p>
+                    <ul class="reflex-list list-unstyled small">
+                        <li>— Chronic Anxiety</li>
+                        <li>— Mental Fatigue</li>
+                        <li>— Adrenal Burnout</li>
+                        <li>— Tension Headaches</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="candidate-card-v36 p-4 h-100 border-sharp-gold">
+                    <h4 class="serif text-emerald-deep h4 mb-4">The Active <br>High-Performer</h4>
+                    <p class="x-small ls-1 text-muted mb-4">LOCALIZED RELIEF FOR:</p>
+                    <ul class="reflex-list list-unstyled small text-muted">
+                        <li>— Plantar Fasciitis</li>
+                        <li>— Arch/Heel Pain</li>
+                        <li>— Ankle Instability</li>
+                        <li>— Post-Run Recovery</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="candidate-card-v36 p-4 h-100 border-sharp-gold bg-ivory">
+                    <h4 class="serif text-emerald-deep h4 mb-4">The Internal <br>Optimizer</h4>
+                    <p class="x-small ls-1 text-muted mb-4">FUNCTIONAL SUPPORT FOR:</p>
+                    <ul class="reflex-list list-unstyled small text-muted">
+                        <li>— Digestive Sluggishness</li>
+                        <li>— Hormonal Imbalance</li>
+                        <li>— Immune Strength</li>
+                        <li>— Detoxification</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="candidate-card-v36 p-4 h-100 border-sharp-gold">
+                    <h4 class="serif text-emerald-deep h4 mb-4">The Efficiency <br>Seeker</h4>
+                    <p class="x-small ls-1 text-muted mb-4">IDEAL FOR THOSE WHO:</p>
+                    <ul class="reflex-list list-unstyled small text-muted">
+                        <li>— Dislike full-body touch</li>
+                        <li>— Prefer staying clothed</li>
+                        <li>— Have limited time</li>
+                        <li>— Need a mid-day reset</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row mt-5 pt-lg-4 justify-content-center text-center">
+            <div class="col-lg-8">
+                <p class="serif text-emerald-deep h5 mb-4">Ready to map your path to recovery?</p>
+                <button class="btn-luxury-outline" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                    Reserve Your Precision Reset
+                </button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    .reflex-candidates {
+        background-color: var(--white);
+        padding: 120px 0;
+    }
+
+    .candidate-card-v36 {
+        border-radius: 4px;
+        transition: all 0.5s ease;
+        border: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    .candidate-card-v36:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(5, 44, 30, 0.05);
+        border-color: var(--gold-metallic);
+    }
+
+    .reflex-list li {
+        margin-bottom: 12px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    }
+
+    .reflex-list li:last-child {
+        border-bottom: none;
+    }
+
+    .btn-luxury-outline {
+        background: transparent;
+        border: 1px solid var(--emerald-deep);
+        color: var(--emerald-deep);
+        padding: 18px 35px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.75rem;
+        transition: 0.4s;
+    }
+
+    .btn-luxury-outline:hover {
+        background: var(--emerald-deep);
+        color: white;
+    }
+
+    @media (max-width: 991px) {
+        .reflex-candidates { padding: 80px 0; }
+    }
+</style>
+
+<section class="reflex-process joy-both">
+    <div class="container">
+        
+        <div class="row mb-5 pb-lg-3 text-center">
+            <div class="col-12">
+                <h6 class="ls-wide text-gold-metallic mb-3">TECHNICAL EXECUTION</h6>
+                <h2 class="display-3 text-emerald-deep mb-4">How we map <br><span class="serif italic">your reset.</span></h2>
+            </div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            
+            <div class="col-lg-4">
+                <div class="p-process-card p-4 text-center h-100">
+                    <div class="p-node mb-4 mx-auto">01</div>
+                    <h4 class="serif text-emerald-deep h5">Systemic Consultation</h4>
+                    <p class="small text-muted">We begin by identifying your internal goals—whether it’s digestive support, headache relief, or adrenal recovery—to determine which reflex zones require the most focus.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="p-process-card p-4 text-center h-100">
+                    <div class="p-node active-reflex mb-4 mx-auto">02</div>
+                    <h4 class="serif text-emerald-deep h5">Zone Activation</h4>
+                    <p class="small text-muted">Using specialized "thumb-walking" and finger-pressure techniques, Nathalie systematically clears congestion in the 7,000+ nerve endings found in your feet.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="p-process-card p-4 text-center h-100">
+                    <div class="p-node mb-4 mx-auto">03</div>
+                    <h4 class="serif text-emerald-deep h5">Neurological Integration</h4>
+                    <p class="small text-muted">The session concludes with grounding strokes that signal your central nervous system to hold the "reset," leaving you feeling balanced from head to toe.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    .reflex-process { background-color: var(--ivory); padding: 120px 0; }
+    .p-node {
+        width: 70px; height: 70px; border: 1px solid var(--gold-metallic);
+        border-radius: 50%; display: flex; align-items: center; justify-content: center;
+        font-family: var(--serif); font-size: 1.5rem; color: var(--emerald-deep);
+        background: var(--white); transition: 0.4s;
+    }
+    .active-reflex { background: var(--emerald-deep); color: var(--gold-metallic); border-color: var(--emerald-deep); box-shadow: 0 10px 30px rgba(5, 44, 30, 0.2); }
+    .p-process-card { transition: 0.3s; background: var(--white); border: 1px solid rgba(212, 175, 55, 0.1); border-radius: 4px; }
+    .p-process-card:hover { transform: translateY(-5px); border-color: var(--gold-metallic); }
+</style>
+
+
+
+<section class="precision-booking joy-both bg-white">
+    <div class="container">
+        
+
+        <div class="row g-5 justify-content-center">
+            
+            <div class="col-lg-5">
+                <div class="precision-card-path light-path p-5 h-100 border-sharp-gold animate__animated animate__fadeInLeft">
+                    <div class="mb-4">
+                        <span class="x-small ls-2 text-gold-metallic fw-bold uppercase">First Session</span>
+                    </div>
+                    <h3 class="serif text-emerald-deep h2 mb-4">New Patients.</h3>
+                    <p class="body-text text-muted mb-5">
+                        Your first visit includes a **Neuro-Mapping Consultation**. We analyze the reactive zones of your feet to identify internal blockages and build your clinical profile.
+                    </p>
+                    
+                    <div class="mt-auto">
+                        <button class="btn-precision-dark w-100" data-bs-toggle="modal" data-bs-target="#reflexBookingModal">
+                            Begin My Mapping <i class="ph ph-target ms-2"></i>
+                        </button>
+                        <p class="text-center x-small text-muted italic mt-3">Clinical intake sent via email</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="precision-card-path dark-path p-5 h-100 animate__animated animate__fadeInRight">
+                    <div class="mb-4">
+                        <span class="x-small ls-2 text-gold-metallic fw-bold uppercase">Regular Maintenance</span>
+                    </div>
+                    <h3 class="serif text-white h2 mb-4">Returning.</h3>
+                    <p class="body-text text-white opacity-75 mb-5">
+                        Your map is already on file. Skip the introduction and move directly into active zone work to recalibrate your nervous system and clear energy pathways.
+                    </p>
+                    
+                    <div class="mt-auto">
+                        <button class="btn-precision-gold w-100" data-bs-toggle="modal" data-bs-target="#reflexBookingModal">
+                            Continue My Reset <i class="ph ph-calendar-check ms-2"></i>
+                        </button>
+                        <p class="text-center x-small text-white opacity-50 italic mt-3">Quick-Select Scheduling Enabled</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" id="reflexBookingModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content border-sharp-gold overflow-hidden">
+            
+            <div class="modal-header border-0 p-4 pb-0 bg-white">
+                <div class="modal-title-box">
+                    <h5 class="serif text-emerald-deep h3 mb-1">Precision <span class="italic text-gold-metallic">Portal.</span></h5>
+                    <p class="x-small text-muted ls-2 mb-0 uppercase">Reflexology Protocol · Bay Harbor Islands</p>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body p-4 bg-white">
+                <div class="iframe-load-box bg-ivory border-sharp-gold position-relative d-flex align-items-center justify-content-center overflow-hidden" style="min-height: 550px;">
+                    
+                    <div id="reflexLoader" class="text-center p-5">
+                        <i class="ph ph-target animate-pulse display-4 text-gold-metallic mb-3"></i>
+                        <p class="serif italic text-emerald-deep">Locating Nathalie's clinical availability...</p>
+                    </div>
+
+                    <iframe 
+                        id="reflexIframe"
+                        src="https://your-booking-link.com" 
+                        style="width:100%; height:600px; border:none; display:none;" 
+                        onload="document.getElementById('reflexLoader').style.display='none'; this.style.display='block';">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="modal-footer border-0 p-4 justify-content-center bg-ivory">
+                <p class="x-small text-muted mb-0 italic">Prefer a call? Nathalie is available at 786-292-7551</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<style>
+    /* CARDS */
+    .precision-booking { padding: 120px 0; }
+    
+    .precision-card-path {
+        border-radius: 4px;
+        transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        display: flex;
+        flex-direction: column;
+        border: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    .light-path { background: var(--white); box-shadow: 20px 20px 0px var(--ivory); }
+    .dark-path { background: var(--emerald-deep); border-color: var(--emerald-deep); }
+
+    .precision-card-path:hover {
+        transform: translateY(-12px);
+        border-color: var(--gold-metallic);
+        box-shadow: 0 40px 80px rgba(5, 44, 30, 0.1);
+    }
+
+    /* BUTTONS */
+    .btn-precision-dark {
+        background: var(--emerald-deep);
+        color: var(--gold-metallic);
+        border: 1px solid var(--emerald-deep);
+        padding: 22px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.75rem;
+        transition: 0.3s;
+    }
+
+    .btn-precision-gold {
+        background: var(--gold-metallic);
+        color: var(--emerald-deep);
+        border: 1px solid var(--gold-metallic);
+        padding: 22px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.75rem;
+        transition: 0.3s;
+    }
+
+    .btn-precision-dark:hover, .btn-precision-gold:hover {
+        filter: brightness(1.1);
+        transform: scale(1.02);
+    }
+
+    /* PULSE LOADER */
+    @keyframes targetPulse {
+        0% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.2); opacity: 0.5; }
+        100% { transform: scale(1); opacity: 1; }
+    }
+    .animate-pulse { animation: targetPulse 2s infinite ease-in-out; display: inline-block; }
+
+    @media (max-width: 991px) {
+        .precision-booking { padding: 80px 0; }
+        .precision-card-path { padding: 40px 30px !important; }
+    }
+</style>
+
+
+<section class="precision-reviews joy-both">
+    <div class="container">
+        
+        <div class="row mb-5 pb-lg-4 align-items-end">
+            <div class="col-lg-6">
+                <h6 class="ls-wide text-gold-metallic mb-3">CLINICAL FEEDBACK</h6>
+                <h2 class="display-3 text-emerald-deep mb-0">Voices of <br><span class="serif italic text-gold-metallic">Precision.</span></h2>
+            </div>
+            <div class="col-lg-5 offset-lg-1">
+                <p class="text-muted border-start border-gold-thin ps-4 mb-0">
+                    From chronic foot pain to systemic stress management, our clients in Bay Harbor Islands experience the profound impact of targeted neurological mapping.
+                </p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            
+            <div class="col-lg-4 animate__animated animate__fadeInUp">
+                <div class="reflex-review-card p-5 h-100 border-sharp-gold">
+                    <div class="stars-gold mb-4">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p class="serif text-emerald-deep h4 mb-4">"I came in for foot pain, but I left with a level of mental clarity I haven't felt in months. Nathalie explained how my feet were holding my stress—it was eye-opening."</p>
+                    <div class="review-meta-v37 pt-4 border-top">
+                        <span class="d-block fw-bold text-emerald-deep">Marcus V.</span>
+                        <span class="x-small ls-1 text-gold-metallic uppercase">Systemic Reset · Google Review</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 animate__animated animate__fadeInUp animate__delay-1s">
+                <div class="reflex-review-card p-5 h-100 bg-emerald-deep text-white">
+                    <div class="stars-gold mb-4">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p class="serif h4 mb-4">"Plantar fasciitis was making it impossible to stay active. Nathalie's precision work on my arches and heels has been a game changer. I'm finally back to my morning runs."</p>
+                    <div class="review-meta-v37 pt-4 border-top border-white-10">
+                        <span class="d-block fw-bold text-white">Sarah L.</span>
+                        <span class="x-small ls-1 text-gold-metallic uppercase">Plantar Relief · Verified Patient</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 animate__animated animate__fadeInUp animate__delay-2s">
+                <div class="reflex-review-card p-5 h-100 border-sharp-gold">
+                    <div class="stars-gold mb-4">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p class="serif text-emerald-deep h4 mb-4">"As someone who struggles with digestion and sleep, I didn't think a foot treatment could help. I was wrong. The neurological connection is real. Nathalie is a master."</p>
+                    <div class="review-meta-v37 pt-4 border-top">
+                        <span class="d-block fw-bold text-emerald-deep">Daniela P.</span>
+                        <span class="x-small ls-1 text-gold-metallic uppercase">Internal Balance · Google Review</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row mt-5 pt-lg-4 text-center">
+            <div class="col-12">
+                <a href="#" class="precision-trust-link">
+                    <i class="ph ph-google-logo me-2"></i> Join 130+ 5-Star Clinical Experiences
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    .precision-reviews {
+        background-color: var(--ivory);
+        padding: 140px 0;
+    }
+
+    .reflex-review-card {
+        background-color: #FFFFFF;
+        border-radius: 4px;
+        transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        display: flex;
+        flex-direction: column;
+        border: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    .reflex-review-card:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 40px 80px rgba(5, 44, 30, 0.08);
+        border-color: var(--gold-metallic);
+    }
+
+    .stars-gold {
+        color: var(--gold-metallic);
+        font-size: 0.8rem;
+    }
+
+    .border-white-10 { border-color: rgba(255,255,255,0.1) !important; }
+
+    .precision-trust-link {
+        color: var(--emerald-deep);
+        text-decoration: none;
+        font-weight: 800;
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        border-bottom: 2px solid var(--gold-metallic);
+        padding-bottom: 5px;
+        transition: 0.3s;
+    }
+
+    .precision-trust-link:hover {
+        color: var(--gold-metallic);
+    }
+
+    @media (max-width: 991px) {
+        .precision-reviews { padding: 80px 0; }
+    }
+</style>
+
+
+<section class="precision-aftermath joy-both">
+    <div class="container">
+        
+        <div class="row mb-5 pb-lg-3 text-center">
+            <div class="col-12">
+                <h6 class="ls-wide text-gold-metallic mb-3">POST-SESSION RECOVERY</h6>
+                <h2 class="display-3 text-emerald-deep mb-4">The Precision <br><span class="serif italic">Afterglow.</span></h2>
+                <p class="text-muted mx-auto" style="max-width: 600px;">
+                    Reflexology is a deep neurological conversation. After your session, your body will begin to integrate the signals sent to your central nervous system.
+                </p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            
+            <div class="col-lg-3 col-md-6 animate__animated animate__fadeInUp">
+                <div class="aftermath-card-v38 p-4 h-100 border-sharp-gold">
+                    <i class="ph ph-brain text-gold-metallic display-6 mb-3 d-block"></i>
+                    <h3 class="serif text-emerald-deep h4 mb-3">Neurological Reset</h3>
+                    <p class="small text-muted mb-0">
+                        Most clients experience a profound sense of mental "floatiness" or clarity. This is your nervous system shifting out of high-alert mode into a state of repair.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 animate__animated animate__fadeInUp animate__delay-1s">
+                <div class="aftermath-card-v38 p-4 h-100 bg-emerald-deep text-white">
+                    <i class="ph ph-waves text-gold-metallic display-6 mb-3 d-block"></i>
+                    <h3 class="serif text-gold-metallic h4 mb-3">Systemic Flush</h3>
+                    <p class="small opacity-75 mb-0">
+                        As energy pathways clear, you may feel a "detox" effect. Increased hydration is vital to help your kidneys process the metabolic waste released during the session.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 animate__animated animate__fadeInUp animate__delay-2s">
+                <div class="aftermath-card-v38 p-4 h-100 border-sharp-gold">
+                    <i class="ph ph-feather text-gold-metallic display-6 mb-3 d-block"></i>
+                    <h3 class="serif text-emerald-deep h4 mb-3">Structural Ease</h3>
+                    <p class="small text-muted mb-0">
+                        Your feet will feel significantly lighter and "unlocked." This often translates to better posture and reduced tension in the lower back and hips.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 animate__animated animate__fadeInUp animate__delay-3s">
+                <div class="aftermath-card-v38 p-4 h-100 border-sharp-gold">
+                    <i class="ph ph-moon-stars text-gold-metallic display-6 mb-3 d-block"></i>
+                    <h3 class="serif text-emerald-deep h4 mb-3">Deep Integration</h3>
+                    <p class="small text-muted mb-0">
+                        Expect a very deep night of sleep. Reflexology balances your circadian rhythm by lowering cortisol and priming the body for restorative rest.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row mt-5 pt-lg-4">
+            <div class="col-lg-10 mx-auto">
+                <div class="reflex-note-box d-flex align-items-center p-4 bg-ivory border-sharp-gold">
+                    <i class="ph ph-info text-gold-metallic fs-2 me-4"></i>
+                    <p class="small text-emerald-deep mb-0">
+                        <strong>NATHALIE’S PROTOCOL:</strong> To maximize the benefits, avoid high-intensity workouts for 4-6 hours post-session. Allow your nervous system the quiet space it needs to hold the new calibration.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    .precision-aftermath {
+        background-color: var(--white);
+        padding: 120px 0;
+    }
+
+    .aftermath-card-v38 {
+        border-radius: 4px;
+        transition: 0.4s ease;
+        border: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    .aftermath-card-v38:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(5, 44, 30, 0.05);
+        border-color: var(--gold-metallic);
+    }
+
+    .reflex-note-box {
+        box-shadow: 10px 10px 0px rgba(212, 175, 55, 0.1);
+    }
+
+    .bg-ivory { background-color: #FAF9F3 !important; }
+
+    @media (max-width: 991px) {
+        .precision-aftermath { padding: 80px 0; }
+        .reflex-note-box { flex-direction: column; text-align: center; }
+        .reflex-note-box i { margin: 0 0 15px 0 !important; }
+    }
+</style>
+
+<section class="why-precision joy-both">
+    <div class="container">
+        
+        <div class="row align-items-center g-5">
+            
+            <div class="col-lg-5 animate__animated animate__fadeIn">
+                <h6 class="ls-wide text-gold-metallic mb-3">THE CATHARTIC DIFFERENCE</h6>
+                <h2 class="display-3 text-emerald-deep mb-4">Accuracy beyond <br><span class="serif italic text-gold-metallic">the surface.</span></h2>
+                <p class="body-text text-muted mb-5">
+                    A typical foot massage at a nail salon or commercial spa is a surface-level relaxation technique. At Cathartic, we view the feet as a diagnostic map. Nathalie Koffler uses her 15+ years of experience to identify systemic blockages, ensuring your session isn't just felt—it's integrated.
+                </p>
+                
+                <div class="credential-badge-reflex p-4 border-sharp-gold bg-ivory d-inline-block">
+                    <span class="h2 serif text-emerald-deep mb-0">Expert</span>
+                    <p class="x-small ls-2 fw-bold text-gold-metallic mb-0 uppercase">15+ Years of <br>Clinical Bodywork</p>
+                </div>
+            </div>
+
+            <div class="col-lg-6 offset-lg-1">
+                <div class="precision-pillars">
+                    
+                    <div class="p-pill-item mb-5 animate__animated animate__fadeInRight">
+                        <div class="d-flex align-items-center gap-3 mb-2">
+                            <i class="ph ph-fingerprint text-gold-metallic h4 mb-0"></i>
+                            <h4 class="serif text-emerald-deep h4 mb-0">Neuro-Mapping Accuracy</h4>
+                        </div>
+                        <p class="small text-muted ps-5">
+                            We don't use generic routines. Nathalie identifies specific tension patterns in your reflex zones that correlate to your unique internal stressors, from adrenal fatigue to digestive sluggishness.
+                        </p>
+                    </div>
+
+                    <div class="p-pill-item mb-5 animate__animated animate__fadeInRight animate__delay-1s">
+                        <div class="d-flex align-items-center gap-3 mb-2">
+                            <i class="ph ph-shield-check text-gold-metallic h4 mb-0"></i>
+                            <h4 class="serif text-emerald-deep h4 mb-0">The Private Sanctuary</h4>
+                        </div>
+                        <p class="small text-muted ps-5">
+                            Our Bay Harbor suite is 100% private. There are no shared waiting rooms or commercial distractions—only a quiet, high-end environment focused entirely on your neurological reset.
+                        </p>
+                    </div>
+
+                    <div class="p-pill-item animate__animated animate__fadeInRight animate__delay-2s">
+                        <div class="d-flex align-items-center gap-3 mb-2">
+                            <i class="ph ph-chart-line-up text-gold-metallic h4 mb-0"></i>
+                            <h4 class="serif text-emerald-deep h4 mb-0">Clinical Intensity</h4>
+                        </div>
+                        <p class="small text-muted ps-5">
+                            Reflexology requires a specific "thumb-walking" depth to be effective. Nathalie’s technique is firm and purposeful, designed to trigger actual physiological change rather than just temporary comfort.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    .why-precision {
+        background-color: var(--white);
+        padding: 140px 0;
+    }
+
+    .credential-badge-reflex {
+        box-shadow: 15px 15px 0px rgba(212, 175, 55, 0.05);
+        border: 1px solid var(--gold-metallic);
+    }
+
+    .p-pill-item {
+        position: relative;
+        transition: 0.3s ease;
+    }
+
+    .p-pill-item:hover {
+        transform: translateX(10px);
+    }
+
+    .p-pill-item i {
+        font-size: 2.2rem;
+    }
+
+    .bg-ivory { background-color: #FAF9F3 !important; }
+
+    @media (max-width: 991px) {
+        .why-precision { padding: 80px 0; }
+        .credential-badge-reflex { margin-bottom: 40px; }
+    }
+</style>
+
+
+<section class="reflex-about-v39 joy-both">
+    <div class="container">
+        
+        <div class="row align-items-center g-5">
+            
+            <div class="col-lg-5 animate__animated animate__fadeIn">
+                <div class="reflex-image-frame position-relative">
+                    <img src="https://images.unsplash.com/photo-1544126592-807daa215a75?auto=format&fit=crop&q=80" alt="Reflexology Clinical Mapping" class="img-fluid border-sharp-gold">
+                    
+                    <div class="floating-badge-v39 bg-emerald-deep text-white p-4">
+                        <span class="d-block h2 serif text-gold-metallic mb-0">7,000+</span>
+                        <p class="x-small ls-2 mb-0 uppercase">Nerve Endings <br>Per Foot</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 offset-lg-1">
+                <h6 class="ls-wide text-gold-metallic mb-3">THE METHODOLOGY</h6>
+                <h2 class="display-3 text-emerald-deep mb-4">The Science of <br><span class="serif italic text-gold-metallic">the Map.</span></h2>
+                
+                <p class="lead-text-reflex text-emerald-deep mb-5">
+                    Reflexology is a neurological dialogue. It operates on the principle of "Zone Theory," where the body is divided into ten longitudinal zones. By applying precise pressure to these zones on the feet, we trigger a parasympathetic response that travels through the central nervous system to the corresponding organ or muscle group.
+                </p>
+
+                <div class="reflex-pillars-v39">
+                    <div class="r-method-item mb-4 pb-4 border-bottom-subtle">
+                        <h4 class="serif text-emerald-deep h5 mb-2">Thumb-Walking Technique</h4>
+                        <p class="small text-muted mb-0">Unlike the broad strokes of a massage, we use a specialized "thumb-walking" motion. This allows for extreme accuracy in identifying "crystals" or congestions within the reflex points that signal internal stress.</p>
+                    </div>
+
+                    <div class="r-method-item">
+                        <h4 class="serif text-emerald-deep h5 mb-2">Systemic Homeostasis</h4>
+                        <p class="small text-muted mb-0">The ultimate goal is balance. Whether you are dealing with hormonal fluctuations, digestive issues, or chronic migraines, we use the feet as a gateway to restore your body’s natural equilibrium.</p>
+                    </div>
+                </div>
+
+                <div class="mt-5 d-flex align-items-center gap-3">
+                    <i class="ph ph-activity text-gold-metallic fs-4"></i>
+                    <p class="x-small text-muted ls-1 mb-0 uppercase">Targeting: Central Nervous System & Organ Vitality</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    .reflex-about-v39 {
+        background-color: var(--ivory);
+        padding: 140px 0;
+    }
+
+    .lead-text-reflex {
+        font-size: 1.15rem;
+        line-height: 1.8;
+        border-left: 2px solid var(--gold-metallic);
+        padding-left: 25px;
+    }
+
+    .reflex-image-frame img {
+        border-radius: 4px;
+        box-shadow: 20px 20px 0px var(--white);
+    }
+
+    .floating-badge-v39 {
+        position: absolute;
+        bottom: -30px;
+        right: -30px;
+        border: 1px solid var(--gold-metallic);
+        box-shadow: 0 20px 40px rgba(5, 44, 30, 0.15);
+        z-index: 10;
+    }
+
+    .border-bottom-subtle {
+        border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    @media (max-width: 991px) {
+        .reflex-about-v39 { padding: 80px 0; }
+        .floating-badge-v39 { position: static; margin-top: 20px; text-align: center; }
+        .reflex-image-frame { margin-bottom: 60px; }
+    }
+</style>
+
+<section class="precision-faq-v40 joy-both">
+    <div class="container">
+        
+        <div class="row mb-5 pb-lg-3">
+            <div class="col-lg-6">
+                <h6 class="ls-wide text-gold-metallic mb-3">NEUROLOGICAL GUIDE</h6>
+                <h2 class="display-3 text-emerald-deep mb-0">Frequently <br><span class="serif italic">Asked.</span></h2>
+            </div>
+        </div>
+
+        <div class="row g-5">
+            
+            <div class="col-lg-4">
+                <h4 class="serif text-gold-metallic h5 mb-4 border-bottom pb-2">01 — The Approach</h4>
+                <div class="accordion accordion-flush sharp-faq" id="faqPrecision1">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#p1">How is this different from a foot massage?</button></h2>
+                        <div id="p1" class="accordion-collapse collapse" data-bs-parent="#faqPrecision1"><div class="accordion-body">A foot massage focuses on skin and muscle relaxation. Precision Reflexology targets the 7,000+ nerve endings that correspond to internal organs and systems to trigger a full-body healing response.</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#p2">Do I need to undress?</button></h2>
+                        <div id="p2" class="accordion-collapse collapse" data-bs-parent="#faqPrecision1"><div class="accordion-body">No. This is an ideal modality for those who prefer to remain clothed. You only need to remove your shoes and socks.</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#p3">What if I am ticklish?</button></h2>
+                        <div id="p3" class="accordion-collapse collapse" data-bs-parent="#faqPrecision1"><div class="accordion-body">Don't worry. Reflexology uses firm, specialized pressure and "thumb-walking" techniques that are therapeutic rather than light, which usually bypasses the tickle response.</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#p4">Is it safe for everyone?</button></h2>
+                        <div id="p4" class="accordion-collapse collapse" data-bs-parent="#faqPrecision1"><div class="accordion-body">Generally, yes. However, if you have active blood clots, foot fractures, or certain late-stage cardiovascular issues, please consult Nathalie before booking.</div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <h4 class="serif text-gold-metallic h5 mb-4 border-bottom pb-2">02 — The Sensation</h4>
+                <div class="accordion accordion-flush sharp-faq" id="faqPrecision2">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#s1">Why do some spots feel "crunchy"?</button></h2>
+                        <div id="s1" class="accordion-collapse collapse" data-bs-parent="#faqPrecision2"><div class="accordion-body">That "crunchy" feeling is often uric acid or calcium crystals that have settled in the reflex zones. Nathalie works to break these down to restore clear energy and nerve flow.</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#s2">Does reflexology hurt?</button></h2>
+                        <div id="s2" class="accordion-collapse collapse" data-bs-parent="#faqPrecision2"><div class="accordion-body">It should be "comfortably intense." Some points may feel tender if the corresponding organ or system is stressed, but the sensation usually gives way to deep relief.</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#s3">Can you diagnose my health issues?</button></h2>
+                        <div id="s3" class="accordion-collapse collapse" data-bs-parent="#faqPrecision2"><div class="accordion-body">Reflexology is a therapeutic tool, not a medical diagnosis. While Nathalie can identify "congestion" in certain zones, we always recommend seeing a physician for specific health concerns.</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#s4">What is "Thumb-Walking"?</button></h2>
+                        <div id="s4" class="accordion-collapse collapse" data-bs-parent="#faqPrecision2"><div class="accordion-body">It is a specialized clinical stroke used to maintain constant pressure while moving across the foot. It allows Nathalie to find precise blockages that broad strokes would miss.</div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <h4 class="serif text-gold-metallic h5 mb-4 border-bottom pb-2">03 — The Integration</h4>
+                <div class="accordion accordion-flush sharp-faq" id="faqPrecision3">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#a1">Why am I so thirsty afterward?</button></h2>
+                        <div id="a1" class="accordion-collapse collapse" data-bs-parent="#faqPrecision3"><div class="accordion-body">Reflexology stimulates your detoxification pathways. Water helps flush out the metabolic waste and "crystals" released during the session.</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#a2">Can it help with migraines?</button></h2>
+                        <div id="a2" class="accordion-collapse collapse" data-bs-parent="#faqPrecision3"><div class="accordion-body">Yes. By targeting the reflex points for the head, neck, and endocrine system, we can help reduce the frequency and intensity of chronic headaches.</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#a3">How often should I come in?</button></h2>
+                        <div id="a3" class="accordion-collapse collapse" data-bs-parent="#faqPrecision3"><div class="accordion-body">For chronic issues (like digestion or anxiety), weekly sessions are recommended for a month. For general maintenance, once every 3-4 weeks is ideal.</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#a4">Will I feel tired afterward?</button></h2>
+                        <div id="a4" class="accordion-collapse collapse" data-bs-parent="#faqPrecision3"><div class="accordion-body">It is common to feel a "healing crisis" or light fatigue as your body recalibrates. This is a sign that your nervous system is successfully integrating the reset.</div></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    .precision-faq-v40 {
+        background-color: var(--white);
+        padding: 120px 0;
+    }
+
+    .sharp-faq .accordion-item {
+        background-color: transparent;
+        border-bottom: 1px solid rgba(5, 44, 30, 0.1) !important;
+    }
+
+    .sharp-faq .accordion-button {
+        padding: 20px 0;
+        background-color: transparent !important;
+        box-shadow: none !important;
+        font-family: var(--serif);
+        font-size: 1.1rem;
+        color: var(--emerald-deep);
+        transition: 0.3s;
+    }
+
+    .sharp-faq .accordion-button:not(.collapsed) {
+        color: var(--gold-metallic);
+    }
+
+    .sharp-faq .accordion-body {
+        padding: 0 0 20px 0;
+        font-size: 0.95rem;
+        color: #666;
+        line-height: 1.6;
+    }
+
+    .sharp-faq .accordion-button::after {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23D4AF37'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+    }
+
+    @media (max-width: 991px) {
+        .precision-faq-v40 { padding: 80px 0; }
+    }
+</style>
+
+<section class="precision-cta-v41 joy-both">
+    <div class="container">
+        
+        <div class="cta-shield-precision d-flex flex-column flex-lg-row align-items-center justify-content-between animate__animated animate__fadeInUp">
+            
+            <div class="cta-content-left">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <span class="x-small text-gold-metallic ls-3 fw-bold uppercase">Neurological Calibration</span>
+                    <div class="gold-line-precision"></div>
+                </div>
+                <h2 class="serif text-white display-4 mb-3">Map your way <br><span class="italic text-gold-metallic">to balance.</span></h2>
+                <p class="body-text text-white opacity-75 mb-0" style="max-width: 450px;">
+                    Whether you are targeting chronic foot pain or seeking a full-body nervous system reset, Nathalie’s 15+ years of precision mapping ensures a clinical result.
+                </p>
+            </div>
+
+            <div class="cta-content-right mt-5 mt-lg-0 text-center text-lg-end">
+                <div class="d-flex flex-column flex-sm-row gap-3 align-items-center">
+                    <button class="btn-precision-final" data-bs-toggle="modal" data-bs-target="#reflexBookingModal">
+                        Secure Your Reset <i class="ph ph-target ms-2"></i>
+                    </button>
+                    
+                    <div class="contact-sub-text border-start border-white-10 ps-4 ms-2 d-none d-sm-block text-start">
+                        <a href="tel:7862927551" class="text-white text-decoration-none x-small ls-2 fw-bold hover-gold d-block">786.292.7551</a>
+                        <span class="x-small text-gold-metallic opacity-50 uppercase ls-1">Bay Harbor Islands</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row mt-5 pt-4">
+            <div class="col-12 text-center">
+                <p class="x-small text-muted ls-2 uppercase">
+                    <span class="mx-2">No Disrobing Required</span> • 
+                    <span class="mx-2">Clinical Neuro-Mapping</span> • 
+                    <span class="mx-2">Private Suite</span>
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    .precision-cta-v41 {
+        padding: 100px 0 80px 0;
+        background-color: var(--white);
+    }
+
+    .cta-shield-precision {
+        background-color: var(--emerald-deep);
+        padding: 70px 80px;
+        border-radius: 4px;
+        border: 1px solid rgba(212, 175, 55, 0.4);
+        box-shadow: 0 40px 100px rgba(5, 44, 30, 0.25);
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* THE GOLD ACCENT */
+    .gold-line-precision {
+        width: 40px;
+        height: 1px;
+        background: var(--gold-metallic);
+    }
+
+    /* THE BUTTON */
+    .btn-precision-final {
+        background: var(--gold-metallic);
+        color: var(--emerald-deep);
+        border: 1px solid var(--gold-metallic);
+        padding: 22px 45px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.8rem;
+        transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        border-radius: 2px;
+        white-space: nowrap;
+    }
+
+    .btn-precision-final:hover {
+        background: transparent;
+        color: #FFFFFF;
+        border-color: #FFFFFF;
+        transform: translateY(-5px);
+    }
+
+    /* HELPERS */
+    .border-white-10 { border-color: rgba(255,255,255,0.1) !important; }
+    .hover-gold:hover { color: var(--gold-metallic) !important; transition: 0.3s; }
+
+    @media (max-width: 991px) {
+        .precision-cta-v41 { padding: 80px 0; }
+        .cta-shield-precision { padding: 50px 30px; text-align: center; }
+        .cta-content-left { margin-bottom: 40px; }
+        .gold-line-precision { display: none; }
+        .d-flex { justify-content: center; }
+        .border-start { border: none !important; padding: 0 !important; margin: 0 !important; }
+        .contact-sub-text { text-align: center !important; }
+    }
+</style>
+{% endblock body %}
+    
+
+
+{% block js %}
+    
+{% endblock js %}
+    

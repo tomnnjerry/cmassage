@@ -1,0 +1,1171 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header %}
+
+{% endblock header %}
+
+{% block css %}
+    
+{% endblock css %}
+    
+
+
+{% block body %}
+    <section class="service-hero-v3 cupping-hero">
+    <div class="hero-image-overlay">
+        <img src="https://images.unsplash.com/photo-1544126592-807daa215a75?auto=format&fit=crop&q=80" alt="Clinical Cupping Therapy">
+        <div class="gradient-shield-kinetic"></div>
+    </div>
+
+    <div class="container position-relative z-5">
+        <div class="row">
+            <div class="col-lg-7">
+                
+                <div class="hero-text-block animate__animated animate__fadeInUp">
+                    <span class="modality-tag text-gold-metallic ls-3 mb-3 d-block fw-bold uppercase x-small">The Kinetic Protocol</span>
+                    
+                    <h1 class="display-1 text-white mb-4">
+                        Kinetic 
+                        <span class="serif italic text-gold-metallic">Cupping</span>
+                    </h1>
+
+                    <div class="description-box mb-5">
+                        <p class="lead text-white opacity-75">
+                            Myofascial decompression through negative pressure. By creating a vacuum over targeted muscle groups, we lift stagnant blood, release fascial adhesions, and initiate rapid tissue repair where traditional pressure cannot reach.
+                        </p>
+                    </div>
+
+                    <div class="action-row d-flex align-items-center gap-5">
+                        <button class="btn-luxury-sharp" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                            Secure Your Recovery
+                        </button>
+
+                        <div class="v-stats d-flex gap-4 border-start border-gold-thin ps-4">
+                            <div class="stat-item">
+                                <span class="d-block text-gold-metallic h5 mb-0">45/60</span>
+                                <span class="x-small text-white opacity-50 ls-2 uppercase">Min</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="d-block text-gold-metallic h5 mb-0">LVL 04</span>
+                                <span class="x-small text-white opacity-50 ls-2 uppercase">Intensity</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="clinical-tag animate__animated animate__fadeInRight">
+        <span class="ls-2">MYOFASCIAL DECOMPRESSION · BAY HARBOR</span>
+    </div>
+</section>
+
+<style>
+    .service-hero-v3.cupping-hero {
+        min-height: 90vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+        background-color: var(--emerald-deep);
+        padding: 100px 0;
+        overflow: hidden;
+    }
+
+    /* THE IMAGE: Dark, moody, emphasizing the vacuum effect */
+    .hero-image-overlay {
+        position: absolute;
+        top: 0; right: 0; width: 60%; height: 100%;
+        z-index: 1;
+    }
+    .hero-image-overlay img {
+        width: 100%; height: 100%; object-fit: cover;
+        filter: grayscale(20%) brightness(0.4);
+    }
+    
+    .gradient-shield-kinetic {
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: linear-gradient(to right, var(--emerald-deep) 35%, transparent 100%);
+    }
+
+    .display-1 { font-weight: 800; letter-spacing: -2px; line-height: 0.9; }
+
+    .description-box {
+        max-width: 550px;
+        border-left: 2px solid var(--gold-metallic);
+        padding-left: 30px;
+    }
+
+    .border-gold-thin { border-color: rgba(212, 175, 55, 0.3) !important; }
+
+    .clinical-tag {
+        position: absolute;
+        bottom: 0; right: 0;
+        background: var(--gold-metallic);
+        color: var(--emerald-deep);
+        padding: 15px 40px;
+        font-size: 0.65rem;
+        font-weight: 900;
+        z-index: 10;
+    }
+
+    .btn-luxury-sharp {
+        background: var(--gold-metallic);
+        color: var(--emerald-deep);
+        padding: 20px 40px;
+        border: none;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.75rem;
+        transition: 0.4s;
+    }
+    .btn-luxury-sharp:hover { background: white; transform: translateY(-5px); }
+
+    @media (max-width: 991px) {
+        .hero-image-overlay { width: 100%; opacity: 0.4; }
+        .display-1 { font-size: 3.5rem; }
+    }
+</style>
+
+
+<section class="cupping-benefits joy-both">
+    <div class="container">
+        
+        <div class="row mb-5 pb-lg-3 text-center">
+            <div class="col-12">
+                <h6 class="ls-wide text-gold-metallic mb-3">DECOMPRESSIVE RELIEF</h6>
+                <h2 class="display-3 text-emerald-deep mb-4">The power of <span class="serif italic">negative pressure</span></h2>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            
+            <div class="col-lg-3 col-md-6 animate__animated animate__fadeInUp">
+                <div class="cupping-card p-4 h-100 border-sharp-gold bg-emerald-deep text-white">
+                    <div class="cupping-icon mb-4 bg-white">
+                        <i class="ph ph-intersect-three text-emerald-deep fs-2"></i>
+                    </div>
+                    <h3 class="serif text-gold-metallic h4 mb-3">Fascial Unbinding</h3>
+                    <p class="small opacity-75 mb-0">
+                        Chronic tension causes fascia to "glue" to the muscle. Cupping lifts and separates these layers, restoring the sliding surface and ending "stuck" pain.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 animate__animated animate__fadeInUp animate__delay-1s">
+                <div class="cupping-card p-4 h-100 border-sharp-gold">
+                    <div class="cupping-icon mb-4">
+                        <i class="ph ph-drop-half-bottom text-gold-metallic fs-2"></i>
+                    </div>
+                    <h3 class="serif text-emerald-deep h4 mb-3">Oxygen Influx</h3>
+                    <p class="small text-muted mb-0">
+                        The vacuum draws fresh, nutrient-rich blood into deep tissues while pulling metabolic waste to the surface for the lymphatic system to process.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 animate__animated animate__fadeInUp animate__delay-2s">
+                <div class="cupping-card p-4 h-100 border-sharp-gold">
+                    <div class="cupping-icon mb-4">
+                        <i class="ph ph-thermometer-cold text-gold-metallic fs-2"></i>
+                    </div>
+                    <h3 class="serif text-emerald-deep h4 mb-3">Cytokine Response</h3>
+                    <p class="small text-muted mb-0">
+                        Cupping triggers a localized "micro-trauma" response, signaling your brain to flood the area with anti-inflammatory cells for accelerated recovery.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 animate__animated animate__fadeInUp animate__delay-3s">
+                <div class="cupping-card p-4 h-100 border-sharp-gold">
+                    <div class="cupping-icon mb-4">
+                        <i class="ph ph-unite text-gold-metallic fs-2"></i>
+                    </div>
+                    <h3 class="serif text-emerald-deep h4 mb-3">Kinetic Freedom</h3>
+                    <p class="small text-muted mb-0">
+                        By releasing the "suction" of tight fascia, joints move with less resistance. Perfect for golfers, tennis players, and the high-performance lifestyle.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    .cupping-benefits {
+        background-color: var(--white);
+        padding: 120px 0;
+    }
+
+    .cupping-card {
+        border-radius: 4px;
+        transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cupping-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 30px 60px rgba(5, 44, 30, 0.08);
+        border-color: var(--gold-metallic);
+    }
+
+    .cupping-icon {
+        width: 55px;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--ivory);
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        border-radius: 2px;
+    }
+
+    .bg-emerald-deep {
+        background-color: var(--emerald-deep) !important;
+    }
+
+    @media (max-width: 991px) {
+        .cupping-benefits { padding: 80px 0; }
+    }
+</style>
+
+
+<section class="cupping-candidates joy-both">
+    <div class="container">
+        
+        <div class="row mb-5 pb-lg-4">
+            <div class="col-lg-6">
+                <h6 class="ls-wide text-gold-metallic mb-3">RECOVERY MATCH</h6>
+                <h2 class="display-3 text-emerald-deep mb-4">Who is a <br><span class="serif italic text-gold-metallic">Candidate?</span></h2>
+            </div>
+            <div class="col-lg-5 offset-lg-1 d-flex align-items-end">
+                <p class="body-text text-muted border-start border-gold-thin ps-4">
+                    Cupping is a results-driven modality. It is designed for those who prioritize functional recovery and are comfortable with the temporary "cup marks" that signal successful decompression.
+                </p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="candidate-card-v43 p-4 h-100 border-sharp-gold bg-emerald-deep text-white">
+                    <h4 class="serif text-gold-metallic h4 mb-4">The High-Level <br>Athlete</h4>
+                    <p class="x-small ls-1 opacity-75 mb-4 uppercase">Performance & Repair</p>
+                    <ul class="kinetic-list list-unstyled small">
+                        <li>— Rapid muscle recovery</li>
+                        <li>— Increased ROM</li>
+                        <li>— Post-training flush</li>
+                        <li>— Joint decompression</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="candidate-card-v43 p-4 h-100 border-sharp-gold">
+                    <h4 class="serif text-emerald-deep h4 mb-4">The "Stuck" <br>Patient</h4>
+                    <p class="x-small ls-1 text-gold-metallic mb-4 uppercase">Chronic Resolution</p>
+                    <ul class="kinetic-list list-unstyled small text-muted">
+                        <li>— Fibrous adhesions</li>
+                        <li>— "Knot" saturation</li>
+                        <li>— Old injury scarring</li>
+                        <li>— Stiff neck/shoulders</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="candidate-card-v43 p-4 h-100 border-sharp-gold bg-ivory">
+                    <h4 class="serif text-emerald-deep h4 mb-4">The Digital <br>Professional</h4>
+                    <p class="x-small ls-1 text-gold-metallic mb-4 uppercase">Postural Correction</p>
+                    <ul class="kinetic-list list-unstyled small text-muted">
+                        <li>— "Tech Neck" relief</li>
+                        <li>— Upper back stagnation</li>
+                        <li>— Scapular binding</li>
+                        <li>— Circulation boost</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="candidate-card-v43 p-4 h-100 border-sharp-gold">
+                    <h4 class="serif text-emerald-deep h4 mb-4">The Systemic <br>Optimizer</h4>
+                    <p class="x-small ls-1 text-gold-metallic mb-4 uppercase">Metabolic Flush</p>
+                    <ul class="kinetic-list list-unstyled small text-muted">
+                        <li>— Lymphatic support</li>
+                        <li>— Deep tissue detox</li>
+                        <li>— Stress hormone flush</li>
+                        <li>— Immune activation</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row mt-5 pt-lg-4 justify-content-center text-center">
+            <div class="col-lg-8">
+                <div class="marks-disclaimer p-4 border-sharp-gold bg-ivory">
+                    <p class="small text-emerald-deep mb-0">
+                        <i class="ph ph-warning-circle text-gold-metallic me-2"></i>
+                        <strong>SENSORY NOTE:</strong> Cupping produces circular marks (eccymosis). These are not bruises, but a visual indicator of successful blood stasis release. They typically fade within 3–7 days.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    .cupping-candidates {
+        background-color: var(--white);
+        padding: 120px 0;
+    }
+
+    .candidate-card-v43 {
+        border-radius: 4px;
+        transition: all 0.5s ease;
+        border: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    .candidate-card-v43:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(5, 44, 30, 0.05);
+        border-color: var(--gold-metallic);
+    }
+
+    .kinetic-list li {
+        margin-bottom: 12px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    }
+
+    .candidate-card-v43.bg-emerald-deep .kinetic-list li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .kinetic-list li:last-child {
+        border-bottom: none;
+    }
+
+    .marks-disclaimer {
+        box-shadow: 10px 10px 0px rgba(212, 175, 55, 0.1);
+    }
+
+    @media (max-width: 991px) {
+        .cupping-candidates { padding: 80px 0; }
+    }
+</style>
+
+<section class="cupping-process joy-both">
+    <div class="container">
+        
+        <div class="row mb-5 pb-lg-3 text-center">
+            <div class="col-12">
+                <h6 class="ls-wide text-gold-metallic mb-3">TECHNICAL EXECUTION</h6>
+                <h2 class="display-3 text-emerald-deep mb-4">The path to <br><span class="serif italic">decompression.</span></h2>
+            </div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            
+            <div class="col-lg-4">
+                <div class="c-process-card p-5 text-center h-100">
+                    <div class="c-node mb-4 mx-auto">01</div>
+                    <h4 class="serif text-emerald-deep h5 mb-3">Thermal Priming</h4>
+                    <p class="small text-muted mb-0">
+                        We begin with targeted manual strokes to warm the myofascial layers. This "scouts" the tissue for adhesions and ensures the skin is supple enough for the vacuum transition.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="c-process-card p-5 text-center h-100">
+                    <div class="c-node active-cupping mb-4 mx-auto">02</div>
+                    <h4 class="serif text-emerald-deep h5 mb-3">Vacuum Decompression</h4>
+                    <p class="small text-muted mb-0">
+                        Medical-grade cups are applied to "hot spots." You will feel a strong lifting sensation as negative pressure separates fused layers and draws stagnant blood to the surface.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="c-process-card p-5 text-center h-100">
+                    <div class="c-node mb-4 mx-auto">03</div>
+                    <h4 class="serif text-emerald-deep h5 mb-3">Kinetic Integration</h4>
+                    <p class="small text-muted mb-0">
+                        After cup removal, we perform flushing strokes to assist the lymphatic system in processing the released toxins, leaving the muscle nourished with fresh oxygen.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <div class="d-inline-flex align-items-center gap-3 p-3 border-gold-subtle bg-ivory">
+                    <i class="ph ph-info text-gold-metallic"></i>
+                    <span class="x-small ls-1 uppercase text-emerald-deep fw-bold">Note: Static and Dynamic (moving) cupping may be used based on tissue density.</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    .cupping-process { 
+        background-color: var(--ivory); 
+        padding: 140px 0; 
+    }
+
+    .c-process-card { 
+        background: var(--white); 
+        border: 1px solid rgba(212, 175, 55, 0.1); 
+        border-radius: 4px; 
+        transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1); 
+    }
+
+    .c-process-card:hover { 
+        transform: translateY(-10px); 
+        border-color: var(--gold-metallic); 
+        box-shadow: 0 30px 60px rgba(5, 44, 30, 0.05); 
+    }
+
+    .c-node {
+        width: 60px; height: 60px; 
+        border: 1px solid var(--gold-metallic);
+        border-radius: 50%; 
+        display: flex; align-items: center; justify-content: center;
+        font-family: var(--serif); font-size: 1.2rem; color: var(--emerald-deep);
+        background: var(--white);
+    }
+
+    .active-cupping { 
+        background: var(--emerald-deep); 
+        color: var(--gold-metallic); 
+        border-color: var(--emerald-deep); 
+        box-shadow: 0 10px 25px rgba(5, 44, 30, 0.2); 
+    }
+
+    .border-gold-subtle { border: 1px solid rgba(212, 175, 55, 0.3); }
+
+    @media (max-width: 991px) {
+        .cupping-process { padding: 80px 0; }
+        .c-process-card { margin-bottom: 20px; }
+    }
+</style>
+
+<section class="cupping-booking joy-both bg-white">
+    <div class="container">
+        
+        <div class="row g-5 justify-content-center">
+            
+            <div class="col-lg-5">
+                <div class="booking-card-v42 light-path p-5 h-100 animate__animated animate__fadeInLeft">
+                    <h6 class="ls-wide text-gold-metallic mb-3">INITIAL DECOMPRESSION</h6>
+                    <h2 class="serif text-emerald-deep h2 mb-4">New Patients.</h2>
+                    <p class="body-text text-muted mb-5">
+                        Your first Kinetic Protocol includes a <strong>Myofascial Assessment</strong>. We determine your tissue's response to suction and customize cup placement for your specific injury history.
+                    </p>
+                    <button class="btn-cupping-dark w-100" data-bs-toggle="modal" data-bs-target="#cuppingBookingModal">
+                        Book My Assessment <i class="ph ph-shield-plus ms-2"></i>
+                    </button>
+                    <p class="text-center x-small text-muted italic mt-3">Note: "Cup marks" may persist for 3-7 days.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="booking-card-v42 dark-path p-5 h-100 animate__animated animate__fadeInRight">
+                    <h6 class="ls-wide text-gold-metallic mb-3">RECOVERY MAINTENANCE</h6>
+                    <h2 class="serif text-white h2 mb-4">Returning.</h2>
+                    <p class="body-text text-white opacity-75 mb-5">
+                        Your tolerance levels and primary tension zones are already mapped. We move straight into clinical decompression to keep your range of motion at its peak.
+                    </p>
+                    <button class="btn-cupping-gold w-100" data-bs-toggle="modal" data-bs-target="#cuppingBookingModal">
+                        Schedule Follow-Up <i class="ph ph-arrows-out-line ms-2"></i>
+                    </button>
+                    <p class="text-center x-small text-white opacity-50 italic mt-3">Advanced Decompression Enabled</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" id="cuppingBookingModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content border-sharp-gold overflow-hidden">
+            
+            <div class="modal-header border-0 p-4 pb-0 bg-white">
+                <div>
+                    <h5 class="serif text-emerald-deep h3 mb-1">Kinetic <span class="italic text-gold-metallic">Portal.</span></h5>
+                    <p class="x-small text-muted ls-2 mb-0 uppercase">Cupping Therapy · Bay Harbor Islands</p>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body p-4 bg-white">
+                <div class="iframe-load-box bg-ivory border-sharp-gold d-flex align-items-center justify-content-center overflow-hidden" style="min-height: 550px;">
+                    
+                    <div id="cuppingLoader" class="text-center p-5">
+                        <i class="ph ph-intersect-three animate-pulse display-4 text-gold-metallic mb-3"></i>
+                        <p class="serif italic text-emerald-deep">Connecting to the secure recovery engine...</p>
+                    </div>
+
+                    <iframe 
+                        id="cuppingIframe"
+                        src="https://your-booking-link.com" 
+                        style="width:100%; height:600px; border:none; display:none;" 
+                        onload="document.getElementById('cuppingLoader').style.display='none'; this.style.display='block';">
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<style>
+    .booking-card-v42 { border-radius: 4px; transition: 0.5s ease; border: 1px solid rgba(212, 175, 55, 0.2); display: flex; flex-direction: column; }
+    .light-path { background: var(--white); box-shadow: 20px 20px 0px var(--ivory); }
+    .dark-path { background: var(--emerald-deep); border-color: var(--emerald-deep); }
+    
+    .booking-card-v42:hover { transform: translateY(-10px); border-color: var(--gold-metallic); }
+
+    .btn-cupping-dark { background: var(--emerald-deep); color: var(--gold-metallic); border: 1px solid var(--emerald-deep); padding: 22px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; font-size: 0.75rem; }
+    .btn-cupping-gold { background: var(--gold-metallic); color: var(--emerald-deep); border: 1px solid var(--gold-metallic); padding: 22px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; font-size: 0.75rem; }
+
+    @keyframes pulse { 0% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.1); opacity: 0.5; } 100% { transform: scale(1); opacity: 1; } }
+    .animate-pulse { animation: pulse 2s infinite ease-in-out; display: inline-block; }
+</style>
+
+
+<section class="cupping-reviews joy-both">
+    <div class="container">
+        
+        <div class="row mb-5 pb-lg-4 align-items-end">
+            <div class="col-lg-6">
+                <h6 class="ls-wide text-gold-metallic mb-3">CLINICAL FEEDBACK</h6>
+                <h2 class="display-3 text-emerald-deep mb-0">Voices of <br><span class="serif italic text-gold-metallic">Kinetic.</span></h2>
+            </div>
+            <div class="col-lg-5 offset-lg-1">
+                <p class="text-muted border-start border-gold-thin ps-4 mb-0">
+                    From chronic "Tech Neck" to athletic recovery, our Bay Harbor clients rely on Cupping to reach the depths that traditional pressure simply cannot.
+                </p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            
+            <div class="col-lg-4 animate__animated animate__fadeInUp">
+                <div class="kinetic-review-card p-5 h-100 border-sharp-gold">
+                    <div class="stars-gold mb-4">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p class="serif text-emerald-deep h4 mb-4">"I spent years with a 'permanent' knot in my shoulder. One session of Kinetic Cupping did more for my mobility than six months of standard massage."</p>
+                    <div class="review-meta-v44 pt-4 border-top">
+                        <span class="d-block fw-bold text-emerald-deep">James R.</span>
+                        <span class="x-small ls-1 text-gold-metallic uppercase">Corporate Executive · Google Review</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 animate__animated animate__fadeInUp animate__delay-1s">
+                <div class="kinetic-review-card p-5 h-100 bg-emerald-deep text-white">
+                    <div class="stars-gold mb-4">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p class="serif h4 mb-4">"The marks are worth it. My recovery time between training sessions has dropped significantly. Nathalie knows exactly how to decompress the fascia."</p>
+                    <div class="review-meta-v44 pt-4 border-top border-white-10">
+                        <span class="d-block fw-bold text-white">Elena S.</span>
+                        <span class="x-small ls-1 text-gold-metallic uppercase">D1 Athlete · Verified Patient</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 animate__animated animate__fadeInUp animate__delay-2s">
+                <div class="kinetic-review-card p-5 h-100 border-sharp-gold">
+                    <div class="stars-gold mb-4">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p class="serif text-emerald-deep h4 mb-4">"I was nervous about the marks, but Nathalie's explanation of the 'flush' made total sense. I felt lighter immediately and the spots faded in just 4 days."</p>
+                    <div class="review-meta-v44 pt-4 border-top">
+                        <span class="d-block fw-bold text-emerald-deep">Sofia M.</span>
+                        <span class="x-small ls-1 text-gold-metallic uppercase">Postural Recovery · Google Review</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row mt-5 pt-lg-4 text-center">
+            <div class="col-12">
+                <a href="#" class="kinetic-trust-link">
+                    <i class="ph ph-google-logo me-2"></i> Join 130+ 5-Star Recovery Stories
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    .cupping-reviews {
+        background-color: var(--white);
+        padding: 140px 0;
+    }
+
+    .kinetic-review-card {
+        background-color: var(--white);
+        border-radius: 4px;
+        transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        display: flex;
+        flex-direction: column;
+        border: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    .kinetic-review-card:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 40px 80px rgba(5, 44, 30, 0.1);
+        border-color: var(--gold-metallic);
+    }
+
+    .stars-gold {
+        color: var(--gold-metallic);
+        font-size: 0.8rem;
+    }
+
+    .border-white-10 { border-color: rgba(255,255,255,0.1) !important; }
+
+    .kinetic-trust-link {
+        color: var(--emerald-deep);
+        text-decoration: none;
+        font-weight: 800;
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        border-bottom: 2px solid var(--gold-metallic);
+        padding-bottom: 5px;
+        transition: 0.3s;
+    }
+
+    .kinetic-trust-link:hover {
+        color: var(--gold-metallic);
+    }
+
+    @media (max-width: 991px) {
+        .cupping-reviews { padding: 80px 0; }
+    }
+</style>
+
+<section class="cupping-aftermath joy-both">
+    <div class="container">
+        
+        <div class="row mb-5 pb-lg-3 text-center">
+            <div class="col-12">
+                <h6 class="ls-wide text-gold-metallic mb-3">POST-SESSION RECOVERY</h6>
+                <h2 class="display-3 text-emerald-deep mb-4">The Kinetic <br><span class="serif italic">Afterglow.</span></h2>
+                <p class="text-muted mx-auto" style="max-width: 600px;">
+                    Cupping initiates a deep internal cleaning process. As your body processes the released stagnation, you will notice specific physical and visual changes.
+                </p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            
+            <div class="col-lg-3 col-md-6 animate__animated animate__fadeInUp">
+                <div class="aftermath-card-v45 p-4 h-100 border-sharp-gold">
+                    <i class="ph ph-circle text-gold-metallic display-6 mb-3 d-block"></i>
+                    <h3 class="serif text-emerald-deep h4 mb-3">The "Cup Kiss"</h3>
+                    <p class="small text-muted mb-0">
+                        You will likely have circular marks. These are not bruises (which are damaged vessels), but "eccymosis"—stagnant blood drawn to the surface for lymphatic removal. They fade in 3–7 days.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 animate__animated animate__fadeInUp animate__delay-1s">
+                <div class="aftermath-card-v45 p-4 h-100 bg-emerald-deep text-white">
+                    <i class="ph ph-drop text-gold-metallic display-6 mb-3 d-block"></i>
+                    <h3 class="serif text-gold-metallic h4 mb-3">Metabolic Flush</h3>
+                    <p class="small opacity-75 mb-0">
+                        The vacuum releases cellular waste into the bloodstream. You must double your water intake for 24 hours to assist your kidneys in flushing these toxins from your system.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 animate__animated animate__fadeInUp animate__delay-2s">
+                <div class="aftermath-card-v45 p-4 h-100 border-sharp-gold">
+                    <i class="ph ph-thermometer-hot text-gold-metallic display-6 mb-3 d-block"></i>
+                    <h3 class="serif text-emerald-deep h4 mb-3">Thermal Shift</h3>
+                    <p class="small text-muted mb-0">
+                        The treated areas may feel warm or slightly tender to the touch for a few hours. This is due to the massive influx of fresh, oxygenated blood rushing to the repair sites.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 animate__animated animate__fadeInUp animate__delay-3s">
+                <div class="aftermath-card-v45 p-4 h-100 border-sharp-gold">
+                    <i class="ph ph-arrows-out text-gold-metallic display-6 mb-3 d-block"></i>
+                    <h3 class="serif text-emerald-deep h4 mb-3">Structural Space</h3>
+                    <p class="small text-muted mb-0">
+                        You will feel "hollow" or lighter in your joints. Without the fascial "glue" holding you back, your range of motion will feel significantly more fluid and effortless.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row mt-5 pt-lg-4">
+            <div class="col-lg-10 mx-auto">
+                <div class="kinetic-note-box d-flex align-items-center p-4 bg-ivory border-sharp-gold">
+                    <i class="ph ph-shield-check text-gold-metallic fs-2 me-4"></i>
+                    <p class="small text-emerald-deep mb-0">
+                        <strong>NATHALIE’S RULE:</strong> Keep the treated areas covered and warm after your session. Avoid cold showers, swimming, or excessive wind for 12 hours, as the "pores" of the tissue are open and vulnerable to temperature shifts.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    .cupping-aftermath {
+        background-color: var(--white);
+        padding: 120px 0;
+    }
+
+    .aftermath-card-v45 {
+        border-radius: 4px;
+        transition: 0.4s ease;
+        border: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    .aftermath-card-v45:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(5, 44, 30, 0.05);
+        border-color: var(--gold-metallic);
+    }
+
+    .kinetic-note-box {
+        box-shadow: 10px 10px 0px rgba(212, 175, 55, 0.1);
+    }
+
+    .bg-ivory { background-color: #FAF9F3 !important; }
+
+    @media (max-width: 991px) {
+        .cupping-aftermath { padding: 80px 0; }
+        .kinetic-note-box { flex-direction: column; text-align: center; }
+        .kinetic-note-box i { margin: 0 0 15px 0 !important; }
+    }
+</style>
+
+
+<section class="why-kinetic joy-both">
+    <div class="container">
+        
+        <div class="row align-items-center g-5">
+            
+            <div class="col-lg-5 animate__animated animate__fadeIn">
+                <h6 class="ls-wide text-gold-metallic mb-3">THE CATHARTIC DIFFERENCE</h6>
+                <h2 class="display-3 text-emerald-deep mb-4">Decompression <br><span class="serif italic text-gold-metallic">with intent.</span></h2>
+                <p class="body-text text-muted mb-5">
+                    Most spas offer cupping as a stationary "add-on." At Cathartic, it is a primary clinical protocol. Nathalie Koffler integrates **Dynamic Cupping** (moving the cups) and **Functional Range of Motion** to ensure that we aren't just marking the skin, but actually unbinding the fascia from the muscle.
+                </p>
+                
+                <div class="credential-badge-kinetic p-4 border-sharp-gold bg-ivory d-inline-block">
+                    <span class="h2 serif text-emerald-deep mb-0">Certified</span>
+                    <p class="x-small ls-2 fw-bold text-gold-metallic mb-0 uppercase">Advanced Myofascial <br>Decompression Specialist</p>
+                </div>
+            </div>
+
+            <div class="col-lg-6 offset-lg-1">
+                <div class="kinetic-pillars">
+                    
+                    <div class="k-pill-item mb-5 animate__animated animate__fadeInRight">
+                        <div class="d-flex align-items-center gap-3 mb-2">
+                            <i class="ph ph-selection-all text-gold-metallic h4 mb-0"></i>
+                            <h4 class="serif text-emerald-deep h4 mb-0">Medical-Grade Equipment</h4>
+                        </div>
+                        <p class="small text-muted ps-5">
+                            We utilize professional-grade polycarbonate and silicone sets that allow for precise suction control. Unlike cheap alternative sets, our tools are sanitized to hospital standards after every session.
+                        </p>
+                    </div>
+
+                    <div class="k-pill-item mb-5 animate__animated animate__fadeInRight animate__delay-1s">
+                        <div class="d-flex align-items-center gap-3 mb-2">
+                            <i class="ph ph-arrows-out-cardinal text-gold-metallic h4 mb-0"></i>
+                            <h4 class="serif text-emerald-deep h4 mb-0">Dynamic Technique</h4>
+                        </div>
+                        <p class="small text-muted ps-5">
+                            We don't just "park" the cups. Nathalie often uses sliding cupping techniques to massage the tissue from the inside out, addressing large areas of stagnation in a single pass.
+                        </p>
+                    </div>
+
+                    <div class="k-pill-item animate__animated animate__fadeInRight animate__delay-2s">
+                        <div class="d-flex align-items-center gap-3 mb-2">
+                            <i class="ph ph-door-open text-gold-metallic h4 mb-0"></i>
+                            <h4 class="serif text-emerald-deep h4 mb-0">Total Privacy</h4>
+                        </div>
+                        <p class="small text-muted ps-5">
+                            Cupping is a vulnerable process. Our Bay Harbor suite provides a 1-on-1 environment where you can recover in complete silence, away from the foot traffic of a busy commercial spa.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    .why-kinetic {
+        background-color: var(--white);
+        padding: 140px 0;
+    }
+
+    .credential-badge-kinetic {
+        box-shadow: 15px 15px 0px rgba(212, 175, 55, 0.05);
+        border: 1px solid var(--gold-metallic);
+    }
+
+    .k-pill-item {
+        position: relative;
+        transition: 0.3s ease;
+    }
+
+    .k-pill-item:hover {
+        transform: translateX(10px);
+    }
+
+    .k-pill-item i {
+        font-size: 2.2rem;
+    }
+
+    .bg-ivory { background-color: #FAF9F3 !important; }
+
+    @media (max-width: 991px) {
+        .why-kinetic { padding: 80px 0; }
+        .credential-badge-kinetic { margin-bottom: 40px; }
+    }
+</style>
+
+<section class="kinetic-about-v46 joy-both">
+    <div class="container">
+        
+        <div class="row align-items-center g-5">
+            
+            <div class="col-lg-5 animate__animated animate__fadeIn">
+                <div class="kinetic-image-frame position-relative">
+                    <img src="https://images.unsplash.com/photo-1544126592-807daa215a75?auto=format&fit=crop&q=80" alt="Clinical Cupping Decompression" class="img-fluid border-sharp-gold">
+                    
+                    <div class="floating-badge-v46 bg-emerald-deep text-white p-4">
+                        <span class="d-block h2 serif text-gold-metallic mb-0">Lift</span>
+                        <p class="x-small ls-2 mb-0 uppercase">Myofascial <br>Decompression</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 offset-lg-1">
+                <h6 class="ls-wide text-gold-metallic mb-3">THE METHODOLOGY</h6>
+                <h2 class="display-3 text-emerald-deep mb-4">Space for <br><span class="serif italic text-gold-metallic">Healing.</span></h2>
+                
+                <p class="lead-text-kinetic text-emerald-deep mb-5">
+                    The Kinetic Protocol is built on the science of negative pressure. By creating a vacuum over targeted muscle groups, we lift the skin and superficial fascia away from the deep muscle. This "unweighting" of the tissue allows for an immediate influx of nutrient-rich blood and the mechanical breaking of fascial adhesions that manual pressure often misses.
+                </p>
+
+                <div class="kinetic-pillars-v46">
+                    <div class="k-method-item mb-4 pb-4 border-bottom-subtle">
+                        <h4 class="serif text-emerald-deep h5 mb-2">Myofascial Separation</h4>
+                        <p class="small text-muted mb-0">Chronic tension causes your tissue layers to "fuse" together, limiting range of motion. Cupping physically pulls these layers apart, restoring the sliding surfaces necessary for pain-free movement.</p>
+                    </div>
+
+                    <div class="k-method-item">
+                        <h4 class="serif text-emerald-deep h5 mb-2">Blood Stasis Release</h4>
+                        <p class="small text-muted mb-0">We target areas of stagnant blood and metabolic waste. The vacuum draws these to the surface—resulting in the "cup kiss"—where your lymphatic system can finally process and remove them.</p>
+                    </div>
+                </div>
+
+                <div class="mt-5 d-flex align-items-center gap-3">
+                    <i class="ph ph-arrows-out-simple text-gold-metallic fs-4"></i>
+                    <p class="x-small text-muted ls-1 mb-0 uppercase">Specializing in: Fascial Adhesions, Scar Tissue, & Stagnation</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    .kinetic-about-v46 {
+        background-color: var(--ivory);
+        padding: 140px 0;
+    }
+
+    .lead-text-kinetic {
+        font-size: 1.15rem;
+        line-height: 1.8;
+        border-left: 2px solid var(--gold-metallic);
+        padding-left: 25px;
+    }
+
+    .kinetic-image-frame img {
+        border-radius: 4px;
+        box-shadow: 20px 20px 0px var(--white);
+    }
+
+    .floating-badge-v46 {
+        position: absolute;
+        bottom: -30px;
+        right: -30px;
+        border: 1px solid var(--gold-metallic);
+        box-shadow: 0 20px 40px rgba(5, 44, 30, 0.15);
+        z-index: 10;
+    }
+
+    .border-bottom-subtle {
+        border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    @media (max-width: 991px) {
+        .kinetic-about-v46 { padding: 80px 0; }
+        .floating-badge-v46 { position: static; margin-top: 20px; text-align: center; }
+        .kinetic-image-frame { margin-bottom: 60px; }
+    }
+</style>
+
+<section class="kinetic-faq-v47 joy-both">
+    <div class="container">
+        
+        <div class="row mb-5 pb-lg-3">
+            <div class="col-lg-6">
+                <h6 class="ls-wide text-gold-metallic mb-3">RECOVERY GUIDE</h6>
+                <h2 class="display-3 text-emerald-deep mb-0">Frequently <br><span class="serif italic">Asked.</span></h2>
+            </div>
+        </div>
+
+        <div class="row g-5">
+            
+            <div class="col-lg-4">
+                <h4 class="serif text-gold-metallic h5 mb-4 border-bottom pb-2">01 — The Marks</h4>
+                <div class="accordion accordion-flush sharp-faq" id="faqKinetic1">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#k1">Are those bruises on my skin?</button></h2>
+                        <div id="k1" class="accordion-collapse collapse" data-bs-parent="#faqKinetic1"><div class="accordion-body">Technically, no. A bruise is caused by blunt force trauma that breaks capillaries. Cupping marks (eccymosis) are caused by vacuum pressure drawing stagnant blood and metabolic waste to the surface.</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#k2">How long do the marks last?</button></h2>
+                        <div id="k2" class="accordion-collapse collapse" data-bs-parent="#faqKinetic1"><div class="accordion-body">Usually between 3 to 7 days. The darker the mark, the more stagnation was present. As you receive regular treatments, the marks will become lighter and fade faster.</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#k3">Can I get a session without marks?</button></h2>
+                        <div id="k3" class="accordion-collapse collapse" data-bs-parent="#faqKinetic1"><div class="accordion-body">We can perform "Flash Cupping" or "Dynamic Moving Cupping," which provides the benefits of decompression with much less risk of long-lasting marks.</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#k4">Do the marks hurt?</button></h2>
+                        <div id="k4" class="accordion-collapse collapse" data-bs-parent="#faqKinetic1"><div class="accordion-body">No. While they look dramatic, the skin is generally not tender. Most clients forget the marks are even there until they look in a mirror.</div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <h4 class="serif text-gold-metallic h5 mb-4 border-bottom pb-2">02 — The Session</h4>
+                <div class="accordion accordion-flush sharp-faq" id="faqKinetic2">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#ks1">What does it feel like?</button></h2>
+                        <div id="ks1" class="accordion-collapse collapse" data-bs-parent="#faqKinetic2"><div class="accordion-body">It feels like a tight, pulling sensation. It is the opposite of a standard massage; instead of being pushed down, you feel your muscles being "lifted" and spread apart.</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#ks2">Is it painful?</button></h2>
+                        <div id="ks2" class="accordion-collapse collapse" data-bs-parent="#faqKinetic2"><div class="accordion-body">It is "intense" but should not be painful. Nathalie monitors the suction levels closely and can adjust the vacuum pressure at any moment to your comfort level.</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#ks3">Do you use glass or silicone cups?</button></h2>
+                        <div id="ks3" class="accordion-collapse collapse" data-bs-parent="#faqKinetic2"><div class="accordion-body">We use medical-grade polycarbonate and silicone cups. Polycarbonate allows for precise suction control via a vacuum pump, while silicone is used for moving, dynamic work.</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#ks4">How long are the cups left on?</button></h2>
+                        <div id="ks4" class="accordion-collapse collapse" data-bs-parent="#faqKinetic2"><div class="accordion-body">Typically 5 to 15 minutes for static placement, or they are moved continuously across the tissue for the duration of the targeted treatment.</div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <h4 class="serif text-gold-metallic h5 mb-4 border-bottom pb-2">03 — The Recovery</h4>
+                <div class="accordion accordion-flush sharp-faq" id="faqKinetic3">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#ka1">Why can't I take a cold shower after?</button></h2>
+                        <div id="ka1" class="accordion-collapse collapse" data-bs-parent="#faqKinetic3"><div class="accordion-body">Cupping opens the pores and increases blood flow. Cold water or wind can cause the muscles to spasm or "lock in" the cold, potentially causing more tension. Keep the area warm.</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#ka2">Can I workout after cupping?</button></h2>
+                        <div id="ka2" class="accordion-collapse collapse" data-bs-parent="#faqKinetic3"><div class="accordion-body">We recommend waiting at least 24 hours. Your body is busy processing the metabolic waste released during the session; adding the stress of a workout can delay recovery.</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#ka3">Who should avoid cupping?</button></h2>
+                        <div id="ka3" class="accordion-collapse collapse" data-bs-parent="#faqKinetic3"><div class="accordion-body">Those with skin infections, open wounds, severe anemia, or those on high-dose blood thinners should avoid cupping or consult with their doctor first.</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#ka4">Why am I so tired after a session?</button></h2>
+                        <div id="ka4" class="accordion-collapse collapse" data-bs-parent="#faqKinetic3"><div class="accordion-body">This is a "healing response." Your lymphatic system is working hard to clear out years of stagnation. Rest and hydration are your best allies.</div></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    .kinetic-faq-v47 {
+        background-color: var(--white);
+        padding: 120px 0;
+    }
+
+    .sharp-faq .accordion-item {
+        background-color: transparent;
+        border-bottom: 1px solid rgba(5, 44, 30, 0.1) !important;
+    }
+
+    .sharp-faq .accordion-button {
+        padding: 20px 0;
+        background-color: transparent !important;
+        box-shadow: none !important;
+        font-family: var(--serif);
+        font-size: 1.1rem;
+        color: var(--emerald-deep);
+        transition: 0.3s;
+    }
+
+    .sharp-faq .accordion-button:not(.collapsed) {
+        color: var(--gold-metallic);
+    }
+
+    .sharp-faq .accordion-body {
+        padding: 0 0 20px 0;
+        font-size: 0.95rem;
+        color: #666;
+        line-height: 1.6;
+    }
+
+    .sharp-faq .accordion-button::after {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23D4AF37'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+    }
+
+    @media (max-width: 991px) {
+        .kinetic-faq-v47 { padding: 80px 0; }
+    }
+</style>
+
+<section class="kinetic-cta-v48 joy-both">
+    <div class="container">
+        
+        <div class="cta-shield-kinetic d-flex flex-column flex-lg-row align-items-center justify-content-between animate__animated animate__fadeInUp">
+            
+            <div class="cta-content-left">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <span class="x-small text-gold-metallic ls-3 fw-bold uppercase">Myofascial Decompression</span>
+                    <div class="gold-line-kinetic"></div>
+                </div>
+                <h2 class="serif text-white display-4 mb-3">Release what is <br><span class="italic text-gold-metallic">holding you back.</span></h2>
+                <p class="body-text text-white opacity-75 mb-0" style="max-width: 450px;">
+                    Experience the clinical standard in vacuum therapy. From chronic adhesions to athletic recovery, let Nathalie’s Kinetic Protocol restore your body’s fluid motion.
+                </p>
+            </div>
+
+            <div class="cta-content-right mt-5 mt-lg-0 text-center text-lg-end">
+                <div class="d-flex flex-column flex-sm-row gap-3 align-items-center">
+                    <button class="btn-kinetic-final" data-bs-toggle="modal" data-bs-target="#cuppingBookingModal">
+                        Reserve Your Recovery <i class="ph ph-arrows-out-simple ms-2"></i>
+                    </button>
+                    
+                    <div class="contact-sub-text border-start border-white-10 ps-4 ms-2 d-none d-sm-block text-start">
+                        <a href="tel:7862927551" class="text-white text-decoration-none x-small ls-2 fw-bold hover-gold d-block">786.292.7551</a>
+                        <span class="x-small text-gold-metallic opacity-50 uppercase ls-1">Bay Harbor Islands</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="text-center mt-5">
+            <p class="x-small text-muted ls-2 uppercase opacity-50">Clinical Myofascial Specialist · 1005 Kane Concourse · Suite #211</p>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    .kinetic-cta-v48 {
+        padding: 100px 0 60px 0;
+        background-color: var(--white);
+    }
+
+    .cta-shield-kinetic {
+        background-color: var(--emerald-deep);
+        padding: 60px 70px;
+        border-radius: 4px;
+        border: 1px solid var(--gold-metallic);
+        box-shadow: 0 30px 70px rgba(5, 44, 30, 0.2);
+        position: relative;
+    }
+
+    /* THE GOLD ACCENT */
+    .gold-line-kinetic {
+        width: 40px;
+        height: 1px;
+        background: var(--gold-metallic);
+    }
+
+    /* THE BUTTON */
+    .btn-kinetic-final {
+        background: var(--gold-metallic);
+        color: var(--emerald-deep);
+        border: 1px solid var(--gold-metallic);
+        padding: 22px 45px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.8rem;
+        transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        border-radius: 2px;
+        white-space: nowrap;
+    }
+
+    .btn-kinetic-final:hover {
+        background: transparent;
+        color: #FFFFFF;
+        border-color: #FFFFFF;
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    }
+
+    /* HELPERS */
+    .border-white-10 { border-color: rgba(255,255,255,0.1) !important; }
+    .hover-gold:hover { color: var(--gold-metallic) !important; transition: 0.3s; }
+
+    @media (max-width: 991px) {
+        .kinetic-cta-v48 { padding: 60px 0; }
+        .cta-shield-kinetic { padding: 50px 30px; text-align: center; }
+        .cta-content-left { margin-bottom: 40px; }
+        .gold-line-kinetic { display: none; }
+        .d-flex { justify-content: center; }
+        .border-start { border: none !important; padding: 0 !important; margin: 0 !important; }
+        .contact-sub-text { text-align: center !important; }
+    }
+</style>
+{% endblock body %}
+    
+
+
+{% block js %}
+    
+{% endblock js %}
+    
