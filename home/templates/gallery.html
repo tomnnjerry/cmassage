@@ -1,0 +1,238 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header %}
+
+{% endblock header %}
+
+{% block css %}
+    
+{% endblock css %}
+    
+
+
+{% block body %}
+<section class="gallery-hero-v64 joy-both">
+    <div class="container-fluid p-0">
+        <div class="row g-0 align-items-center">
+            
+            <div class="col-lg-5 order-2 order-lg-1">
+                <div class="gallery-hero-text p-5 p-lg-10 animate__animated animate__fadeInLeft">
+                    <span class="x-small text-gold-metallic ls-3 fw-bold uppercase d-block mb-3">Visual Tour</span>
+                    <h1 class="display-2 text-emerald-deep mb-4">
+                        A Space for <br>
+                        <span class="serif italic text-gold-metallic">Stillness</span>
+                    </h1>
+                    <p class="lead text-muted mb-5" style="max-width: 400px;">
+                        Take a look inside our private clinical suite in Bay Harbor Islands. Designed for privacy, healing, and total decompression.
+                    </p>
+                    
+                    <div class="scroll-indicator d-flex align-items-center gap-3">
+                        <div class="mouse-icon">
+                            <div class="wheel"></div>
+                        </div>
+                        <span class="x-small ls-2 text-gold-metallic uppercase fw-bold">Explore the Suite</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7 order-1 order-lg-2">
+                <div class="featured-gallery-frame animate__animated animate__fadeIn">
+                    <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&q=80" alt="Cathartic Private Suite Interior" class="img-fluid">
+                    <div class="gold-accent-border d-none d-lg-block"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    .gallery-hero-v64 {
+        background-color: #FAF9F3; /* Ivory */
+        overflow: hidden;
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .gallery-hero-text {
+        padding-left: 10% !important;
+    }
+
+    .display-2 {
+        font-weight: 800;
+        line-height: 1.1;
+    }
+
+    .featured-gallery-frame {
+        position: relative;
+        height: 80vh;
+    }
+
+    .featured-gallery-frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* The Luxury Border Twist */
+    .gold-accent-border {
+        position: absolute;
+        top: 40px;
+        left: -40px;
+        width: 100px;
+        height: 80%;
+        border: 1px solid #D4AF37;
+        z-index: -1;
+    }
+
+    /* Mouse Scroll Animation */
+    .mouse-icon {
+        width: 22px;
+        height: 35px;
+        border: 2px solid #D4AF37;
+        border-radius: 20px;
+        position: relative;
+    }
+    .wheel {
+        width: 4px;
+        height: 8px;
+        background: #D4AF37;
+        border-radius: 2px;
+        position: absolute;
+        top: 6px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: scroll-wheel 1.5s infinite;
+    }
+
+    @keyframes scroll-wheel {
+        0% { top: 6px; opacity: 1; }
+        100% { top: 15px; opacity: 0; }
+    }
+
+    @media (max-width: 991px) {
+        .featured-gallery-frame { height: 40vh; }
+        .gallery-hero-text { padding: 40px 20px !important; text-align: center; }
+        .gallery-hero-text .scroll-indicator { justify-content: center; }
+        .display-2 { font-size: 3rem; }
+    }
+</style>
+
+
+<section class="cathartic-gallery-masonry joy-both">
+    <div class="container">
+        
+        <div class="masonry-wrapper">
+            
+            <div class="masonry-item">
+                <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&q=80" alt="Clinical Suite">
+                <div class="gallery-overlay"><span class="serif">Private Sanctuary</span></div>
+            </div>
+
+            <div class="masonry-item">
+                <img src="https://images.unsplash.com/photo-1544126592-807daa215a75?auto=format&fit=crop&q=80" alt="Cupping Session">
+                <div class="gallery-overlay"><span class="serif">The Kinetic Protocol</span></div>
+            </div>
+
+            <div class="masonry-item">
+                <img src="https://images.unsplash.com/photo-1519824145371-296894a0daa9?auto=format&fit=crop&q=80" alt="Treatment Room Atmosphere">
+                <div class="gallery-overlay"><span class="serif">Healing Stillness</span></div>
+            </div>
+
+            <div class="masonry-item">
+                <img src="https://images.unsplash.com/photo-1591343395082-e120087004b4?auto=format&fit=crop&q=80" alt="Assisted Stretching">
+                <div class="gallery-overlay"><span class="serif">The Structural Protocol</span></div>
+            </div>
+
+            <div class="masonry-item">
+                <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&q=80" alt="Massage Oils">
+                <div class="gallery-overlay"><span class="serif">Clinical Details</span></div>
+            </div>
+
+            <div class="masonry-item">
+                <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80" alt="Massage Hands">
+                <div class="gallery-overlay"><span class="serif">Masterful Touch</span></div>
+            </div>
+
+            <div class="masonry-item">
+                <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80" alt="Wellness Space">
+            </div>
+
+            <div class="masonry-item">
+                <img src="https://images.unsplash.com/photo-1631383842371-33157e84126f?auto=format&fit=crop&q=80" alt="Room Lighting">
+            </div>
+
+            <div class="masonry-item">
+                <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc206e?auto=format&fit=crop&q=80" alt="Tools">
+            </div>
+
+             <div class="masonry-item">
+                <img src="https://images.unsplash.com/photo-1537367663819-1224823351d0?auto=format&fit=crop&q=80" alt="Soft Atmosphere">
+            </div>
+
+            <div class="masonry-item">
+                <img src="https://images.unsplash.com/photo-1519415510236-855906a6099c?auto=format&fit=crop&q=80" alt="Desk Detail">
+            </div>
+
+            <div class="masonry-item">
+                <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&q=80" alt="Relaxation">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    .cathartic-gallery-masonry { padding: 80px 0; background: #FFF; }
+    
+    .masonry-wrapper {
+        column-count: 3;
+        column-gap: 20px;
+    }
+
+    .masonry-item {
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 20px;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid rgba(212, 175, 55, 0.1);
+        transition: 0.4s ease;
+    }
+
+    .masonry-item img {
+        display: block;
+        width: 100%;
+        height: auto; /* Maintains original aspect ratio */
+        transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .masonry-item:hover img { transform: scale(1.05); }
+
+    .gallery-overlay {
+        position: absolute;
+        bottom: 0; left: 0; width: 100%; height: 40%;
+        padding: 20px;
+        background: linear-gradient(transparent, rgba(5, 44, 30, 0.9));
+        color: white;
+        opacity: 0;
+        transition: 0.4s;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .masonry-item:hover .gallery-overlay { opacity: 1; }
+
+    @media (max-width: 991px) { .masonry-wrapper { column-count: 2; } }
+    @media (max-width: 576px) { .masonry-wrapper { column-count: 1; } }
+</style>
+{% endblock body %}
+    
+
+
+{% block js %}
+    
+{% endblock js %}
+    

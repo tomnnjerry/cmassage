@@ -1,0 +1,295 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header %}
+
+{% endblock header %}
+
+{% block css %}
+    
+{% endblock css %}
+    
+
+
+{% block body %}
+<section class="booking-hero-v68 joy-both">
+    <div class="container">
+        <div class="row align-items-center min-vh-75 g-5">
+            
+            <div class="col-lg-6 animate__animated animate__fadeInLeft">
+                <div class="booking-intro-box">
+                    <span class="x-small text-gold-metallic ls-3 fw-bold uppercase d-block mb-3">Secure Your Session</span>
+                    <h1 class="display-1 text-emerald-deep mb-4">
+                        Invest in <br>
+                        <span class="serif italic text-gold-metallic">Your Recovery.</span>
+                    </h1>
+                    
+                    <p class="lead text-muted mb-5 border-start border-gold-thin ps-4" style="max-width: 480px;">
+                        Select your preferred protocol below. All sessions are held in our private Bay Harbor suite, providing one-on-one attention without the distractions of a busy spa.
+                    </p>
+
+                    <div class="booking-trust-bar d-flex align-items-center gap-4 py-3 border-top border-bottom">
+                        <div class="trust-item">
+                            <i class="ph ph-lock-key text-gold-metallic me-2"></i>
+                            <span class="x-small ls-1 uppercase fw-bold text-emerald-deep">Secure Booking</span>
+                        </div>
+                        <div class="trust-item">
+                            <i class="ph ph-clock text-gold-metallic me-2"></i>
+                            <span class="x-small ls-1 uppercase fw-bold text-emerald-deep">Instant Confirmation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5 offset-lg-1 animate__animated animate__fadeIn">
+                <div class="booking-visual-frame position-relative">
+                    <img src="https://images.unsplash.com/photo-1519824145371-296894a0daa9?auto=format&fit=crop&q=80" alt="Cathartic Booking Suite" class="img-fluid border-sharp-gold">
+                    
+                    <div class="floating-clinical-badge bg-white p-4 border-sharp-gold shadow-lg">
+                        <span class="d-block h3 serif text-emerald-deep mb-0">1:1</span>
+                        <p class="x-small ls-2 text-gold-metallic uppercase mb-0">Private Clinical <br>Attention</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    .booking-hero-v68 {
+        background-color: #FAF9F3; /* Ivory */
+        padding: 120px 0 80px 0;
+        overflow: hidden;
+    }
+
+    .min-vh-75 { min-height: 75vh; }
+
+    .display-1 { 
+        font-weight: 800; 
+        line-height: 0.95; 
+        letter-spacing: -2px;
+    }
+
+    .border-gold-thin { border-color: rgba(212, 175, 55, 0.4) !important; }
+
+    .booking-trust-bar { border-color: rgba(5, 44, 30, 0.1) !important; }
+
+    .booking-visual-frame img {
+        width: 100%;
+        height: 550px;
+        object-fit: cover;
+        box-shadow: 25px 25px 0px #FFFFFF;
+    }
+
+    .floating-clinical-badge {
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        z-index: 5;
+        text-align: center;
+    }
+
+    @media (max-width: 991px) {
+        .booking-hero-v68 { padding: 80px 0 40px 0; }
+        .display-1 { font-size: 3.5rem; }
+        .booking-visual-frame { margin-top: 60px; }
+        .booking-visual-frame img { height: 400px; box-shadow: 15px 15px 0px #FFFFFF; }
+        .floating-clinical-badge { right: 10px; }
+    }
+</style>
+
+<section class="booking-portal-v69 joy-both bg-white">
+    <div class="container">
+        
+        <div class="row mb-5 justify-content-center">
+            <div class="col-lg-8 text-center">
+                <div class="booking-steps-nav d-flex justify-content-between align-items-center p-3 border-sharp-gold bg-ivory">
+                    <div class="step-link active"><span class="num">1</span> <span class="txt">Select Protocol</span></div>
+                    <div class="step-divider"></div>
+                    <div class="step-link"><span class="num">2</span> <span class="txt">Choose Time</span></div>
+                    <div class="step-divider"></div>
+                    <div class="step-link"><span class="num">3</span> <span class="txt">Confirm</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="iframe-wrapper-v69 border-sharp-gold shadow-lg position-relative">
+                    
+                    <div id="iframeLoader" class="iframe-loader d-flex flex-column align-items-center justify-content-center">
+                        <div class="spinner-gold mb-3"></div>
+                        <p class="serif italic text-emerald-deep">Opening the Clinical Calendar...</p>
+                        <span class="x-small ls-2 text-gold-metallic uppercase">Secure Connection</span>
+                    </div>
+
+                    <iframe 
+                        src="https://your-booking-software-link.com" 
+                        id="bookingIframe"
+                        class="booking-iframe"
+                        frameborder="0" 
+                        scrolling="yes"
+                        onload="document.getElementById('iframeLoader').style.display='none';">
+                    </iframe>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-lg-8 mx-auto text-center">
+                <div class="p-4 border-top border-bottom border-gold-thin">
+                    <p class="x-small text-muted ls-1 mb-0">
+                        <i class="ph ph-shield-check text-gold-metallic me-2"></i> 
+                        <strong>Privacy Note:</strong> Your health information is encrypted and HIPAA-compliant. 
+                        We require 24-hour notice for all cancellations to respect the clinical schedule.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    .booking-portal-v69 { padding: 40px 0 120px 0; }
+    
+    .bg-ivory { background-color: #FAF9F3 !important; }
+    .border-gold-thin { border-color: rgba(212, 175, 55, 0.2) !important; }
+
+    /* Booking Steps Nav */
+    .step-link { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #666; display: flex; align-items: center; gap: 8px; }
+    .step-link.active { color: #052c1e; }
+    .step-link .num { width: 20px; height: 20px; background: #D4AF37; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.6rem; }
+    .step-divider { flex-grow: 1; height: 1px; background: rgba(212, 175, 55, 0.3); margin: 0 20px; }
+
+    /* Iframe Wrapper */
+    .iframe-wrapper-v69 {
+        min-height: 800px;
+        background: #fff;
+        overflow: hidden;
+    }
+
+    .booking-iframe {
+        width: 100%;
+        height: 900px; /* Adjust based on your booking software's height */
+        border: none;
+    }
+
+    /* Loader Styling */
+    .iframe-loader {
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: #fff;
+        z-index: 10;
+    }
+
+    .spinner-gold {
+        width: 40px; height: 40px;
+        border: 3px solid rgba(212, 175, 55, 0.1);
+        border-top: 3px solid #D4AF37;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+    @media (max-width: 991px) {
+        .iframe-wrapper-v69 { min-height: 600px; }
+        .booking-steps-nav .txt { display: none; } /* Show only numbers on mobile */
+    }
+</style>
+
+<section class="booking-reviews-v70 joy-both">
+    <div class="container">
+        
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-8">
+                <span class="x-small text-gold-metallic ls-3 fw-bold uppercase d-block mb-3">Verified Experiences</span>
+                <h2 class="serif text-emerald-deep h1 mb-0">Why our patients <br><span class="italic text-gold-metallic">keep coming back</span></h2>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            
+            <div class="col-lg-4">
+                <div class="b-review-card p-5 bg-white border-sharp-gold h-100">
+                    <div class="stars-gold mb-3"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                    <p class="body-text text-emerald-deep mb-4">"I love how easy the online booking is. No back-and-forth emails. I can see Nathalie’s exact availability and grab a spot in seconds. The automated reminders are a lifesaver for my busy schedule."</p>
+                    <div class="b-author pt-3 border-top d-flex align-items-center gap-3">
+                        <div class="author-initials bg-emerald-deep text-gold-metallic">AM</div>
+                        <span class="x-small fw-bold text-emerald-deep ls-1 uppercase">Amanda M.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="b-review-card p-5 bg-emerald-deep text-white border-sharp-gold h-100">
+                    <div class="stars-gold mb-3"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                    <p class="body-text mb-4">"Nathalie is a true specialist. I’ve tried every massage place in Miami, but her clinical approach is different. I book the Kinetic Protocol every two weeks and my chronic neck tension has finally disappeared."</p>
+                    <div class="b-author pt-3 border-top border-white-10 d-flex align-items-center gap-3">
+                        <div class="author-initials bg-white text-emerald-deep">RT</div>
+                        <span class="x-small fw-bold text-white ls-1 uppercase">Robert T.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="b-review-card p-5 bg-white border-sharp-gold h-100">
+                    <div class="stars-gold mb-3"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                    <p class="body-text text-emerald-deep mb-4">"The private suite in Bay Harbor is so much better than a typical spa. It’s quiet, clean, and you get Nathalie’s undivided attention. Worth every penny for the level of care you receive."</p>
+                    <div class="b-author pt-3 border-top d-flex align-items-center gap-3">
+                        <div class="author-initials bg-emerald-deep text-gold-metallic">SL</div>
+                        <span class="x-small fw-bold text-emerald-deep ls-1 uppercase">Sophia L.</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<style>
+    .booking-reviews-v70 {
+        padding: 100px 0;
+        background-color: #FFFFFF;
+    }
+
+    .b-review-card {
+        transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        border: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    .b-review-card:hover {
+        transform: translateY(-8px);
+        border-color: #D4AF37;
+        box-shadow: 0 20px 40px rgba(5, 44, 30, 0.05);
+    }
+
+    .stars-gold { color: #D4AF37; font-size: 0.8rem; }
+
+    .author-initials {
+        width: 35px; height: 35px;
+        display: flex; align-items: center; justify-content: center;
+        border-radius: 50%;
+        font-size: 0.65rem;
+        font-weight: 800;
+        letter-spacing: 1px;
+    }
+
+    .border-white-10 { border-color: rgba(255,255,255,0.1) !important; }
+
+    @media (max-width: 991px) {
+        .booking-reviews-v70 { padding: 60px 0; }
+    }
+</style>
+{% endblock body %}
+    
+
+
+{% block js %}
+    
+{% endblock js %}
+    

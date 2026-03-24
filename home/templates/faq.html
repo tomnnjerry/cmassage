@@ -12,7 +12,218 @@
 
 
 {% block body %}
-    
+    <section class="faq-hero-v62 joy-both">
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-8">
+                
+                <div class="animate__animated animate__fadeInDown">
+                    <span class="x-small text-gold-metallic ls-3 fw-bold uppercase d-block mb-3">Your Questions, Answered</span>
+                    <div class="gold-line-centered mx-auto mb-4"></div>
+                </div>
+
+                <h1 class="display-2 text-emerald-deep mb-4 animate__animated animate__fadeInUp">
+                    Clarity for your <br>
+                    <span class="serif italic text-gold-metallic">Healing Journey.</span>
+                </h1>
+
+                <p class="lead text-muted mb-5 animate__animated animate__fadeInUp animate__delay-1s mx-auto" style="max-width: 600px;">
+                    Whether you’re curious about our clinical protocols, booking policies, or what to wear to your first session, you’ll find everything you need to know right here.
+                </p>
+
+                <div class="faq-quick-jump d-flex flex-wrap justify-content-center gap-3 animate__animated animate__fadeInUp animate__delay-2s">
+                    <a href="#booking" class="jump-link">Booking</a>
+                    <a href="#cupping" class="jump-link">Cupping</a>
+                    <a href="#stretching" class="jump-link">Stretching</a>
+                    <a href="#policies" class="jump-link">Policies</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .faq-hero-v62 {
+        background-color: #FAF9F3; /* Ivory Background */
+        padding: 140px 0 100px 0;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Decorative Elements */
+    .faq-hero-v62::before {
+        content: 'FAQ';
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        font-size: 15rem;
+        font-family: var(--serif);
+        color: rgba(5, 44, 30, 0.03); /* Very faint emerald */
+        font-weight: 800;
+        z-index: 0;
+    }
+
+    .gold-line-centered {
+        width: 60px;
+        height: 2px;
+        background: #D4AF37;
+    }
+
+    .display-2 {
+        font-weight: 800;
+        color: #052c1e;
+        line-height: 1.1;
+    }
+
+    /* Quick Jump Links */
+    .jump-link {
+        padding: 10px 25px;
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        color: #052c1e;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 0.7rem;
+        letter-spacing: 2px;
+        transition: 0.3s;
+        background: #FFFFFF;
+    }
+
+    .jump-link:hover {
+        background: #D4AF37;
+        color: #FFFFFF;
+        border-color: #D4AF37;
+        transform: translateY(-3px);
+    }
+
+    @media (max-width: 991px) {
+        .faq-hero-v62 { padding: 100px 0 60px 0; }
+        .display-2 { font-size: 3rem; }
+        .faq-hero-v62::before { font-size: 8rem; }
+    }
+</style>
+
+<section class="faq-body-v63 joy-both bg-white">
+    <div class="container">
+        
+        <div class="row g-5">
+            
+            <div class="col-lg-6 mb-5" id="treatments">
+                <h3 class="serif text-gold-metallic mb-4"><i class="ph ph-steth-scope me-2"></i> 01. The Treatments</h3>
+                <div class="accordion accordion-flush custom-faq" id="accTreatments">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#t1">What is a "Clinical Protocol"?</button></h2>
+                        <div id="t1" class="accordion-collapse collapse" data-bs-parent="#accTreatments">
+                            <div class="accordion-body text-muted">It’s our signature way of combining different therapies (like massage and cupping) into one focused session to solve a specific problem like "stuck" muscles.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#t2">Does the massage hurt?</button></h2>
+                        <div id="t2" class="accordion-collapse collapse" data-bs-parent="#accTreatments">
+                            <div class="accordion-body text-muted">We use "productive pressure." It may be intense in tight areas, but it should always feel like a "good hurt" that brings relief.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#t3">What is Deep Tissue exactly?</button></h2><div id="t3" class="accordion-collapse collapse"><div class="accordion-body text-muted">It's a technique that focuses on the deeper layers of muscle and connective tissue to release chronic tension.</div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#t4">Can I get a relaxation-only massage?</button></h2><div id="t4" class="accordion-collapse collapse"><div class="accordion-body text-muted">Yes, our Vital Protocol is designed specifically for nervous system calming and pure relaxation.</div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#t5">What is "Trigger Point" therapy?</button></h2><div id="t5" class="accordion-collapse collapse"><div class="accordion-body text-muted">It involves pressing on specific "knots" to release pain that might be traveling to other parts of your body.</div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#t6">Do you use oil or lotion?</button></h2><div id="t6" class="accordion-collapse collapse"><div class="accordion-body text-muted">We use high-end, hypoallergenic oils and creams that nourish the skin without leaving you feeling greasy.</div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#t7">Can I combine stretching and cupping?</button></h2><div id="t7" class="accordion-collapse collapse"><div class="accordion-body text-muted">Yes! For a total body reset, we can build a custom session that utilizes both decompression and elongation.</div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#t8">Is Nathalie the only therapist?</button></h2><div id="t8" class="accordion-collapse collapse"><div class="accordion-body text-muted">Yes, Cathartic is a private clinical practice. Every session is performed personally by Nathalie to ensure elite-level care.</div></div></div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mb-5" id="modalities">
+                <h3 class="serif text-gold-metallic mb-4"><i class="ph ph-intersect me-2"></i> 02. Specialized Care</h3>
+                <div class="accordion accordion-flush custom-faq" id="accModalities">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#m1">Will the cups leave marks every time?</button></h2>
+                        <div id="m1" class="accordion-collapse collapse" data-bs-parent="#accModalities">
+                            <div class="accordion-body text-muted">Usually, yes. The darker the mark, the more "stuck" the area was. As you get healthier, the marks actually become lighter.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#m2">How is your stretch different from a gym stretch?</button></h2>
+                        <div id="m2" class="accordion-collapse collapse" data-bs-parent="#accModalities">
+                            <div class="accordion-body text-muted">We use PNF (Proprioceptive Neuromuscular Facilitation)—a medical technique that "tricks" the brain into letting muscles go deeper.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#m3">Is cupping safe for everyone?</button></h2><div id="m3" class="accordion-collapse collapse"><div class="accordion-body text-muted">Most people, yes. We avoid it for those on blood thinners or with certain skin conditions.</div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#m4">Does stretching help with sciatica?</button></h2><div id="m4" class="accordion-collapse collapse"><div class="accordion-body text-muted">Often, yes. By stretching the piriformis and glutes, we can take pressure off the sciatic nerve.</div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#m5">Can I get cupping on my face?</button></h2><div id="m5" class="accordion-collapse collapse"><div class="accordion-body text-muted">We offer specialized, gentle facial cupping for lymphatic drainage and sinus relief—it does NOT leave marks like back cupping.</div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#m6">How long do stretch results last?</button></h2><div id="m6" class="accordion-collapse collapse"><div class="accordion-body text-muted">You’ll feel the "openness" for several days. Regular sessions help make that flexibility permanent.</div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#m7">What is "Dynamic" cupping?</button></h2><div id="m7" class="accordion-collapse collapse"><div class="accordion-body text-muted">It’s when we move the cups across your skin while they are attached—it feels like a deep-tissue steamroller.</div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#m8">Do I need to be flexible to start?</button></h2><div id="m8" class="accordion-collapse collapse"><div class="accordion-body text-muted">No! This is exactly for people who feel "stiff as a board." We meet you where you are.</div></div></div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mb-5" id="policies">
+                <h3 class="serif text-gold-metallic mb-4"><i class="ph ph-clipboard-text me-2"></i> 03. Booking & Prep</h3>
+                <div class="accordion accordion-flush custom-faq" id="accPolicies">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#p1">What is your cancellation policy?</button></h2>
+                        <div id="p1" class="accordion-collapse collapse" data-bs-parent="#accPolicies">
+                            <div class="accordion-body text-muted">We require 24 hours' notice for cancellations. This allows us to offer the spot to someone on our waiting list.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#p2">Should I tip my therapist?</button></h2>
+                        <div id="p2" class="accordion-collapse collapse" data-bs-parent="#accPolicies">
+                            <div class="accordion-body text-muted">Gratuity is never expected but always appreciated if you feel you received exceptional service.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#p3">Can I book for two people at once?</button></h2><div id="p3" class="accordion-collapse collapse"><div class="accordion-body text-muted">Since Nathalie is a solo practitioner, we can only see one person at a time (no "couples" massages).</div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#p4">Do you accept insurance?</button></h2><div id="p4" class="accordion-collapse collapse"><div class="accordion-body text-muted">We do not bill insurance directly, but we can provide a detailed receipt (Superbill) for you to submit.</div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#p5">What if I’m late?</button></h2><div id="p5" class="accordion-collapse collapse"><div class="accordion-body text-muted">Your session will still end on time so the next patient isn't delayed. We recommend arriving 5 minutes early.</div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#p6">Are there gift cards?</button></h2><div id="p6" class="accordion-collapse collapse"><div class="accordion-body text-muted">Yes, digital gift cards are available via our booking portal—perfect for birthdays or holidays.</div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#p7">Do I need to shower before?</button></h2><div id="p7" class="accordion-collapse collapse"><div class="accordion-body text-muted">It’s not required, but clean skin helps our oils and cups work much more effectively.</div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#p8">Is there parking available?</button></h2><div id="p8" class="accordion-collapse collapse"><div class="accordion-body text-muted">Yes, there is street parking and nearby garage options right here on Kane Concourse.</div></div></div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mb-5" id="health">
+                <h3 class="serif text-gold-metallic mb-4"><i class="ph ph-heart-beat me-2"></i> 04. Health & Wellness</h3>
+                <div class="accordion accordion-flush custom-faq" id="accHealth">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#h1">Can I get a massage if I'm pregnant?</button></h2>
+                        <div id="h1" class="accordion-collapse collapse" data-bs-parent="#accHealth">
+                            <div class="accordion-body text-muted">Yes, but only after your first trimester. Please let us know so we can set up the table for your comfort.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#h2">What if I have a cold?</button></h2>
+                        <div id="h2" class="accordion-collapse collapse" data-bs-parent="#accHealth">
+                            <div class="accordion-body text-muted">If you have a fever or are contagious, please reschedule. Massage can actually make you feel worse when you're fighting an active virus.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#h3">How often should I come?</button></h2><div id="h3" class="accordion-collapse collapse"><div class="accordion-body text-muted">For chronic pain, every 2 weeks. For general wellness, once a month is the gold standard.</div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#h4">Why do I need to drink water after?</button></h2><div id="h4" class="accordion-collapse collapse"><div class="accordion-body text-muted">Massage and cupping release metabolic waste from your muscles. Water helps your kidneys flush it out.</div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#h5">Will I be sore the next day?</button></h2><div id="h5" class="accordion-collapse collapse"><div class="accordion-body text-muted">A "muscle glow" (mild soreness) is normal—it’s like the feeling after a good workout.</div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#h6">Can I work out after my session?</button></h2><div id="h6" class="accordion-collapse collapse"><div class="accordion-body text-muted">It’s best to wait 12–24 hours to let your muscles integrate the work we did.</div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#h7">Can massage help with headaches?</button></h2><div id="h7" class="accordion-collapse collapse"><div class="accordion-body text-muted">Yes, especially tension headaches caused by tight neck and shoulder muscles.</div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#h8">Is my health information private?</button></h2><div id="h8" class="accordion-collapse collapse"><div class="accordion-body text-muted">100%. We follow strict privacy standards to ensure your intake forms and history are totally confidential.</div></div></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    .faq-body-v63 { padding: 80px 0; }
+    .custom-faq .accordion-item { border-bottom: 1px solid #eee !important; margin-bottom: 5px; }
+    .custom-faq .accordion-button { 
+        background: transparent !important; 
+        color: #052c1e; 
+        font-weight: 600; 
+        padding: 20px 0;
+        box-shadow: none !important;
+    }
+    .custom-faq .accordion-button:not(.collapsed) { color: #D4AF37; }
+    .custom-faq .accordion-body { padding: 0 0 20px 0; font-size: 0.95rem; line-height: 1.6; }
+    .serif { font-family: 'Playfair Display', serif; }
+    .text-gold-metallic { color: #D4AF37; }
+</style>
 
 {% endblock body %}
     
